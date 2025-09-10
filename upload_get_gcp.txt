@@ -1,0 +1,17 @@
+from google.cloud import storage
+
+# Inisialisasi client (otomatis baca GOOGLE_APPLICATION_CREDENTIALS)
+client = storage.Client()
+
+bucket_name = "your-bucket-name"
+bucket = client.bucket(bucket_name)
+
+# ---- Upload file ----
+blob = bucket.blob("folder/hello.txt")
+blob.upload_from_filename("local_hello.txt")
+print("File uploaded to bucket.")
+
+# ---- Download file ----
+blob = bucket.blob("folder/hello.txt")
+blob.download_to_filename("downloaded_hello.txt")
+print("File downloaded from bucket.")
