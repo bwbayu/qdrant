@@ -1,3 +1,9 @@
 cognee
 twelvelabs
 crewai
+qdrant-client
+neo4j
+pymupdf
+google-cloud-storage
+docx2pdf
+cognee-community-vector-adapter-qdrant
