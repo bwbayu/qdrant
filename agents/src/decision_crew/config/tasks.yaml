@@ -1,0 +1,28 @@
+research_task:
+  description: >
+    Conduct a thorough research by retrieving embeddings from video, text,
+    and graph sources. Ensure you gather any interesting and relevant
+    information that emerges from these multimodal vectors.
+  expected_output: >
+    A consolidated list with at least 5 bullet points highlighting the
+    most relevant findings. Each point should specify the source
+    (video, text, graph) and explain why it is relevant. do not add knowledge 
+    from out of nowhere. do not make up information. only use the information
+    from the tools' output.
+  agent: researcher
+
+reporting_task:
+  description: >
+    Review and analyze the research findings obtained from video, text,
+    and graph embeddings. Expand each bullet point into a complete
+    section of a detailed report. Include synthesis across sources,
+    identify overlapping insights, and highlight unique contributions
+    from each modality.
+  expected_output: >
+    A comprehensive report formatted in markdown, including:
+    - Executive Summary
+    - Detailed Findings (organized by video, text, graph sources)
+    - Cross-Source Correlations
+    - Actionable Recommendations
+  agent: reporting_analyst
+
