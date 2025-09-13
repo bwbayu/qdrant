@@ -1,28 +1,28 @@
 research_task:
   description: >
-    Conduct a thorough research by retrieving embeddings from video, text,
-    and graph sources. Ensure you gather any interesting and relevant
-    information that emerges from these multimodal vectors.
+    Conduct a thorough research by selecting and executing the most relevant
+    Cognee tools (VideoEmbedTool, ChunksTool, SummariesTool, RAGCompletionTool,
+    GraphCompletionTool). Ensure you gather any interesting and relevant
+    information that emerges from these tools' outputs.
   expected_output: >
     A consolidated list with at least 5 bullet points highlighting the
-    most relevant findings. Each point should specify the source
-    (video, text, graph) and explain why it is relevant. do not add knowledge 
-    from out of nowhere. do not make up information. only use the information
-    from the tools' output.
+    most relevant findings. Each point should be clear, concise, and
+    directly grounded in the tools' outputs. Do not add knowledge 
+    from outside sources. Do not invent information.
   agent: researcher
 
 reporting_task:
   description: >
-    Review and analyze the research findings obtained from video, text,
-    and graph embeddings. Expand each bullet point into a complete
-    section of a detailed report. Include synthesis across sources,
-    identify overlapping insights, and highlight unique contributions
-    from each modality.
+    Review and analyze the research findings obtained from the Cognee tools.
+    Expand each bullet point into a concise section of a short report.
+    Provide synthesis across sources, identify overlapping insights,
+    and highlight unique contributions. Ensure the narrative is fluid,
+    avoiding mentions of the underlying tools or modalities.
   expected_output: >
-    A comprehensive report formatted in markdown, including:
-    - Executive Summary
-    - Detailed Findings (organized by video, text, graph sources)
-    - Cross-Source Correlations
-    - Actionable Recommendations
+    A short report formatted in markdown, with either:
+    - Up to 3 concise paragraphs, OR
+    - 3–5 clear bullet points summarizing the findings.
+    The final output must be written in clear, concise, and natural language,
+    without referencing specific tools or data sources.
   agent: reporting_analyst
 

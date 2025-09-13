@@ -1,4 +1,4 @@
-from agents.src.decision_crew.tools.custom_tool import GraphEmbedTool, TextEmbedTool, VideoEmbedTool
+from agents.src.decision_crew.tools.custom_tool import VideoEmbedTool, CogneeTool, ChunksTool, SummariesTool, RAGCompletionTool, GraphCompletionTool
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from crewai.agents.agent_builder.base_agent import BaseAgent
@@ -27,7 +27,11 @@ class DecisionCrew():
             config=self.agents_config['researcher'],  # type: ignore[index]
             verbose=True,
             # Example of adding tools to an agent
-            tools=[TextEmbedTool(), VideoEmbedTool(), GraphEmbedTool()]
+            tools=[VideoEmbedTool(),
+                   ChunksTool(),
+                   SummariesTool(),
+                   RAGCompletionTool(),
+                   GraphCompletionTool(),]
         )
 
     @agent
