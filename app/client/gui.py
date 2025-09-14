@@ -172,7 +172,7 @@ def chat_page():
 
         # Event: Save Video Link
         def save_generate(session_id, msg):
-            summary = summary_generation()
+            summary = summary_generation(msg)
             vids = video_link_generation()
             print("save generate link:", session_id, summary, vids)
             updates = []
