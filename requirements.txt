@@ -7,3 +7,5 @@ pymupdf
 google-cloud-storage
 docx2pdf
 cognee-community-vector-adapter-qdrant
+crewai
+gradio
