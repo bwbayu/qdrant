@@ -3,6 +3,7 @@ from typing import Type, List, Union
 from pydantic import BaseModel, Field
 import json
 from app.api.combine_output import RAGCompetionOutput, GraphCompletionOutput, ChunksOutput, SummariesOutput, VideoEmbedOutput
+import asyncio
 
 # =========================
 # Input Schema
@@ -60,13 +61,7 @@ class GraphCompletionTool(BaseTool):
     args_schema: Type[BaseModel] = GraphCompletionInput
 
     def _run(self, query: str) -> str:
-        # TODO: implementasi embed video
-        # misal call Qdrant / FAISS / service API buat embed video
-        # Handle kalau "queries" masuk sebagai string
-        # if isinstance(query, str):
-        #     return "anjay ngajak ribut"
-        return "hasil Graph Completion: perbedaan antara software engineer dan software engineering adalah sebagai berikut. Software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. Mereka menggunakan prinsip-prinsip rekayasa untuk menciptakan solusi perangkat lunak yang efisien dan dapat diandalkan. Sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur."
-
+        return asyncio.run(GraphCompletionOutput(query))
 
 class ChunksTool(BaseTool):
     name: str = "Chunks Tool"
@@ -80,13 +75,7 @@ class ChunksTool(BaseTool):
     args_schema: Type[BaseModel] = ChunksInput
 
     def _run(self, query: str) -> str:
-        # TODO: implementasi embed video
-        # misal call Qdrant / FAISS / service API buat embed video
-        # Handle kalau "queries" masuk sebagai string
-        # if isinstance(query, str):
-        #     return "anjay ngajak ribut"
-        return ChunksOutput(query)
-        return "hasil Chunks: bagaimana perbedaan antara software engineer dan software engineering. Software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. Mereka menggunakan prinsip-prinsip rekayasa untuk menciptakan solusi perangkat lunak yang efisien dan dapat diandalkan. Sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur."
+        return asyncio.run(ChunksOutput(query))
 
 
 class SummariesTool(BaseTool):
@@ -101,14 +90,7 @@ class SummariesTool(BaseTool):
     args_schema: Type[BaseModel] = SummariesInput
 
     def _run(self, query: str) -> str:
-        # TODO: implementasi embed video
-        # misal call Qdrant / FAISS / service API buat embed video
-        # Handle kalau "queries" masuk sebagai string
-        # if isinstance(query, str):
-        #     return "anjay ngajak ribut"
-        return SummariesOutput(query)
-        return "hasil summaries: menurut saya, perbedaan antara software engineer dan software engineering adalah sebagai berikut. software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. mereka menggunakan prinsip-prinsip rekayasa untuk menciptakan solusi perangkat lunak yang efisien dan dapat diandalkan. sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur."
-
+        return asyncio.run(SummariesOutput(query))
 
 class RAGCompletionTool(BaseTool):
     name: str = "RAG Completion Tool"
@@ -118,18 +100,11 @@ class RAGCompletionTool(BaseTool):
     What it does: Pulls top-k chunks via vector search, stitches a context window, then asks an LLM to answer.
     When to use: You want fast, text-only RAG without graph structure.
     Output: An LLM answer grounded in retrieved chunks.
-"""
+    """
     args_schema: Type[BaseModel] = RAGCompletionInput
 
     def _run(self, query: str) -> str:
-        # TODO: implementasi embed video
-        # misal call Qdrant / FAISS / service API buat embed video
-        # Handle kalau "queries" masuk sebagai string
-        # if isinstance(query, str):
-        #     return "anjay ngajak ribut"
-        return RAGCompetionOutput(query)
-        return "hasil RAG completion: software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. Mereka menggunakan prinsip-prinsip rekayasa untuk menciptakan solusi perangkat lunak yang efisien dan dapat diandalkan. Sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur."
-
+        return asyncio.run(RAGCompetionOutput(query))
 
 class VideoEmbedTool(BaseTool):
     name: str = "Video Embed Tool"
@@ -137,16 +112,11 @@ class VideoEmbedTool(BaseTool):
     args_schema: Type[BaseModel] = VideoEmbedInput
 
     def _run(self, query: str) -> str:
-        # TODO: implementasi embed video
-        # misal call Qdrant / FAISS / service API buat embed video
-        # Handle kalau "queries" masuk sebagai string
-        # if isinstance(query, str):
-        #     return "anjay ngajak ribut"
-        result = json.dumps(VideoEmbedOutput(
-            query), ensure_ascii=False, indent=2)
+        # output list of dict (json)
+        output = asyncio.run(VideoEmbedOutput(query))
+        # convert to string
+        result = json.dumps(output, ensure_ascii=False, indent=2)
         return result
-        return "hasil transcribe video: ini ada perbedaan antara software engineer dan software engineering. Software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. Mereka menggunakan prinsip-prinsip rekayasa untuk menciptakan solusi perangkat lunak yang efisien dan dapat diandalkan. Sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur."
-        return f"[VideoEmbed] Hasil embedding untuk video query: {query}"
 
 
 class CogneeTool(BaseTool):
