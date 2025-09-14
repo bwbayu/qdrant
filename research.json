@@ -1,112 +1,85 @@
 {
   "research_points": [
     {
-      "topic": "Definition of Software Engineer",
-      "findings": "A software engineer is an individual who designs, develops, tests, and maintains software. They apply engineering principles to create efficient and reliable software solutions. This role focuses on practical implementation, problem-solving, and the application of technical skills to build functional systems.",
-      "relevance": "This directly addresses the 'who' and 'what' of a software engineer, clarifying their role as a practitioner in the field.",
+      "topic": "Bus Interconnection Scheme",
+      "findings": "System interconnection in computers relies heavily on bus structures, which serve as communication pathways linking components like the CPU, memory, and I/O modules. The bus interconnection scheme includes three primary types of lines: **Control Lines** (for signaling operations like read/write), **Address Lines** (to specify memory/peripheral locations), and **Data Lines** (to transfer actual data). These buses can be structured as single or multiple systems, with examples like the Control/Address/Data bus in PCs or the Unibus in DEC-PDP systems. All units (CPU, memory, I/O) must be interconnected, but the type of connection varies by unit type (e.g., memory vs. peripherals).",
+      "relevance": "This explains the foundational architecture of how components in a computer system communicate, which is critical for understanding system interconnection.",
       "sources": [
         {
-          "type": "video",
-          "link": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
-          "transcription": "menurut saya, perbedaan antara software engineer dan software engineering adalah sebagai berikut. software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. mereka menggunakan prinsip-prinsip rekayasa untuk menciptakan solusi perangkat lunak yang efisien dan dapat diandalkan.",
-          "start_offset_sec": "0",
-          "end_offset_sec": "5",
-          "embedding_option": "visual-text",
-          "embedding_scope": "clip"
-        },
-        {
-          "type": "text",
-          "link": "https://example.com/software_engineer_definition",
-          "transcription": "Software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. Mereka menggunakan prinsip-prinsip rekayasa untuk menciptakan solusi perangkat lunak yang efisien dan dapat diandalkan.",
-          "start_offset_sec": "0",
-          "end_offset_sec": "0",
-          "embedding_option": "visual-text",
-          "embedding_scope": "clip"
+          "type": "Chunk",
+          "link": "Arskom_Slide_25_31",
+          "transcription": "Bus Interconnection Scheme\nCPU\nMemory\n...\nMemory\nI/O\n...\nI/O\nControl Lines\nAddress Lines\nData Lines\nBus\nArskom\nConnecting\n- All the units must be connected\n- Different type of connection for different type of unit\n  o Memory\n  o Input/Output\n  o CPU\n\nBuses\n• There are a number of possible interconnection systems\n• Single and multiple BUS structures are most common\n• e.g. Control/Address/Data bus (PC)\n• e.g. Unibus (DEC-PDP)",
+          "start_offset_sec": "N/A",
+          "end_offset_sec": "N/A",
+          "embedding_option": "N/A",
+          "embedding_scope": "N/A"
         }
       ]
     },
     {
-      "topic": "Definition of Software Engineering",
-      "findings": "Software engineering is a scientific and systematic discipline that studies the processes, methods, and tools used to develop software. It encompasses the entire software development lifecycle (SDLC), including requirements analysis, design, implementation, testing, deployment, and maintenance. Unlike the role of a software engineer, software engineering is the broader field that provides the frameworks and methodologies for building software.",
-      "relevance": "This clarifies that software engineering is the academic and methodological foundation, not a job title, and distinguishes it from the role of a software engineer.",
+      "topic": "CPU, Memory, and I/O Connections",
+      "findings": "The **CPU** reads instructions and data, processes them, and sends control signals to other units while handling interrupts. **Memory** receives/sends data, addresses, and control signals (e.g., read/write/timing). **I/O modules** act similarly to memory from the computer’s perspective: they receive/send data to/from peripherals (e.g., spinning a disk) and use control signals (e.g., port numbers for identification) and interrupts. A top-level view shows these components connected via a **System Bus**, which includes registers like PC (Program Counter), IR (Instruction Register), MAR (Memory Address Register), and MBR (Memory Buffer Register).",
+      "relevance": "This details the functional roles of core components in system interconnection, emphasizing how data and control signals flow between them.",
       "sources": [
         {
-          "type": "video",
-          "link": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
-          "transcription": "sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur.",
-          "start_offset_sec": "0",
-          "end_offset_sec": "5",
-          "embedding_option": "visual-text",
-          "embedding_scope": "clip"
-        },
-        {
-          "type": "text",
-          "link": "https://example.com/software_engineering_definition",
-          "transcription": "Software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur.",
-          "start_offset_sec": "0",
-          "end_offset_sec": "0",
-          "embedding_option": "visual-text",
-          "embedding_scope": "clip"
+          "type": "Chunk",
+          "link": "Arskom_Slide_27_30",
+          "transcription": "Memory Connection\n• Receives and sends data\n• Receives addresses (of locations)\n• Receives control signals\n  ○ Read\n  ○ Write\n  ○ Timing\n\nCPU Connection\n● Reads instruction and data\n● Writes out data (after processing)\n● Sends control signals to other units\n● Receives (& acts on) interrupts\n\nInput/Output Connection\n• Similar to memory from computer's viewpoint\n• Output\n  ○ Receive data from computer\n  ○ Send data to peripheral\n• Input\n  ○ Receive data from peripheral\n  ○ Send data to computer\n\nComputer Components: Top Level View\nDiagram: CPU, Main Memory, and I/O Module terhubung oleh System Bus.\nCPU (komponen di kotak):\n- PC, IR, MAR, MBR, I/O AR, I/O BR, Execution unit",
+          "start_offset_sec": "N/A",
+          "end_offset_sec": "N/A",
+          "embedding_option": "N/A",
+          "embedding_scope": "N/A"
         }
       ]
     },
     {
-      "topic": "Key Differences: Role vs. Discipline",
-      "findings": "The primary difference lies in the nature of the two terms: a software engineer is a professional who applies software engineering principles in practice, while software engineering is the theoretical and methodological discipline that guides how software should be developed. The former is a job role; the latter is the field of study and practice that informs that role.",
-      "relevance": "This directly answers the query by contrasting the practitioner (engineer) with the discipline (engineering), which is the core of the question.",
+      "topic": "Control Bus and Signal Management",
+      "findings": "The **Control Bus** manages critical operations such as memory read/write signals, interrupt requests, and clock signals. It ensures synchronized communication between components by transmitting control and timing information. For example, when a peripheral device (e.g., a disk) needs attention, it sends an **interrupt request** via the control bus to the CPU, which then prioritizes and processes the request. Clock signals maintain the rhythm of data transfers, ensuring components operate in harmony.",
+      "relevance": "This highlights the role of the control bus in coordinating actions across the system, which is essential for stable and efficient interconnection.",
       "sources": [
         {
-          "type": "video",
-          "link": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
-          "transcription": "menurut saya, perbedaan antara software engineer dan software engineering adalah sebagai berikut. software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. [...] sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur.",
-          "start_offset_sec": "0",
-          "end_offset_sec": "5",
-          "embedding_option": "visual-text",
-          "embedding_scope": "clip"
-        },
-        {
-          "type": "text",
-          "link": "https://example.com/software_engineer_vs_engineering",
-          "transcription": "Software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. [...] Sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur.",
-          "start_offset_sec": "0",
-          "end_offset_sec": "0",
-          "embedding_option": "visual-text",
-          "embedding_scope": "clip"
+          "type": "Chunk",
+          "link": "Arskom_Slide_ControlBus",
+          "transcription": "Control Bus\n• Control and timing information\n  ○ Memory read/write signal\n  ○ Interrupt request\n  ○ Clock signals",
+          "start_offset_sec": "N/A",
+          "end_offset_sec": "N/A",
+          "embedding_option": "N/A",
+          "embedding_scope": "N/A"
         }
       ]
     },
     {
-      "topic": "Practical Application vs. Theoretical Framework",
-      "findings": "Software engineers focus on applying engineering principles to solve real-world problems, such as writing code, debugging, and optimizing software. In contrast, software engineering as a discipline provides the theoretical frameworks, best practices, and standardized processes (e.g., Agile, Waterfall) that engineers use to ensure quality, scalability, and maintainability in software development.",
-      "relevance": "This highlights the complementary relationship between the two: engineers rely on the discipline of software engineering to perform their work effectively.",
+      "topic": "Input/Output (I/O) Connection Mechanics",
+      "findings": "I/O connections mirror memory interactions but are tailored for peripherals. For **output operations**, the computer sends data to the I/O module, which forwards it to the peripheral (e.g., a printer). For **input operations**, the I/O module receives data from the peripheral (e.g., a keyboard) and sends it to the computer. Control signals manage these transfers, including addressing peripherals via port numbers and handling interrupts (e.g., a disk signaling it’s ready to read/write).",
+      "relevance": "This clarifies how peripherals integrate into the system, extending the interconnection framework beyond core components like CPU and memory.",
       "sources": [
         {
-          "type": "text",
-          "link": "https://example.com/practical_vs_theoretical",
-          "transcription": "Software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. [...] Sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur.",
-          "start_offset_sec": "0",
-          "end_offset_sec": "0",
-          "embedding_option": "visual-text",
-          "embedding_scope": "clip"
+          "type": "Chunk",
+          "link": "Arskom_Slide_28_29",
+          "transcription": "Input/Output Connection\n• Similar to memory from computer's viewpoint\n• Output\n  ○ Receive data from computer\n  ○ Send data to peripheral\n• Input\n  ○ Receive data from peripheral\n  ○ Send data to computer\n\nInput/Output Connection (2)\n• Receive control signals from computer\n• Send control signals to peripherals\n  ○ e.g. spin disk\n• Receive addresses from computer\n  ○ e.g. port number to identify peripheral\n• Send interrupt signals (control)",
+          "start_offset_sec": "N/A",
+          "end_offset_sec": "N/A",
+          "embedding_option": "N/A",
+          "embedding_scope": "N/A"
         }
       ]
     },
     {
-      "topic": "Examples of Software Engineering Methodologies",
-      "findings": "Software engineering includes methodologies such as Agile, DevOps, Waterfall, and Spiral models, which provide structured approaches to software development. These methodologies are taught in academic programs and applied by software engineers in their projects. For example, Agile emphasizes iterative development and collaboration, while DevOps integrates development and operations for continuous delivery.",
-      "relevance": "This illustrates how software engineering (the discipline) provides the tools and methods that software engineers (the practitioners) use in their daily work.",
+      "topic": "System Bus as a Broadcast Communication Pathway",
+      "findings": "A **bus** is a shared communication pathway that links multiple devices in a broadcast manner. For example, a 32-bit data bus consists of 32 parallel lines, each carrying one bit of data simultaneously. Buses are fundamental to system interconnection because they enable efficient, scalable communication between components without requiring direct point-to-point connections. While power lines are often omitted in diagrams for simplicity, they are implicitly part of the physical interconnection.",
+      "relevance": "This defines the bus as the backbone of system interconnection, explaining its scalability and role in parallel data transfer.",
       "sources": [
         {
-          "type": "text",
-          "link": "https://example.com/software_engineering_methodologies",
-          "transcription": "Software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur.",
-          "start_offset_sec": "0",
-          "end_offset_sec": "0",
-          "embedding_option": "visual-text",
-          "embedding_scope": "clip"
+          "type": "Summary",
+          "link": "Arskom_Bus_Summary",
+          "transcription": "Components of a computer system\nA bus is a communication pathway linking multiple devices, typically broadcast; it often comprises grouped channels (e.g., a 32-bit data bus contains 32 single-bit lines). Power lines may be omitted in diagrams.",
+          "start_offset_sec": "N/A",
+          "end_offset_sec": "N/A",
+          "embedding_option": "N/A",
+          "embedding_scope": "N/A"
         }
       ]
     }
   ],
-  "summary": "The research clarifies that **software engineer** refers to a professional who designs, builds, and maintains software, while **software engineering** is the academic and methodological discipline that defines how software should be developed. The former is a job role focused on practical implementation, while the latter is the field that provides the theories, processes, and tools (e.g., Agile, DevOps) to guide software development. This distinction is consistent across video transcriptions, text chunks, summaries, and graph-based insights, all of which emphasize the complementary relationship between the practitioner and the discipline."
+  "summary": "System interconnection in computers is primarily achieved through **bus structures**, which act as shared communication pathways for the CPU, memory, and I/O modules. These buses are categorized into **control**, **address**, and **data lines**, each serving distinct roles in signal management, location specification, and data transfer. Components like the CPU, memory, and I/O modules interact via these buses, with the **control bus** coordinating operations through signals (e.g., interrupts, clock synchronization). I/O connections extend this framework to peripherals, mirroring memory interactions but with added complexity for device-specific control. The **system bus** enables scalable, broadcast-style communication, forming the backbone of intercomponent connectivity. Together, these elements ensure efficient, synchronized, and modular system operation."
 }
