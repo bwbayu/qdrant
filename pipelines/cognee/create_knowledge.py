@@ -1,8 +1,8 @@
 import os
 import json
 from preprocessing import process_document
-from utils.pipeline_utils import get_doc_id_from_filename
-from utils.check_processed_docs import load_registry, save_registry
+from pipelines.cognee.utils.pipeline_utils import get_doc_id_from_filename
+from pipelines.cognee.utils.check_processed_docs import load_registry, save_registry
 from cognee_community_vector_adapter_qdrant import register
 from cognee import add, cognify
 

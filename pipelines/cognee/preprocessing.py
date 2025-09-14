@@ -1,10 +1,10 @@
 import os
 import json
 import fitz
-from utils.pdf_converter import convert_to_pdf
-from utils.pipeline_utils import save_page_as_image, extract_text, clean_text, get_doc_id_from_filename
-from utils.upload_to_gcs import upload_file
-from utils.extract_image_llm import query_slide_llm
+from pipelines.cognee.utils.pdf_converter import convert_to_pdf
+from pipelines.cognee.utils.pipeline_utils import save_page_as_image, extract_text, clean_text, get_doc_id_from_filename
+from pipelines.cognee.utils.upload_to_gcs import upload_file
+from pipelines.cognee.utils.extract_image_llm import query_slide_llm
 
 # Load environment variables for Google Cloud Storage configuration
 GCS_BUCKET_NAME = os.environ.get("GCS_BUCKET_NAME")

@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 from cognee_community_vector_adapter_qdrant import register  # noqa: F401
 from cognee import config, prune
-from create_knowledge import create_knowledge
+from pipelines.cognee.create_knowledge import create_knowledge
 
 async def pipeline_cognee(reset_data=False):
     # Setup config Cognee
