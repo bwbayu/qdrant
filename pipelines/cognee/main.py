@@ -23,8 +23,8 @@ async def pipeline_cognee(reset_data=False):
     config.set_vector_db_config(
         {
             "vector_db_provider": os.getenv("VECTOR_DB_PROVIDER", "qdrant"),
-            "vector_db_url": os.getenv("VECTOR_DB_URL"),
-            "vector_db_key": os.getenv("VECTOR_DB_KEY"),
+            "vector_db_url": os.getenv("VECTOR_DB_URL", "http://localhost:6333"),
+            "vector_db_key": os.getenv("VECTOR_DB_KEY", ""),
         }
     )
     config.set_graph_db_config(

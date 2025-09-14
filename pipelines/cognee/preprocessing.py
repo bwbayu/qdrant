@@ -77,17 +77,3 @@ def process_document(input_file: str):
 
     doc.close()
     return results
-
-# if __name__ == "__main__":
-#     infile = "data/raw/logif/test2.pdf"
-#     metadata = process_document(infile)
-#     metadata_filename = f"metadata_{metadata[0]['doc_id']}.json"
-#     out_file = os.path.join("data/clean/logif", metadata_filename)
-#     # write local json
-#     # with open(out_file, "w", encoding="utf-8") as f:
-#     #     json.dump(metadata, f, ensure_ascii=False, indent=2)
-
-#     # upload metadata
-#     gcs_metadata_path = f"{GCS_DEST_METADATA_PATH}/{metadata_filename}"
-#     url_gcs_metadata = upload_file(out_file, GCS_BUCKET_NAME, gcs_metadata_path, content_type="application/json")
-#     print("Selesai. Metadata disimpan di:", url_gcs_metadata)

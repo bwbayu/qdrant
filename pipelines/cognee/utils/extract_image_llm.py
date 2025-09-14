@@ -39,7 +39,8 @@ def query_slide_llm(image_url: str, extracted_text: str, model: str = "gpt-5-min
         "4. Jika teks hasil ekstraksi jelek atau tidak sesuai atau tidak jelas maka hapus saja dan mungkin bisa diganti dengan teks hasil deskripsi dari gambar.\n"
         "5. Return hanya JSON dengan field: "
         "{has_image (bool), image_description (string), text_additions (string), final_text (string)}."
-        "Field final_text = teks asli + text_additions + image_description (jika relevan)."
+        "Field final_text = kombinasikan teks asli dan text_additions jika memang ada yang perlu diperbaiki dan image_description (jika relevan)."
+        "Hapus kalimat/ide yang sama yang muncul lebih dari sekali"
     )
 
     # Call the LLM API with both extracted text and image
