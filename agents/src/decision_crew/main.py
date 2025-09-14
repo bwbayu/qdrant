@@ -5,7 +5,7 @@ import warnings
 
 from datetime import datetime
 
-from decision_crew.crew import DecisionCrew
+from agents.src.decision_crew.crew import DecisionCrew
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
@@ -15,7 +15,7 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 # interpolate any tasks and agents information
 
 
-def run():
+def run(query) -> str:
     """
     Run the crew.
     """
@@ -27,11 +27,12 @@ def run():
     #     "query": json.dumps(queries)  # jadi string JSON
     # }
     inputs = {
-        "query": "what is different about software engineer and software engineering",
+        "query": query,
     }
 
     try:
-        DecisionCrew().crew().kickoff(inputs=inputs)
+        result = DecisionCrew().crew().kickoff(inputs=inputs)
+        return result.raw
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
 

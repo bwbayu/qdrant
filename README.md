@@ -5,7 +5,7 @@ docker-compose -f docker-compose.neo4j.yml up -d
 PYTHONPATH=agents/src python3.10 -m agents.tests.app
 
 <!-- Gradio -->
-python3.10 -m app.client.app
+PYTHONPATH=./ gradio ./app/client/gui.py
 
 - run qdrant in docker using docker compose : 
 docker-compose -f docker-compose.qdrant.yml up -d

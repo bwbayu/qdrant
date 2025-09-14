@@ -1,3 +1,6 @@
+from agents.src.decision_crew.main import main as decision_crew_main
+
+
 def summary_generation():
     return "This is a summary of "
 

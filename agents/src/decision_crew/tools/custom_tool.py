@@ -2,6 +2,7 @@ from crewai.tools import BaseTool
 from typing import Type, List, Union
 from pydantic import BaseModel, Field
 import json
+from app.api.combine_output import RAGCompetionOutput, GraphCompletionOutput, ChunksOutput, SummariesOutput, VideoEmbedOutput
 
 # =========================
 # Input Schema
@@ -84,6 +85,7 @@ class ChunksTool(BaseTool):
         # Handle kalau "queries" masuk sebagai string
         # if isinstance(query, str):
         #     return "anjay ngajak ribut"
+        return ChunksOutput(query)
         return "hasil Chunks: bagaimana perbedaan antara software engineer dan software engineering. Software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. Mereka menggunakan prinsip-prinsip rekayasa untuk menciptakan solusi perangkat lunak yang efisien dan dapat diandalkan. Sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur."
 
 
@@ -104,6 +106,7 @@ class SummariesTool(BaseTool):
         # Handle kalau "queries" masuk sebagai string
         # if isinstance(query, str):
         #     return "anjay ngajak ribut"
+        return SummariesOutput(query)
         return "hasil summaries: menurut saya, perbedaan antara software engineer dan software engineering adalah sebagai berikut. software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. mereka menggunakan prinsip-prinsip rekayasa untuk menciptakan solusi perangkat lunak yang efisien dan dapat diandalkan. sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur."
 
 
@@ -124,6 +127,7 @@ class RAGCompletionTool(BaseTool):
         # Handle kalau "queries" masuk sebagai string
         # if isinstance(query, str):
         #     return "anjay ngajak ribut"
+        return RAGCompetionOutput(query)
         return "hasil RAG completion: software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. Mereka menggunakan prinsip-prinsip rekayasa untuk menciptakan solusi perangkat lunak yang efisien dan dapat diandalkan. Sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur."
 
 
@@ -138,6 +142,7 @@ class VideoEmbedTool(BaseTool):
         # Handle kalau "queries" masuk sebagai string
         # if isinstance(query, str):
         #     return "anjay ngajak ribut"
+        return VideoEmbedOutput(query)
         return "hasil transcribe video: ini ada perbedaan antara software engineer dan software engineering. Software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. Mereka menggunakan prinsip-prinsip rekayasa untuk menciptakan solusi perangkat lunak yang efisien dan dapat diandalkan. Sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur."
         return f"[VideoEmbed] Hasil embedding untuk video query: {query}"
 

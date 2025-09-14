@@ -20,8 +20,7 @@ reporting_task:
     avoiding mentions of the underlying tools or modalities.
   expected_output: >
     A short report formatted in markdown, with either:
-    - Up to 3 concise paragraphs, OR
-    - 3–5 clear bullet points summarizing the findings.
+    - Up to 3-4 concise paragraphs,
     The final output must be written in clear, concise, and natural language,
     without referencing specific tools or data sources.
   agent: reporting_analyst

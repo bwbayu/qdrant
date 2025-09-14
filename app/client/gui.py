@@ -3,7 +3,7 @@ import pandas as pd
 from db import init_db, get_all_sessions, create_new_session, get_session, update_session
 import sqlite3
 import datetime
-from example import summary_generation, video_link_generation
+from app.api.combine import summary_generation, video_link_generation
 MAX_VIDEOS = 5  # jumlah slot video yang kamu siapin
 
 # ==============================
@@ -172,7 +172,7 @@ def chat_page():
 
         # Event: Save Video Link
         def save_generate(session_id, msg):
-            summary = summary_generation() + msg
+            summary = summary_generation()
             vids = video_link_generation()
             print("save generate link:", session_id, summary, vids)
             updates = []
