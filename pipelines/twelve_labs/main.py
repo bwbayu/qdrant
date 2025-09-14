@@ -40,10 +40,33 @@ def pipeline_twelvelabs(video_url: str):
     else:
         print("Video sudah ada di JSON, tidak ditambahkan lagi")
 
-    
+import re
+def convert_drive_link_regex(url: str) -> str:
+    """
+    Converts a Google Drive shareable link to a direct download link using regular expressions.
+
+    Args:
+        url: The Google Drive shareable URL.
+             (e.g., https://drive.google.com/file/d/FILE_ID/view?usp=sharing)
+
+    Returns:
+        The direct download link.
+        (e.g., https://drive.google.com/uc?export=download&id=FILE_ID)
+        Returns an empty string if the URL pattern does not match.
+    """
+    # Regex to find and capture the FILE_ID from the shareable link
+    match = re.search(r'/file/d/([^/]+)/', url)
+    if match:
+        file_id = match.group(1)
+        return f'https://drive.google.com/uc?export=download&id={file_id}'
+    return "Invalid or non-matching Google Drive URL format"
+
+
 if __name__ == "__main__":
     start = time.time()
-    pipeline_twelvelabs(video_url="https://drive.google.com/uc?export=download&id=11-DX3VtxpSQApTIosBXd0aSHURi9Auw_")
+    original_link = "https://drive.google.com/file/d/1oEEZl7XVLZ7spNKxYcMPuEG4_6MCHlNL/view?usp=sharing"
+    new_link_regex = convert_drive_link_regex(original_link)
+    pipeline_twelvelabs(video_url=new_link_regex)
     end = time.time()
     elapsed = end - start
     print(f"\nTotal waktu eksekusi: {elapsed:.2f} detik")
