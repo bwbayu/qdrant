@@ -9,3 +9,5 @@ python3.10 -m app.client.app
 
 - run qdrant in docker using docker compose : 
 docker-compose -f docker-compose.qdrant.yml up -d
+
+- test

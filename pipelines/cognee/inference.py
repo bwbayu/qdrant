@@ -1,14 +1,12 @@
-import os
+from cognee import search, SearchType
 import asyncio
 import pathlib
 from os import path
-from dotenv import load_dotenv
-load_dotenv()
+import os
+from cognee import config
 from cognee_community_vector_adapter_qdrant import register  # noqa: F401
-from cognee import config, prune
-from pipelines.cognee.create_knowledge import create_knowledge
 
-async def pipeline_cognee(reset_data=False):
+async def query_cognee(query: str, search_type = SearchType.RAG_COMPLETION):
     # Setup config Cognee
     system_path = pathlib.Path(__file__).parent
     config.system_root_directory(path.join(system_path, ".cognee_system"))
@@ -23,8 +21,8 @@ async def pipeline_cognee(reset_data=False):
     config.set_vector_db_config(
         {
             "vector_db_provider": os.getenv("VECTOR_DB_PROVIDER", "qdrant"),
-            "vector_db_url": os.getenv("VECTOR_DB_URL", "http://localhost:6333"),
-            "vector_db_key": os.getenv("VECTOR_DB_KEY", ""),
+            "vector_db_url": os.getenv("VECTOR_DB_URL"),
+            "vector_db_key": os.getenv("VECTOR_DB_KEY"),
         }
     )
     config.set_graph_db_config(
@@ -32,15 +30,15 @@ async def pipeline_cognee(reset_data=False):
             "graph_database_provider": os.getenv("GRAPH_DATABASE_PROVIDER"),
         }
     )
+    # search knowledge
+    results = await search(query_type=search_type, query_text=query)
 
-    # clear data
-    if reset_data == True:
-        await prune.prune_data()
-        await prune.prune_system(metadata=True)
+    print("\nSearch Results:")
+    for result in results:
+        print(result)
 
-    # create knowledge based on file at data/raw/logif
-    await create_knowledge()
+    return result
 
 if __name__ == "__main__":
-    # create knowledge
-    asyncio.run(pipeline_cognee(reset_data=True))
+    query = "siapa dosen pengajar sistem informasi"
+    asyncio.run(query_cognee(query))
