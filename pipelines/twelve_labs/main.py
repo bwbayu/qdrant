@@ -7,7 +7,6 @@ import time
 
 JSON_FILE = "data/registry/videos.json"
 
-
 def pipeline_twelvelabs(video_url: str):
     video_url = video_url
     collection = "hackaton-collection"
@@ -36,6 +35,7 @@ def pipeline_twelvelabs(video_url: str):
         print("Video baru ditambahkan ke JSON")
 
         embed_and_store_video(video_url, collection, qdrant)
+        # TODO: output_dir change to gcs dir
         extract_slides_from_url(video_url, output_dir=f"data/raw/{external_id}")
     else:
         print("Video sudah ada di JSON, tidak ditambahkan lagi")

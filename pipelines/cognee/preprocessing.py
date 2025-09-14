@@ -5,6 +5,8 @@ from pipelines.cognee.utils.pdf_converter import convert_to_pdf
 from pipelines.cognee.utils.pipeline_utils import save_page_as_image, extract_text, clean_text, get_doc_id_from_filename
 from pipelines.cognee.utils.upload_to_gcs import upload_file
 from pipelines.cognee.utils.extract_image_llm import query_slide_llm
+from dotenv import load_dotenv
+load_dotenv()
 
 # Load environment variables for Google Cloud Storage configuration
 GCS_BUCKET_NAME = os.environ.get("GCS_BUCKET_NAME")
@@ -70,7 +72,7 @@ def process_document(input_file: str):
             "slide_id": slide_id,
             "page_number": page_num + 1,
             "gcs_url": gcs_url,
-            "text": cleaned_text,
+            "text": cleaned_text + f" URL: {gcs_url}",
         }
         results.append(metadata)
         print(f"[{page_num+1}/{len(doc)}] slide {slide_id}")

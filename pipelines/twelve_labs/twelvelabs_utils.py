@@ -10,9 +10,10 @@ from twelvelabs.tasks import TasksRetrieveResponse
 from qdrant_client.models import PointStruct
 
 from skimage.metrics import structural_similarity as ssim
+from dotenv import load_dotenv
+load_dotenv()
 
-TL_API_KEY = "tlk_0ZHHBBN3PV6KTG242V7GP1C3AAQS"
-client = TwelveLabs(api_key=TL_API_KEY)
+client = TwelveLabs(api_key=os.getenv("TWELVE_LABS_API_KEY"))
 
 
 def url_to_id(url: str):
@@ -101,11 +102,12 @@ def query_video(query_text: str, collection_name: str, qdrant_client, top_k: int
         limit=top_k
     )
 
-    print("\n=== Hasil Pencarian ===")
-    for r in results:
-        print(f"Score={r.score:.4f} | "
-              f"Transcription={r.payload.get('transcription')} | "
-              f"Time=({r.payload.get('start_offset_sec')} - {r.payload.get('end_offset_sec')})")
+    # print("\n=== Hasil Pencarian ===")
+    # for r in results:
+    #     print(f"Score={r.score:.4f} | "
+    #           f"Transcription={r.payload.get('transcription')} | "
+    #           f"Time=({r.payload.get('start_offset_sec')} - {r.payload.get('end_offset_sec')})")
+    return results
 
 def extract_slides(video_path, output_dir, checks_per_second=5, change_threshold=0.97, deduplication_threshold=0.98):
     """
@@ -118,6 +120,7 @@ def extract_slides(video_path, output_dir, checks_per_second=5, change_threshold
         change_threshold (float): SSIM threshold to detect a new slide.
         deduplication_threshold (float): SSIM threshold to avoid saving duplicate slides.
     """
+    # TODO: change ? for gcs dir
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
         print(f"Created directory: {output_dir}")

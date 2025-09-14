@@ -39,6 +39,7 @@ async def pipeline_cognee(reset_data=False):
         await prune.prune_system(metadata=True)
 
     # create knowledge based on file at data/raw
+    # TODO: dynamic raw_dir and clean_dir
     raw_dir = "data/raw/arsikom"
     clean_dir = "data/clean/arsikom"
     await create_knowledge(raw_dir, clean_dir)

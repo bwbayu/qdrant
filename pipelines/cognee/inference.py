@@ -5,6 +5,8 @@ from os import path
 import os
 from cognee import config
 from cognee_community_vector_adapter_qdrant import register  # noqa: F401
+from dotenv import load_dotenv
+load_dotenv()
 
 async def query_cognee(query: str, search_type = SearchType.RAG_COMPLETION):
     # Setup config Cognee
@@ -30,15 +32,37 @@ async def query_cognee(query: str, search_type = SearchType.RAG_COMPLETION):
             "graph_database_provider": os.getenv("GRAPH_DATABASE_PROVIDER"),
         }
     )
-    # search knowledge
-    results = await search(query_type=search_type, query_text=query)
+    try:
+        # search knowledge
+        results = await search(query_type=search_type, query_text=query)
 
-    print("\nSearch Results:")
-    for result in results:
-        print(result)
+        texts = []
 
-    return result
+        for result in results:
+            if isinstance(result, str) and result.strip():
+                texts.append(result)
+            elif isinstance(result, dict):
+                text_val = result.get("text")
+                if isinstance(text_val, str) and text_val.strip():
+                    texts.append(text_val)
 
-if __name__ == "__main__":
-    query = "siapa dosen pengajar sistem informasi"
-    asyncio.run(query_cognee(query))
+        if texts:
+            return "\n".join(texts)
+        else:
+            return "text not found"
+
+    except Exception as e:
+        return "text not found"
+
+
+# if __name__ == "__main__":
+#     query = "jelaskan System Interconnection"
+#     # print("RAG_COMPLETION")
+#     # result = asyncio.run(query_cognee(query, search_type=SearchType.RAG_COMPLETION))
+#     # print("GRAPH_COMPLETION")
+#     # result = asyncio.run(query_cognee(query, search_type=SearchType.GRAPH_COMPLETION))
+#     # print("CHUNKS")
+#     # result = asyncio.run(query_cognee(query, search_type=SearchType.CHUNKS))
+#     print("SUMMARIES")
+#     result = asyncio.run(query_cognee(query, search_type=SearchType.SUMMARIES))
+#     print(result)
