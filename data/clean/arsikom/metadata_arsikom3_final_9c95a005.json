@@ -1,0 +1,261 @@
+[
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_0",
+    "page_number": 1,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_0.jpg",
+    "text": "IK200\nARSITEKTUR DAN ORGANISASI KOMPUTER\nYudi Ahmad Hambali, M.T.\nyudi.a.hambali@upi.edu\nDeskripsi gambar: Logo bulat di bagian bawah slide. Bagian atas lingkaran berwarna merah dengan ilustrasi pena/ujung pena berwarna putih dan titik kuning di atasnya. Bagian bawah lingkaran berwarna hitam dengan tiga busur putih melengkung yang menyerupai gelombang atau lajur. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_0.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_1",
+    "page_number": 2,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_1.jpg",
+    "text": "System Interconnection dan Sistem Bus\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_1.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_2",
+    "page_number": 3,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_2.jpg",
+    "text": "Program Concept\n• Hardwired systems are inflexible\n• General purpose hardware can do different tasks, given correct control signals\n• Instead of re-wiring, supply a new set of control signals\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_2.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_3",
+    "page_number": 4,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_3.jpg",
+    "text": "What is a program?\nA sequence of steps\nFor each step, an arithmetic or logical operation is done\nFor each operation, a different set of control signals is needed\nDeskripsi gambar: Slide menampilkan judul \"What is a program?\" di kiri atas; teks utama seperti di atas; ada logo kecil di pojok kiri bawah, footer \"Arskom\" di tengah bawah, dan nomor slide \"4\" di pojok kanan bawah. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_3.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_4",
+    "page_number": 5,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_4.jpg",
+    "text": "Function of Control Unit\nFor each operation a unique code is provided\ne.g. ADD, MOVE\nA hardware segment accepts the code and issues the control signals\nWe have a COMPUTER!\nFooter: Arskom (tengah bawah), slide number 5 (kanan bawah)\nLogo: lingkaran merah di pojok kiri bawah berisi gambar buku terbuka, lingkaran kuning di atas, dan pola hitam di bawah. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_4.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_5",
+    "page_number": 6,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_5.jpg",
+    "text": "Components\n• The Control Unit and the Arithmetic and Logic Unit constitute the Central Processing Unit\n• Data and instructions need to get into the system and results out\n  ○ Input/output\n• Temporary storage of code and results is needed\n  ○ Main memory\nSlide description (Indonesian): Slide berjudul \"Components\" dengan daftar berpoin. Poin utama: 1) \"The Control Unit and the Arithmetic and Logic Unit constitute the Central Processing Unit\"; 2) \"Data and instructions need to get into the system and results out\" dengan subpoin \"Input/output\"; 3) \"Temporary storage of code and results is needed\" dengan subpoin \"Main memory\". Di pojok kiri bawah terdapat sebuah logo bundar berwarna merah/putih/hitam. Di tengah bawah tercantum kata \"Arskom\" dan di sudut kanan bawah nomor slide \"6\". URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_5.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_6",
+    "page_number": 7,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_6.jpg",
+    "text": "Computer Components: Top Level View\nDiagram top-level yang memperlihatkan CPU, Main Memory, dan I/O Module yang terhubung melalui System Bus. Di dalam CPU terdapat: PC, IR, MAR, MBR, I/O AR, I/O BR dan Execution unit. Main Memory menampilkan alamat 0 ... n-1 dengan area 'Instruction' di bagian atas dan area 'Data' di bagian bawah. I/O Module berisi 'Buffers'.\nLegenda (bahasa Indonesia):\nPC = Program counter (penghitung program)\nIR = Instruction register (register instruksi)\nMAR = Memory address register (register alamat memori)\nMBR = Memory buffer register (register penyangga memori)\nI/O AR = Input/output address register (register alamat input/output)\nI/O BR = Input/output buffer register (register penyangga input/output)\nSumber: Arskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_6.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_7",
+    "page_number": 8,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_7.jpg",
+    "text": "Instruction Cycle (Siklus Instruksi)\nTwo steps:\n- Fetch\n- Execute\nDiagram: START → Fetch Next Instruction → Execute Instruction → HALT. Ada panah kembali dari Execute Instruction ke Fetch Next Instruction. Label di atas diagram: \"Fetch Cycle\" (bagian Fetch) dan \"Execute Cycle\" (bagian Execute). Footer: Arskom, slide 8. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_7.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_8",
+    "page_number": 9,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_8.jpg",
+    "text": "Fetch Cycle\n- Program Counter (PC) holds address of next instruction to fetch\n- Processor fetches instruction from memory location pointed to by PC\n- Increment PC — Unless told otherwise\n- Instruksi dimuat ke Instruction Register (IR)\n- Prosesor menafsirkan (interprets) instruksi dan melakukan tindakan yang diperlukan\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_8.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_9",
+    "page_number": 10,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_9.jpg",
+    "text": "Execute Cycle\n● Processor-memory\n  ○ Data transfer between CPU and main memory\n● Processor I/O\n  ○ Data transfer between CPU and I/O module\n● Data processing\n  ○ Some arithmetic or logical operation on data\n● Control\n  ○ Alteration of sequence of operations (perubahan urutan operasi)\n  ○ e.g. jump\n● Combination of above\nFooter: Arskom (tengah), slide number 10 (kanan bawah)\nDeskripsi gambar: Slide berjudul \"Execute Cycle\" dengan daftar poin di sebelah kiri. Poin-poinnya: Processor-memory — Data transfer between CPU and main memory; Processor I/O — Data transfer between CPU and I/O module; Data processing — Some arithmetic or logical operation on data; Control — Alteration of sequence of operations (perubahan urutan operasi), e.g. jump; Combination of above. Di bagian bawah terdapat footer teks \"Arskom\" di tengah dan nomor slide \"10\" di kanan bawah. Ada logo bundar (merah/hitam) di kiri bawah. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_9.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_10",
+    "page_number": 11,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_10.jpg",
+    "text": "Example of Program Execution\nDiagram menampilkan enam langkah eksekusi program dengan keadaan memori dan register CPU.\nKondisi memori yang terlihat:\n- memori[300] = 1940\n- memori[301] = 5941\n- memori[302] = 2941\n- memori[940] = 0003\n- memori[941] = 0002\nLangkah-langkah (dilihat pada diagram):\nStep 1: Fetch instruksi dari memori[300] -> IR = 1940; PC menunjukkan 300.\nStep 2: Eksekusi instruksi 1940: muat isi memori[940] ke AC -> AC = 0003; PC = 301.\nStep 3: Fetch instruksi dari memori[301] -> IR = 5941; PC = 302.\nStep 4: Eksekusi instruksi 5941: AC = AC + memori[941] -> 0003 + 0002 = 0005.\nStep 5: Fetch instruksi dari memori[302] -> IR = 2941; PC = 303.\nStep 6: Eksekusi instruksi 2941: simpan AC ke memori[941] -> memori[941] = 0005.\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_10.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_11",
+    "page_number": 12,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_11.jpg",
+    "text": "Instruction Cycle State Diagram\nNodes dan label pada diagram:\n- Instruction fetch\n- Instruction operation decoding\n- Instruction address calculation\n- Operand address calculation\n- Operand fetch (label pada koneksi: Multiple operands)\n- Data Operation\n- Operand store (label pada koneksi: Multiple results)\nTeks pada panah/bottom:\n- Instruction complete, fetch next instruction\n- Return for string or vector data\nSumber/slide: Arskom, 12\nDeskripsi singkat gambar: Diagram siklus instruksi berbentuk grafik status berisi beberapa lingkaran sebagai keadaan yang terhubung oleh panah menunjukkan transisi. Panah membentuk alur siklus termasuk hubungan dua arah antara Operand fetch dan Operand address calculation (Multiple operands) serta antara Operand store dan Operand address calculation (Multiple results). URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_11.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_12",
+    "page_number": 13,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_12.jpg",
+    "text": "Interrupts\n• Mechanism by which other modules (e.g. I/O) may interrupt normal sequence of processing\n• Program\n  ○ e.g. overflow, division by zero\n• Timer\n  ○ Generated by internal processor timer\n  ○ Used in pre-emptive multitasking\n• I/O\n  ○ from I/O controller\n• Hardware failure\n  ○ e.g. memory parity error\nArskom (footer), slide 13\nDeskripsi gambar: Slide berisi judul \"Interrupts\" dan daftar berpoin yang menjelaskan mekanisme interupsi serta jenis-jenisnya (Program, Timer, I/O, Hardware failure) dengan sub-poin contoh. Tata letak: judul di kiri atas, daftar poin di bagian kiri tengah, logo bulat berwarna di kiri bawah, teks \"Arskom\" di tengah bawah, dan nomor slide \"13\" di kanan bawah. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_12.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_13",
+    "page_number": 14,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_13.jpg",
+    "text": "Program Flow Control\n(a) No interrupts\n(b) Interrupts; short I/O wait\n(c) Interrupts; long I/O wait\nKolom/label di gambar: User Program | I/O Program | I/O Command / I/O\nElemen dalam panel: WRITE (berulang), lingkaran bernomor 1, 2, 3, 4, 5, END, Interrupt Handler\nFooter: Arskom\nNomor slide: 14 URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_13.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_14",
+    "page_number": 15,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_14.jpg",
+    "text": "Interrupt Cycle\n• Added to instruction cycle\n• Processor checks for interrupt\n  ○ Indicated by an interrupt signal\n• If no interrupt, fetch next instruction\n• If interrupt pending:\n  ○ Suspend execution of current program\n  ○ Save context\n  ○ Set PC to start address of interrupt handler routine\n  ○ Process interrupt\n  ○ Restore context and continue interrupted program\nDeskripsi gambar: Slide berjudul \"Interrupt Cycle\" yang menampilkan daftar poin langkah-langkah siklus interrupt. Poin-poin disusun sebagai bullet utama dan sub-bullet (lingkaran kecil) untuk penjelasan. Di bagian bawah terdapat logo kecil di kiri bawah, tulisan \"Arskom\" di tengah bawah, dan nomor slide \"15\" di kanan bawah. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_14.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_15",
+    "page_number": 16,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_15.jpg",
+    "text": "Transfer of Control via Interrupts\nUser Program\n...\ni\n(i+1)\n...\nM\nInterrupt occurs here (panah menunjuk ke antara i dan i+1)\nInterrupt Handler\n(Angka dan titik-titik merepresentasikan lokasi/instruksi dalam memori)\nPanah menunjukkan transfer kontrol dari User Program ke Interrupt Handler dan panah kembali ke posisi i+1 setelah penanganan.\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_15.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_16",
+    "page_number": 17,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_16.jpg",
+    "text": "Instruction Cycle with Interrupts\nFetch Cycle | Execute Cycle | Interrupt Cycle\nSTART\nFetch Next Instruction\nExecute Instruction\nInterrupts Disabled\nInterrupts Enabled\nCheck for Interrupt; Process Interrupt\nHALT\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_16.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_17",
+    "page_number": 18,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_17.jpg",
+    "text": "Program Timing\nShort I/O Wait\nDiagram (a) Without interrupts:\nTime (panah ke bawah)\nUrutan: 1, 4, Processor wait (I/O operation), 5, 2, 4, Processor wait (I/O operation), 5, 3.\nDiagram (b) With interrupts:\nUrutan: 1, 4, 2a (I/O operation), 5, 2b, 4, 3a (I/O operation), 5, 3b.\nFooter: Arskom    18 URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_17.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_18",
+    "page_number": 19,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_18.jpg",
+    "text": "Program Timing\nLong I/O Wait\nTime\nProcessor wait\nI/O operation\n(a) Without interrupts\n(b) With interrupts\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_18.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_19",
+    "page_number": 20,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_19.jpg",
+    "text": "Instruction Cycle (with Interrupts) - State Diagram\nLabel dan anotasi pada diagram:\n- Instruction fetch\n- Instruction address calculation\n- Instruction operation decoding\n- Operand fetch\n- Operand address calculation (muncul dua kali)\n- Data Operation\n- Operand store\n- Interrupt check\n- Interrupt\nAnotasi pada panah/relasi:\n- Multiple operands\n- Multiple results\n- Instruction complete, fetch next instruction\n- Return for string or vector data\n- No interrupt\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_19.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_20",
+    "page_number": 21,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_20.jpg",
+    "text": "Multiple Interrupts\n● Disable interrupts\n  ○ Processor will ignore further interrupts whilst processing one interrupt\n  ○ Interrupts remain pending and are checked after first interrupt has been processed\n  ○ Interrupts handled in sequence as they occur\n● Define priorities\n  ○ Low priority interrupts can be interrupted by higher priority interrupts\n  ○ When higher priority interrupt has been processed, processor returns to previous interrupt\nArskom 21\nDeskripsi gambar: Slide berjudul \"Multiple Interrupts\" berisi dua poin utama dengan sub-poin berupa bulleted list. Poin pertama: \"Disable interrupts\" dengan tiga sub-poin menjelaskan bahwa prosesor akan mengabaikan interrupt lain saat memproses satu interrupt, interrupt tetap tertunda dan diperiksa setelah interrupt pertama selesai, serta interrupt ditangani berurutan sesuai kejadian. Poin kedua: \"Define priorities\" dengan dua sub-poin yang menyatakan bahwa interrupt berprioritas rendah dapat diinterupsi oleh interrupt berprioritas lebih tinggi, dan setelah interrupt berprioritas tinggi diproses, prosesor kembali ke interrupt sebelumnya. Di kiri bawah terdapat logo berwarna merah-hitam, di tengah bawah tertulis \"Arskom\" dan di kanan bawah angka halaman \"21\". URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_20.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_21",
+    "page_number": 22,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_21.jpg",
+    "text": "Multiple Interrupts - Sequential\nUser Program\nInterrupt Handler X\nInterrupt Handler Y\nArskom\nDeskripsi gambar: Diagram menunjukkan kotak \"User Program\" di kiri dengan aliran eksekusi vertikal. Dari titik dalam program terdapat panah putus-putus ke \"Interrupt Handler X\" (atas) dan \"Interrupt Handler Y\" (bawah) di kanan, menandakan pemanggilan handler secara berurutan dan kembalinya eksekusi ke program. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_21.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_22",
+    "page_number": 23,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_22.jpg",
+    "text": "Multiple Interrupts – Nested\nUser Program\nInterrupt Handler X\nInterrupt Handler Y\nArskom\nGambar: Diagram yang menunjukkan nested interrupts. Di kiri terdapat kotak 'User Program' dengan alur eksekusi vertikal; garis putus-putus dari program menuju 'Interrupt Handler X' (kotak tengah), dan dari situ garis putus-putus lanjut ke 'Interrupt Handler Y' (kotak kanan bawah). Panah menunjukkan eksekusi yang terinterupsi lalu masuk ke handler X dan kemudian ke handler Y (nested). URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_22.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_23",
+    "page_number": 24,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_23.jpg",
+    "text": "Time Sequence of Multiple Interrupts\nKolom: User Program | Printer ISR | Communication ISR | Disk ISR\nLabel waktu dan aliran yang terlihat:\n- t = 0 (User Program, awal)\n- t = 10 (User Program → Printer ISR)\n- t = 15 (Printer ISR → Communication ISR)\n- t = 25 (dari Communication ISR terdapat beberapa aliran berlabel t = 25, termasuk kembali ke Printer ISR dan ke Disk ISR)\n- t = 35 (aliran dari Communication ISR → Disk ISR)\n- t = 40 (Printer ISR → kembali ke User Program)\nFooter: Arskom, slide 24\nDeskripsi gambar: Diagram empat kolom vertikal berlabel dari kiri ke kanan: \"User Program\", \"Printer ISR\", \"Communication ISR\", dan \"Disk ISR\". Di bagian atas kolom User Program tertulis t = 0. Dari User Program ada panah ke Printer ISR berlabel t = 10. Dari Printer ISR ada panah kembali ke User Program berlabel t = 40. Dari Printer ISR ada panah ke Communication ISR berlabel t = 15. Pada kolom Communication ISR tampak beberapa panah keluar berlabel t = 25 yang mengarah kembali ke Printer ISR dan ke Disk ISR, serta ada panah lain berlabel t = 35 yang juga mengarah ke Disk ISR. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_23.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_24",
+    "page_number": 25,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_24.jpg",
+    "text": "Connecting\n- All the units must be connected\n- Different type of connection for different type of unit\n  - Memory\n  - Input/Output\n  - CPU\nFooter: Arskom (tengah bawah). Slide number: 25 (kanan bawah). URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_24.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_25",
+    "page_number": 26,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_25.jpg",
+    "text": "Computer Modules\nMemory:\n- Read\n- Write\n- Address\n- Data (masuk)\n- Data (keluar)\n- N Words (indeks 0 ... N-1)\nI/O Module:\n- Read\n- Write\n- Address\n- Internal Data (masuk/keluar)\n- External Data (masuk/keluar)\n- Interrupt Signals (keluar)\n- M Ports\nCPU:\n- Instructions (masuk)\n- Data (masuk/keluar)\n- Interrupt Signals (masuk)\n- Address (keluar)\n- Control Signals (keluar)\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_25.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_26",
+    "page_number": 27,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_26.jpg",
+    "text": "Memory Connection\n- Receives and sends data\n- Receives addresses (of locations)\n- Receives control signals\n  - Read\n  - Write\n  - Timing\nFooter: Arskom\nSlide number: 27\nDeskripsi gambar: Slide berjudul \"Memory Connection\" dengan daftar poin seperti di atas; logo di pojok kiri bawah. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_26.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_27",
+    "page_number": 28,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_27.jpg",
+    "text": "Input/Output Connection\n• Similar to memory from computer’s viewpoint\n• Output\n  ○ Receive data from computer\n  ○ Send data to peripheral\n• Input\n  ○ Receive data from peripheral\n  ○ Send data to computer\nFooter: Arskom\nSlide number: 28\nDeskripsi gambar: Slide berisi judul di kiri atas dan poin-poin teks di tengah-kiri. Di pojok kiri bawah terdapat logo bundar berwarna merah dan hitam dengan elemen putih di tengah. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_27.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_28",
+    "page_number": 29,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_28.jpg",
+    "text": "Input/Output Connection (2)\n• Receive control signals from computer\n• Send control signals to peripherals (e.g. spin disk)\n• Receive addresses from computer (e.g. port number to identify peripheral)\n• Send interrupt signals (control)\nFooter: Arskom (slide 29)\nDeskripsi gambar: Slide berjudul \"Input/Output Connection (2)\" berisi daftar poin seperti tercantum di atas; terdapat logo kecil di pojok kiri bawah, teks \"Arskom\" di footer, dan nomor slide \"29\" di pojok kanan bawah. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_28.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_29",
+    "page_number": 30,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_29.jpg",
+    "text": "CPU Connection\n• Reads instruction and data\n• Writes out data (after processing)\n• Sends control signals to other units\n• Receives (& acts on) interrupts\nArskom\nSlide number: 30\nDeskripsi gambar: Slide berlatarkan putih dengan teks hitam; di pojok kiri bawah terdapat logo bundar merah-hitam dan di tengah bawah tertulis \"Arskom\". URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_29.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_30",
+    "page_number": 31,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_30.jpg",
+    "text": "Deskripsi gambar: Slide berisi teks dengan judul \"Buses\" di kiri atas dan daftar bullet di bagian kiri tengah. Tidak ada diagram atau ilustrasi teknis selain logo kecil di pojok kiri bawah yang berbentuk semi-lingkaran merah dengan simbol buku putih dan titik kuning di atasnya.\nBuses\n- There are a number of possible interconnection systems\n- Single and multiple BUS structures are most common\n- e.g. Control/Address/Data bus (PC)\n- e.g. Unibus (DEC-PDP)\nFooter: Arskom\nSlide number: 31 URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_30.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_31",
+    "page_number": 32,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_31.jpg",
+    "text": "What is a Bus?\n• A communication pathway connecting two or more devices\n• Usually broadcast\n• Often grouped\n  ○ A number of channels in one bus\n  ○ e.g. 32 bit data bus is 32 separate single bit channels\n• Power lines may not be shown\nCatatan gambar: Logo di pojok kiri bawah: bentuk lingkaran dengan bagian atas berwarna merah, terdapat simbol buku putih terbuka di tengah dan elemen kuning kecil di atasnya; bagian bawah berwarna gelap dengan pola melengkung (mungkin representasi gelombang atau garis). URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_31.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_32",
+    "page_number": 33,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_32.jpg",
+    "text": "Data Bus\n• Carries data\n  ○ Remember that there is no difference between “data” and “instruction” at this level\n• Width is a key determinant of performance\n  ○ 8, 16, 32, 64 bit\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_32.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_33",
+    "page_number": 34,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_33.jpg",
+    "text": "Address Bus\n• Identify the source or destination of data\n• e.g. CPU needs to read an instruction (data) from a given location in memory\n• Bus width determines maximum memory capacity of system\n  ○ e.g. 8080 has 16 bit address bus giving 64k address space\nFooter: Arskom    (slide 34)\nDeskripsi gambar: Slide berjudul \"Address Bus\" dengan poin-poin di atas; logo kecil di kiri bawah, tulisan \"Arskom\" di tengah bawah, dan nomor slide \"34\" di kanan bawah. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_33.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_34",
+    "page_number": 35,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_34.jpg",
+    "text": "Control Bus\n• Control and timing information\n  ○ Memory read/write signal\n  ○ Interrupt request\n  ○ Clock signals\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_34.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_35",
+    "page_number": 36,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_35.jpg",
+    "text": "Bus Interconnection Scheme\nLabel diagram:\n- CPU\n- Memory (beberapa modul, ditunjukkan dengan \"...\")\n- I/O (beberapa modul, ditunjukkan dengan \"...\")\nBus lines:\n- Control Lines\n- Address Lines\n- Data Lines\nKeterangan tambahan: elipsis \"...\" menunjukkan perangkat tambahan. Kurung di sisi kanan memberi label kumpulan jalur sebagai \"Bus\".\nFooter: Arskom 36 URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_35.jpg"
+  },
+  {
+    "doc_id": "arsikom3_final_9c95a005",
+    "slide_id": "arsikom3_final_9c95a005_36",
+    "page_number": 37,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_36.jpg",
+    "text": "Reference\nStallings William, Computer Organization and Architecture 7th Edition.\nStallings William, Computer Organization and Architecture 11th Edition.\nRandal E. Bryant, Computer System: A Programmer’s Perspective.\nCatatan: slide berjudul 'Reference' menampilkan tiga referensi seperti tercantum di atas; nomor slide 37 di pojok kanan bawah. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_36.jpg"
+  }
+]
