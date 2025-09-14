@@ -142,7 +142,9 @@ class VideoEmbedTool(BaseTool):
         # Handle kalau "queries" masuk sebagai string
         # if isinstance(query, str):
         #     return "anjay ngajak ribut"
-        return VideoEmbedOutput(query)
+        result = json.dumps(VideoEmbedOutput(
+            query), ensure_ascii=False, indent=2)
+        return result
         return "hasil transcribe video: ini ada perbedaan antara software engineer dan software engineering. Software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. Mereka menggunakan prinsip-prinsip rekayasa untuk menciptakan solusi perangkat lunak yang efisien dan dapat diandalkan. Sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur."
         return f"[VideoEmbed] Hasil embedding untuk video query: {query}"
 

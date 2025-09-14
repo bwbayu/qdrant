@@ -3,7 +3,8 @@ import pandas as pd
 from db import init_db, get_all_sessions, create_new_session, get_session, update_session
 import sqlite3
 import datetime
-from app.api.combine import summary_generation, video_link_generation
+from app.api.combine import summary_generation
+# from app.client.example import summary_generation
 MAX_VIDEOS = 5  # jumlah slot video yang kamu siapin
 
 # ==============================
@@ -172,20 +173,24 @@ def chat_page():
 
         # Event: Save Video Link
         def save_generate(session_id, msg):
-            summary = summary_generation(msg)
-            vids = video_link_generation()
+
+            result = summary_generation(msg)
+            summary = result.get("report_title", "") + \
+                "\n" + result.get("summary", "")
+            vids = result.get("lists", [])
             print("save generate link:", session_id, summary, vids)
             updates = []
             if session_id:
                 update_session(session_id, msg,
                                summary=summary, video_link=vids)
                 for i in range(MAX_VIDEOS):
-                    if i < len(vids):
-                        url, title = vids[i]
+                    if i < len(vids) and vids[i].get("embedding_scope", "") == "clip":
+                        url = vids[i].get("link", "")
+                        transcription = vids[i].get("transcription", "")
                         updates.append(
                             gr.update(value=url, visible=True))   # video
                         updates.append(
-                            gr.update(value=f"**{title}**", visible=True))  # title
+                            gr.update(value=f"**{transcription}**", visible=True))  # title
                     else:
                         updates.append(
                             gr.update(value=None, visible=False))  # video

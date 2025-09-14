@@ -1,0 +1,112 @@
+{
+  "research_points": [
+    {
+      "topic": "Definition of Software Engineer",
+      "findings": "A software engineer is an individual who designs, develops, tests, and maintains software. They apply engineering principles to create efficient and reliable software solutions. This role focuses on practical implementation, problem-solving, and the application of technical skills to build functional systems.",
+      "relevance": "This directly addresses the 'who' and 'what' of a software engineer, clarifying their role as a practitioner in the field.",
+      "sources": [
+        {
+          "type": "video",
+          "link": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
+          "transcription": "menurut saya, perbedaan antara software engineer dan software engineering adalah sebagai berikut. software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. mereka menggunakan prinsip-prinsip rekayasa untuk menciptakan solusi perangkat lunak yang efisien dan dapat diandalkan.",
+          "start_offset_sec": "0",
+          "end_offset_sec": "5",
+          "embedding_option": "visual-text",
+          "embedding_scope": "clip"
+        },
+        {
+          "type": "text",
+          "link": "https://example.com/software_engineer_definition",
+          "transcription": "Software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. Mereka menggunakan prinsip-prinsip rekayasa untuk menciptakan solusi perangkat lunak yang efisien dan dapat diandalkan.",
+          "start_offset_sec": "0",
+          "end_offset_sec": "0",
+          "embedding_option": "visual-text",
+          "embedding_scope": "clip"
+        }
+      ]
+    },
+    {
+      "topic": "Definition of Software Engineering",
+      "findings": "Software engineering is a scientific and systematic discipline that studies the processes, methods, and tools used to develop software. It encompasses the entire software development lifecycle (SDLC), including requirements analysis, design, implementation, testing, deployment, and maintenance. Unlike the role of a software engineer, software engineering is the broader field that provides the frameworks and methodologies for building software.",
+      "relevance": "This clarifies that software engineering is the academic and methodological foundation, not a job title, and distinguishes it from the role of a software engineer.",
+      "sources": [
+        {
+          "type": "video",
+          "link": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
+          "transcription": "sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur.",
+          "start_offset_sec": "0",
+          "end_offset_sec": "5",
+          "embedding_option": "visual-text",
+          "embedding_scope": "clip"
+        },
+        {
+          "type": "text",
+          "link": "https://example.com/software_engineering_definition",
+          "transcription": "Software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur.",
+          "start_offset_sec": "0",
+          "end_offset_sec": "0",
+          "embedding_option": "visual-text",
+          "embedding_scope": "clip"
+        }
+      ]
+    },
+    {
+      "topic": "Key Differences: Role vs. Discipline",
+      "findings": "The primary difference lies in the nature of the two terms: a software engineer is a professional who applies software engineering principles in practice, while software engineering is the theoretical and methodological discipline that guides how software should be developed. The former is a job role; the latter is the field of study and practice that informs that role.",
+      "relevance": "This directly answers the query by contrasting the practitioner (engineer) with the discipline (engineering), which is the core of the question.",
+      "sources": [
+        {
+          "type": "video",
+          "link": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
+          "transcription": "menurut saya, perbedaan antara software engineer dan software engineering adalah sebagai berikut. software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. [...] sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur.",
+          "start_offset_sec": "0",
+          "end_offset_sec": "5",
+          "embedding_option": "visual-text",
+          "embedding_scope": "clip"
+        },
+        {
+          "type": "text",
+          "link": "https://example.com/software_engineer_vs_engineering",
+          "transcription": "Software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. [...] Sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur.",
+          "start_offset_sec": "0",
+          "end_offset_sec": "0",
+          "embedding_option": "visual-text",
+          "embedding_scope": "clip"
+        }
+      ]
+    },
+    {
+      "topic": "Practical Application vs. Theoretical Framework",
+      "findings": "Software engineers focus on applying engineering principles to solve real-world problems, such as writing code, debugging, and optimizing software. In contrast, software engineering as a discipline provides the theoretical frameworks, best practices, and standardized processes (e.g., Agile, Waterfall) that engineers use to ensure quality, scalability, and maintainability in software development.",
+      "relevance": "This highlights the complementary relationship between the two: engineers rely on the discipline of software engineering to perform their work effectively.",
+      "sources": [
+        {
+          "type": "text",
+          "link": "https://example.com/practical_vs_theoretical",
+          "transcription": "Software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. [...] Sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur.",
+          "start_offset_sec": "0",
+          "end_offset_sec": "0",
+          "embedding_option": "visual-text",
+          "embedding_scope": "clip"
+        }
+      ]
+    },
+    {
+      "topic": "Examples of Software Engineering Methodologies",
+      "findings": "Software engineering includes methodologies such as Agile, DevOps, Waterfall, and Spiral models, which provide structured approaches to software development. These methodologies are taught in academic programs and applied by software engineers in their projects. For example, Agile emphasizes iterative development and collaboration, while DevOps integrates development and operations for continuous delivery.",
+      "relevance": "This illustrates how software engineering (the discipline) provides the tools and methods that software engineers (the practitioners) use in their daily work.",
+      "sources": [
+        {
+          "type": "text",
+          "link": "https://example.com/software_engineering_methodologies",
+          "transcription": "Software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur.",
+          "start_offset_sec": "0",
+          "end_offset_sec": "0",
+          "embedding_option": "visual-text",
+          "embedding_scope": "clip"
+        }
+      ]
+    }
+  ],
+  "summary": "The research clarifies that **software engineer** refers to a professional who designs, builds, and maintains software, while **software engineering** is the academic and methodological discipline that defines how software should be developed. The former is a job role focused on practical implementation, while the latter is the field that provides the theories, processes, and tools (e.g., Agile, DevOps) to guide software development. This distinction is consistent across video transcriptions, text chunks, summaries, and graph-based insights, all of which emphasize the complementary relationship between the practitioner and the discipline."
+}

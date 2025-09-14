@@ -71,7 +71,9 @@ def update_session(session_id, query=None, summary=None, video_link: list = None
     if video_link is not None:
         c.execute("DELETE FROM video_data WHERE session_id=?", (session_id,))
         print("Executing insert for video links")
-        for link, description in video_link:
+        for video in video_link:
+            link = video.get("link", "")
+            description = video.get("transcription", "")
             c.execute("INSERT INTO video_data (session_id, link, description) VALUES (?, ?, ?)",
                       (session_id, link, description))
     conn.commit()

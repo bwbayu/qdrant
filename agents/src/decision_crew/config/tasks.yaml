@@ -2,26 +2,43 @@ research_task:
   description: >
     Conduct a thorough research by selecting and executing the most relevant
     Cognee tools (VideoEmbedTool, ChunksTool, SummariesTool, RAGCompletionTool,
-    GraphCompletionTool). Ensure you gather any interesting and relevant
-    information that emerges from these tools' outputs.
+    GraphCompletionTool). Collect all outputs exactly as returned by the tools.
+    IMPORTANT:
+    - Always preserve the original key-value structure from the tools' outputs.
+      Do not rename keys, do not change values, and do not reformat dictionaries.
+    - Do not truncate or split transcription texts. Keep them whole and uncut.
+    - If the same link/source appears multiple times, include it only once in
+      the final sources list (deduplicated).
+    - Do not add any external sources. Only use outputs from Cognee tools.
   expected_output: >
     A consolidated list with at least 5 bullet points highlighting the
-    most relevant findings. Each point should be clear, concise, and
-    directly grounded in the tools' outputs. Do not add knowledge 
-    from outside sources. Do not invent information.
+    most relevant findings. Each point must be clear, concise, and directly
+    grounded in the tools' outputs. 
+    Always answer in English language.
+    Always include dictionaries in their exact original form when relevant.
+    Deduplicate sources if links are identical.
   agent: researcher
+  output_file: research.json
 
 reporting_task:
   description: >
     Review and analyze the research findings obtained from the Cognee tools.
+    Preserve dictionaries exactly as they appear in context without renaming,
+    reformatting, or modifying key-value pairs.
+    IMPORTANT:
+    - Do not truncate or split transcription texts. Keep them whole and uncut.
+    - If a link/source is repeated, include it only once in the final sources list
+      (deduplicated).
+    - Do not add any external sources. Only use those provided in the context.
     Expand each bullet point into a concise section of a short report.
-    Provide synthesis across sources, identify overlapping insights,
-    and highlight unique contributions. Ensure the narrative is fluid,
-    avoiding mentions of the underlying tools or modalities.
+    Provide synthesis across findings, identify overlaps, and highlight unique
+    contributions. Ensure the narrative is fluid, avoiding any mention of the
+    underlying tools or modalities.
   expected_output: >
-    A short report formatted in markdown, with either:
-    - Up to 3-4 concise paragraphs,
-    The final output must be written in clear, concise, and natural language,
-    without referencing specific tools or data sources.
+    A short report summary formatted in markdown, with up to 1-2 concise paragraphs.
+    For the list of sources, copy them exactly as provided in the context,
+    preserving their dictionary structure, and ensure duplicates are removed.
+    Always answer in English language.
   agent: reporting_analyst
-
+  context: [research_task]
+  output_file: report.json

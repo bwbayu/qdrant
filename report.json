@@ -1,0 +1,23 @@
+{
+  "report_title": "Distinction Between Software Engineer and Software Engineering: A Consolidated Analysis",
+  "generation_date": "2023-10-04",
+  "summary": "The distinction between **software engineer** and **software engineering** lies in the separation of a professional role from its governing discipline. A **software engineer** is a practitioner who designs, develops, tests, and maintains software by applying engineering principles to real-world problems. Their work includes coding, debugging, and optimizing systems to ensure functionality and reliability. In contrast, **software engineering** is the scientific and systematic discipline that defines the processes, methodologies, and tools (such as Agile, DevOps, and Waterfall) used to develop software. It encompasses the entire software development lifecycle (SDLC), from requirements analysis to deployment, providing the theoretical and structured frameworks that engineers rely on to deliver high-quality software.\n\nThe relationship between the two is symbiotic: software engineers execute the principles and practices established by software engineering, while the discipline itself evolves through the challenges and innovations encountered by practitioners. This analysis synthesizes insights from video explanations, textual definitions, and methodological examples, all of which consistently reinforce this core distinction. The findings underscore that while a software engineer is the *who*—the individual contributing hands-on technical work—software engineering is the *how*—the academic and procedural foundation that guides their efforts.",
+  "lists": [
+    {
+      "link": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
+      "transcription": "menurut saya, perbedaan antara software engineer dan software engineering adalah sebagai berikut. software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. mereka menggunakan prinsip-prinsip rekayasa untuk menciptakan solusi perangkat lunak yang efisien dan dapat diandalkan. sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur.",
+      "start_offset_sec": "0",
+      "end_offset_sec": "5",
+      "embedding_option": "visual-text",
+      "embedding_scope": "clip"
+    },
+    {
+      "link": "",
+      "transcription": "Software engineer adalah seseorang yang merancang, mengembangkan, menguji, dan memelihara perangkat lunak. Mereka menggunakan prinsip-prinsip rekayasa untuk menciptakan solusi perangkat lunak yang efisien dan dapat diandalkan. Sedangkan software engineering adalah disiplin ilmu yang mempelajari proses, metode, dan alat yang digunakan untuk mengembangkan perangkat lunak secara sistematis dan terstruktur.",
+      "start_offset_sec": "",
+      "end_offset_sec": "",
+      "embedding_option": "",
+      "embedding_scope": ""
+    }
+  ]
+}

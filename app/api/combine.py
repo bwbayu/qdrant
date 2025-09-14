@@ -6,9 +6,4 @@ def summary_generation(query="what is different about software engineer and soft
     return result
 
 
-def video_link_generation():
-    return [
-        # ("https://samplelib.com/lib/preview/mp4/sample-5s.mp4", "Video pertama"),
-        ("https://samplelib.com/lib/preview/mp4/sample-10s.mp4", "Video kedua")
-    ]
 # backend code

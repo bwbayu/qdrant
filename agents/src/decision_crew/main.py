@@ -32,7 +32,7 @@ def run(query) -> str:
 
     try:
         result = DecisionCrew().crew().kickoff(inputs=inputs)
-        return result.raw
+        return result.json_dict
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
 
