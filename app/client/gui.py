@@ -1,6 +1,6 @@
 import gradio as gr
 import pandas as pd
-from db import init_db, get_all_sessions, create_new_session, get_session, update_session
+from app.client.db import init_db, get_all_sessions, create_new_session, get_session, update_session
 import sqlite3
 import datetime
 from app.api.combine import summary_generation, video_link_generation
