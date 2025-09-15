@@ -40,10 +40,10 @@ async def pipeline_cognee(reset_data=False):
 
     # create knowledge based on file at data/raw
     # TODO: dynamic raw_dir and clean_dir
-    raw_dir = "data/raw/arsikom"
-    clean_dir = "data/clean/arsikom"
+    raw_dir = "data/raw/sisfor"
+    clean_dir = "data/clean/sisfor"
     await create_knowledge(raw_dir, clean_dir)
 
 if __name__ == "__main__":
     # create knowledge
-    asyncio.run(pipeline_cognee(reset_data=True))
+    asyncio.run(pipeline_cognee())

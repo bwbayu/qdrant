@@ -1,0 +1,100 @@
+[
+  {
+    "doc_id": "Sistem Informasi8_c9e58121",
+    "slide_id": "Sistem Informasi8_c9e58121_0",
+    "page_number": 1,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_0.jpg",
+    "text": "Prodi Ilmu Komputer\nUNIVERSITAS PENDIDIKAN INDONESIA\nSISTEM INFORMASI\nProses Bisnis\n(Konsep dan Definisi)\nDr. Asep Wahyudin, S.Kom, MT.\nIlmu Komputer\nFPMIFA - Universitas Pendidikan Indonesia\nSistem Informasi – Ilmu Komputer – FPMIPA UPI – Dr. Asep Wahyudin, S.Kom, MT. (halaman 1) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_0.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi8_c9e58121",
+    "slide_id": "Sistem Informasi8_c9e58121_1",
+    "page_number": 2,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_1.jpg",
+    "text": "Sistem Informasi – Ilmu Komputer – FPMIPA UPI – Dr. Asep Wahyudin, S.Kom, MT.\n• Pikirkan atau bayangkanlah sebuah produk/service yang Anda gunakan\n• Proses apa saja yang terlibat dalam penghantaran produk atau service yang telah Anda pikirkan tersebut?\n• Seberapa puas Anda dengan produk/service tersebut?\n• Apakah Anda punya usulan untuk memperbaiki, jika Anda merasa tidak puas dengan produk/service tersebut?\nGambar: siluet kepala menghadap kanan berwarna abu-abu dengan tanda tanya putih di dalamnya di sisi kiri slide.\nNomor slide: 2 URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_1.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi8_c9e58121",
+    "slide_id": "Sistem Informasi8_c9e58121_2",
+    "page_number": 3,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_2.jpg",
+    "text": "Sistem Informasi – Ilmu Komputer – FPMIPA UPI – Dr. Asep Wahyudin, S.Kom, MT.\nMateri Kuliah\nPengantar Proses Bisnis.\nMemahami bagaimana posisi penting proses bisnis. Bagaimana mengelola dan memperbaharui proses bisnis, dan bagaimana sistem informasi dapat dimanfaatkan dalam konteks proses bisnis besar/kompleks.\n1. Pendahuluan definisi proses bisnis\n2. Proses bisnis dan karakternya\n3. Proses bisnis sebagai inti rekayasa sistem informasi\nSumber:\nAndersen, Bjorn (1999), Business Process Improvement Toolbox, ASQ Quality Press, Milwaukee, Wisconsin\nAl-Mashari, Majed, Zahir Irani, and Mohamed Zairi. “Business process reengineering: a survey of international experience.” Business Process Management Journal, December 2001\nSteven Alter, Principles of Information Systems, 2002\nEko Indrajit, Seluk Beluk Proses Bisnis, Nomor 365, 8 September 2013\nDeskripsi gambar: Slide presentasi dengan judul tengah atas berwarna merah 'Materi Kuliah'. Di kiri atas terdapat header kecil berwarna hitam: 'Sistem Informasi – Ilmu Komputer – FPMIPA UPI – Dr. Asep Wahyudin, S.Kom, MT.' Konten utama di kiri berisi subjudul tebal 'Pengantar Proses Bisnis.' diikuti paragraf penjelasan singkat tentang posisi, pengelolaan, dan pemanfaatan sistem informasi dalam proses bisnis besar/kompleks, serta daftar tiga pokok bahasan. Di bagian bawah terdapat daftar sumber dan footer merah dengan teks header yang sama; nomor halaman '3' terletak di pojok kanan bawah. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_2.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi8_c9e58121",
+    "slide_id": "Sistem Informasi8_c9e58121_3",
+    "page_number": 4,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_3.jpg",
+    "text": "Departemen atau Proses?\nBerkoordinasi untuk melakukan tugas-tugas yang bersifat kompleks dan tidak bisa dikerjakan sendiri (perusahaan/enterprise)\nUntuk memenuhi permintaan dengan mengerjakan tindakan yang harus dijalankan\nFokus dari tindakan adalah Proses\nTenaga kerja disewa untuk melakukan tugas yang harus dikerjakan\nKompleksitas pekerjaan berkembang dan jumlah pekerja bertambah\nSehingga tidak mungkin lagi setiap orang melakukan setiap pekerjaan. Pekerjaan terlalu kompleks, dan setiap orang membutuhkan spesialisasi.\nMembentuk Departemen yang terdiri dari individu-individu dengan keahlian serupa\nBerawal dari kebutuhan Proses -> departemen\nDeskripsi gambar: Diagram vertikal dengan ikon-ikon orang dan panah yang menunjukkan alur. Di bagian atas ada satu ikon orang (di bawahnya teks '(perusahaan/enterprise)'). Panah mengarah ke teks utama: 'Berkoordinasi untuk melakukan tugas-tugas yang bersifat kompleks dan tidak bisa dikerjakan sendiri'. Dari teks itu panah menunjuk ke kalimat 'Untuk memenuhi permintaan dengan mengerjakan tindakan yang harus dijalankan' dan panah kecil/penunjuk ke 'Fokus dari tindakan adalah Proses'. Selanjutnya panah turun ke ikon dua orang dengan teks 'Tenaga kerja disewa untuk melakukan tugas yang harus dikerjakan'. Panah berikutnya menuju ikon beberapa orang dengan teks 'Kompleksitas pekerjaan berkembang dan jumlah pekerja bertambah'. Di bawahnya terdapat paragraf 'Sehingga tidak mungkin lagi setiap orang melakukan setiap pekerjaan. Pekerjaan terlalu kompleks, dan setiap orang membutuhkan spesialisasi' dan kalimat 'Membentuk Departemen yang terdiri dari individu-individu dengan keahlian serupa'. Di bagian paling bawah teks berwarna biru: 'Berawal dari kebutuhan Proses -> departemen'. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_3.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi8_c9e58121",
+    "slide_id": "Sistem Informasi8_c9e58121_4",
+    "page_number": 5,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_4.jpg",
+    "text": "Departemen (+)\n• Tenaga kerja diberi kesempatan untuk menjadi sangat spesialis dalam bidangnya\n• Biaya-biaya untuk sentralisasi berbagai fungsi menjadi menurun\n• Tempat kerja menjadi lebih aman, setiap orang tahu dimana mereka harus bekerja dan pekerjaan yang harus dilakukan\n• Struktur organisasi terdefinisi dengan lebih jelas dan dapat dengan mudah digambarkan dan ditampilkan\nDiagram (model departemen vertikal dan proses horisontal):\n- Proses horizontal: Inbound Logistic; Order Handling; Product Development\n- Label sisi kiri: Process\n- Departemen vertikal (dari kiri ke kanan): Purchasing Inventory Department; Production Manufacturing Department; HRM Department; Accounting Finance Department; Marketing Sales Department\n• Perusahaan modern akan terdiri dari berbagai departemen berdasarkan kebutuhan fungsional\n• Model menunjukan departemen vertikal dan proses horisontal yang melalui setiap departemen\n(Deskripsi gambar: Diagram menunjukkan model organisasi dengan departemen vertikal (kotak-teal) dan proses horisontal (panah-oranye) yang melintasi setiap departemen. Tiga panah horizontal berlabel: \"Inbound Logistic\", \"Order Handling\", dan \"Product Development\" bergerak dari kiri ke kanan. Di sisi kiri terdapat kurung dengan label \"Process\". Kelima kolom/departemen vertikal dari kiri ke kanan berlabel: \"Purchasing Inventory Department\", \"Production Manufacturing Department\", \"HRM Department\", \"Accounting Finance Department\", dan \"Marketing Sales Department\".) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_4.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi8_c9e58121",
+    "slide_id": "Sistem Informasi8_c9e58121_5",
+    "page_number": 6,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_5.jpg",
+    "text": "Sistem Informasi – Ilmu Komputer – FPMIPA UPI – Dr. Asep Wahyudin, S.Kom, MT.\nPermasalahan apa yang mungkin timbul dari organisasi berdasarkan departemen disamping ini?\nDiagram: tiga proses utama (Inbound Logistic; Order Handling; Product Development) melintasi departemen: Purchasing/Inventory Department; Production/Manufacturing Department; HRM Department; Accounting/Finance Department; Marketing/Sales Department.\n(-) Ketika pekerja ditempatkan dalam struktur organisasi/departemen, maka akan kerap menganggap bahwa tempat tersebut adalah “kotak” dan batasan dimana harus berada\nDampak:\n• Komunikasi keluar kotak menjadi terbatas\n• Orang dalam departemen hanya melakukan tugas yang menjadi tanggung jawab departemennya saja\n• Setiap departemen akan memaksimalkan otoritas dan kinerja masing-masing terhadap organisasi\nApa yang dapat terjadi kemudian?\nSilo Mentality\nSilo Mentality: sebuah kecenderungan mental ketika beberapa departemen atau sektor tertentu tidak bersedia atau cenderung tertutup untuk berbagi informasi dengan departemen lain di perusahaan yang sama\nBagaimana sebaiknya fokus dari organisasi/perusahaan dalam hal ini? URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_5.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi8_c9e58121",
+    "slide_id": "Sistem Informasi8_c9e58121_6",
+    "page_number": 7,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_6.jpg",
+    "text": "Sistem Informasi – Ilmu Komputer – FPMIPA UPI – Dr. Asep Wahyudin, S.Kom, MT.\nSaat ini terjadi perubahan fokus bisnis\nDari organisasi/perusahaan sebagai\nBEBERAPA DEPARTEMEN\nMenjadi pada\nPROSES BISNIS\nyang dilakukan\nDeskripsi gambar: Ilustrasi target/sasaran berupa lingkaran konsentris merah dan putih dengan satu panah (batang hitam dan bulu panah kuning) menancap tepat di tengah sasaran (bullseye). URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_6.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi8_c9e58121",
+    "slide_id": "Sistem Informasi8_c9e58121_7",
+    "page_number": 8,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_7.jpg",
+    "text": "Isu pendorong orientasi proses\n• Melalui fokus pengelolaan seluruh proses yang melalui banyak departemen, maka resiko optimasi yang tidak maksimal akan lebih rendah dibandingkan dengan mengelola masing-masing departemen\n• Dapat menghilangkan fragmentasi tanggung jawab yang umum ditemui dalam organisasi fungsional, dengan menunjuk process owners yang bertanggung jawab pada kekhususan prosesnya masing-masing\n• Pengelolaan dan fokus pada proses dapat memberikan pondasi yang lebih baik untuk mengelola waktu dan sumber daya\nSistem Informasi – Ilmu Komputer – FPMIPA UPI – Dr. Asep Wahyudin, S.Kom, MT. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_7.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi8_c9e58121",
+    "slide_id": "Sistem Informasi8_c9e58121_8",
+    "page_number": 9,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_8.jpg",
+    "text": "Orientasi dari Departemen ke Proses\n[Ilustrasi atas]\nInput  →  Proses  →  Output\nEntitas (input): Barang, Jasa, Data\nEntitas (output): Barang, Jasa, Data/Informasi\nRequirement & Feedback (panah putus-putus menuju proses dari kedua sisi)\nAktor/Pelaku:\n- Supplier, Inisiator/trigger Proses (kiri)\n- Produsen, Pemilik proses (tengah)\n- Customer, Penerima akhir proses (kanan)\nTraditional: organized around the functional areas of business\n- It provides a focus for work and it promotes professionalism and expertise (+)\n- Too much attention to what happens within the functional area (-)\n- Little concern for coordinating across the function area (-)\nNew: customer-oriented processes\n- Organized around the functional areas of business\n- How business perform their work and provide value for customers (the value chain)\n[Ilustrasi bawah — rangkaian proses]\nI1 → P1 → O1 = I2 → P2 → O2 = I3 → P3 → O3 = In → Pn → On\n(Masing-masing proses memiliki panah putus-putus ke atas bertanda RnF — Requirement & Feedback)\nOur process is Our Customer\nCustomer Satisfaction\nSistem Informasi – Ilmu Komputer – FPMIPA UPI – Dr. Asep Wahyudin, S.Kom, MT. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_8.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi8_c9e58121",
+    "slide_id": "Sistem Informasi8_c9e58121_9",
+    "page_number": 10,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_9.jpg",
+    "text": "Metodologi pengembangan sistem informasi, terutama yang berbasis aplikasi, bagian utama yang diprioritaskan untuk dipahami dengan serius adalah proses bisnis. (Eko Indrajit, 2013)\n1. A collection of activities that takes one or more kinds of input and creates an output that is of value to the customer.\n2. A series of related, structured activities or tasks that produce a specific service or product.\n3. A series of tasks or activities to achieve a given purpose or goal, which can be completed either in sequence or in parallel, by people or systems, either inside or outside an organization.\n4. A defined set of business activities that represent the steps required to achieve a business objective.\n5. A set of linked business activities that take one or more inputs and transform them to create an output.\n6. A set of one or more linked procedures or activities that collectively complete a business objective or policy goal, normally within the context of an organizational structure defining functional roles and relationships.\n7. The execution of a sequence of related steps in response to an event that leads to a clearly defined deliverable or outcome.\n8. A logical series of related transactions that converts input to results or output.\n9. The tasks are pre-defined, and the process can be repeated.\nDeskripsi gambar: Slide berjudul 'Definisi' menampilkan kutipan berbahasa Indonesia di bagian atas dan daftar definisi proses bisnis berbahasa Inggris bernomor di area utama. Beberapa frasa penting pada daftar dicetak tebal pada slide aslinya. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_9.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi8_c9e58121",
+    "slide_id": "Sistem Informasi8_c9e58121_10",
+    "page_number": 11,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_10.jpg",
+    "text": "Komponen Pembentuk utama\nKumpulan aktifitas, kebijakan, struktur organisasi, sumber daya yang berjalan teratur pada suatu organisasi yang merubah Input menjadi Output\nDiagram: Lingkaran pusat \"Proses\" dengan empat panah masuk: Kebijakan (dari atas), Aktifitas (dari kiri), Sumber Daya (dari kanan), Struktur Organisasi (dari bawah).\nKlasifikasi Proses\nProses bisnis utama (Primary Processes)\nMeliputi proses inti yang menghasilkan nilai bagi organisasi, mulai dari pengadaan sampai dengan produk/service akhir ke customer\nProses bisnis Pendukung (Supporting Processes)\nMeliputi proses yang tidak menghasilkan nilai, tetapi diperlukan untuk mendukung proses utama, seperti finansial, personalia dsb. (lihat value chain)\nProses bisnis pengembangan (Development Processes)\nMeliputi proses yang ditujukan untuk meningkatkan kinerja rantai nilai dan proses utama dan pendukung. Contoh pengembangan produk dan layanan\nSistem Informasi – Ilmu Komputer – FPMIPA UPI – Dr. Asep Wahyudin, S.Kom, MT. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_10.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi8_c9e58121",
+    "slide_id": "Sistem Informasi8_c9e58121_11",
+    "page_number": 12,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_11.jpg",
+    "text": "Sistem Informasi – Ilmu Komputer – FPMIPA UPI – Dr. Asep Wahyudin, S.Kom, MT.\nEuropean Network for Advanced Performance Studies (ENAPS)\nGeneric Business Process Framework\nBusiness Process\nProduct Development\n- Product research\n- Product engineering and design\n- Process engineering and design\n- Co-engineering\nObtaining Customer Commitment\n- Market development (Analysis ?)\n- Marketing and sales\n- Tendering\nOrder Fulfillment\n- Procurement and inbound logistics\n- Production planning and control\n- Manufacturing and Assembly\n- Distribution and outbound logistics\n- Order Processing\nCustomer Service\n- After-sales service\n- Product take back\nSecondary Process\nSupport\n- Financial management\n- Human resource management\n- Information management\n- Maintenance\n- Internal control of health, environment and safety\nEvolution\n- Continuous business process improvement\n- Product research\n- Production technology research\n- Human resource development\n- Supplier base development\n- Development of external relations\n- Strategic planning\n* It is possible for a function to belong to more than one process URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_11.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi8_c9e58121",
+    "slide_id": "Sistem Informasi8_c9e58121_12",
+    "page_number": 13,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_12.jpg",
+    "text": "Sistem Informasi – Ilmu Komputer – FPMIPA UPI – Dr. Asep Wahyudin, S.Kom, MT.\nBusiness Process Excellence\nProcess Innovation\nProcess Strategy\nProcess Architecture\nApplication Architecture\nStrategy\nSpecification\nStrategy Adaptation\nDesign\nOptimisation\nControlling\nBest Practices\nSimulation\nABC-Costing\nBenchmarking\nBalanced Scorecard\nPerformance-Measurement\nData Mining\nConfiguration/Customizing\nExecution\nSupplier\nManufacturer\nLogistics/Service Provider\nCustomer\nFinancial Service Provider\nSCM\nCRM\nERP\nB2B\nB2C\nMeasurement\nQUT URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_12.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi8_c9e58121",
+    "slide_id": "Sistem Informasi8_c9e58121_13",
+    "page_number": 14,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_13.jpg",
+    "text": "Selesai\nSistem Informasi – Ilmu Komputer – FPMIPA UPI – Dr. Asep Wahyudin, S.Kom, MT.\nDeskripsi gambar: Slide berlatarkan putih dengan logo kampus di bagian atas di bawah garis kuning tipis; teks \"Selesai\" berwarna merah di tengah; footer merah berisi informasi mata kuliah dan dosen di bagian bawah; nomor halaman 14 di pojok kanan bawah. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem Informasi8_c9e58121_13.jpg"
+  }
+]
