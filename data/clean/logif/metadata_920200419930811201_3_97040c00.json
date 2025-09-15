@@ -1,0 +1,625 @@
+[
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_0",
+    "page_number": 1,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_0.jpg",
+    "text": "ALJABAR BOOLEAN\nIK-130 LOGIKA INFORMATIKA\nAni Anisyah, M.T. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_0.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_1",
+    "page_number": 2,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_1.jpg",
+    "text": "OVERVIEW MATERI\n• Definisi\n• Aljabar Boolean Dua Nilai\n• Ekspresi Boolean\n• Prinsip Dualitas\n• Hukum Aljabar Boolean\n• Fungsi Boolean\n• Bentuk Kanonik\n• Konversi Antar Bentuk Kanonik\n• Rangkaian Digital\n• Penyederhanaan Fungsi Boolean\n• Peta Karnaugh URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_1.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_2",
+    "page_number": 3,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_2.jpg",
+    "text": "PENGANTAR\n• Aljabar Boolean ditemukan oleh George Boole, pada tahun 1854.\n• Boole menyatakan bahwa himpunan dan logika proposisi mempunyai sifat-sifat yang serupa (perhatikan kemiripan hukum-hukum aljabar logika dan hukum-hukum aljabar himpunan).\n• Dalam buku The Laws of Thought, Boole memaparkan aturan-aturan dasar logika.\n• Aturan dasar logika ini membentuk struktur matematika yang disebut aljabar Boolean.\n• Penggunaan Aljabar Boolean:\n  1. Perancangan rangkaian sirkuit\n  2. Dasar teknologi komputer digital (operasi pada komputer menggunakan operasi bit, 0 dan 1)\n  3. Perancangan pensaklaran\n  4. Rangkaian digital\n  5. Rangkaian IC (integrated circuit)\nHalaman: 3 URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_2.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_3",
+    "page_number": 4,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_3.jpg",
+    "text": "Penggunaan Aljabar Boolean\nPapan score digital\nIC (integrated circuit)\nJaringan/Rangkaian saklar\nDeskripsi gambar:\nGambar kiri: Papan skor digital LED menampilkan nama tim, angka skor berwarna (hijau, merah, kuning), hitungan foul, dan waktu pertandingan. Gambar kanan atas: IC (integrated circuit) berupa chip hitam dengan banyak pin yang terpasang pada papan sirkuit tercetak (PCB). Gambar kanan bawah: Diagram jaringan/rangkaian saklar yang menunjukkan jalur sumber listrik utama dan genset, sakelar/switch untuk memilih sumber, jalur ke panel box/MCB, serta koneksi ground. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_3.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_4",
+    "page_number": 5,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_4.jpg",
+    "text": "Pengantar Tipe Data Boolean\n• Menggunakan tipe data Boolean → untuk data yang bertipe logika\n• Tipe Boolean mempunyai dua buah nilai, yaitu true dan false\n• Operasi pada tipe data Boolean:\n  1. AND\n  2. OR\n  3. XOR\n  4. NOT\n• Operasi bit bersesuaian dengan operasi bit\n  • Sebuah bit mempunyai nilai 1 atau 0\n  • 1 → true, 0 → false\nEkspresi pada gambar (kanan):\n~0\n1 ∧ 0\n0 ∨ 0\n1 ⊕ 0\n(halaman 5) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_4.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_5",
+    "page_number": 6,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_5.jpg",
+    "text": "KEMIRIPAN HUKUM LOGIKA DAN HUKUM HIMPUNAN\nDisebut juga hukum-hukum aljabar proposisi.\nHukum-hukum logika (aljabar proposisi):\n1. Hukum identitas:\n- p ∨ F ⇔ p\n- p ∧ T ⇔ p\n2. Hukum null/dominasi:\n- p ∧ F ⇔ F\n- p ∨ T ⇔ T\n3. Hukum negasi:\n- p ∨ ¬p ⇔ T\n- p ∧ ¬p ⇔ F\n4. Hukum idempoten:\n- p ∨ p ⇔ p\n- p ∧ p ⇔ p\n5. Hukum involusi (negasi ganda):\n- ¬(¬p) ⇔ p\n6. Hukum penyerapan (absorpsi):\n- p ∨ (p ∧ q) ⇔ p\n- p ∧ (p ∨ q) ⇔ p\n7. Hukum komutatif:\n- p ∨ q ⇔ q ∨ p\n- p ∧ q ⇔ q ∧ p\n8. Hukum asosiatif:\n- p ∨ (q ∨ r) ⇔ (p ∨ q) ∨ r\n- p ∧ (q ∧ r) ⇔ (p ∧ q) ∧ r\n9. Hukum distributif:\n- p ∨ (q ∧ r) ⇔ (p ∨ q) ∧ (p ∨ r)\n- p ∧ (q ∨ r) ⇔ (p ∧ q) ∨ (p ∧ r)\n10. Hukum De Morgan:\n- ¬(p ∧ q) ⇔ ¬p ∨ ¬q\n- ¬(p ∨ q) ⇔ ¬p ∧ ¬q\nHukum-hukum himpunan (padanan):\n1. Hukum identitas:\n- A ∪ ∅ = A\n- A ∩ U = A\n2. Hukum null/dominasi:\n- A ∩ ∅ = ∅\n- A ∪ U = U\n3. Hukum komplemen:\n- A ∪ Ā = U\n- A ∩ Ā = ∅\n4. Hukum idempoten:\n- A ∪ A = A\n- A ∩ A = A\n5. Hukum involusi:\n- (Ā)̄ = A\n6. Hukum penyerapan (absorpsi):\n- A ∪ (A ∩ B) = A\n- A ∩ (A ∪ B) = A\n7. Hukum komutatif:\n- A ∪ B = B ∪ A\n- A ∩ B = B ∩ A\n8. Hukum asosiatif:\n- A ∪ (B ∪ C) = (A ∪ B) ∪ C\n- A ∩ (B ∩ C) = (A ∩ B) ∩ C\n9. Hukum distributif:\n- A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)\n- A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)\n10. Hukum De Morgan:\n- (A ∩ B)̄ = Ā ∪ B̄\n- (A ∪ B)̄ = Ā ∩ B̄\n11. Hukum 0/1 (hukum komplemen 2):\n- ∅̄ = U\n- Ū = ∅ URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_5.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_6",
+    "page_number": 7,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_6.jpg",
+    "text": "Definisi\nMisalkan terdapat:\n- Dua operator biner: $+$ dan $\\cdot$\n- Sebuah operator unar: $'$\n- $B$: himpunan yang didefinisikan pada operator $+$, $\\cdot$, dan $'$\n- $0$ dan $1$ adalah dua elemen yang berbeda dari $B$\n- Tupel $(B, +, \\cdot, ', 0, 1)$\nDisebut aljabar Boolean jika untuk setiap $a, b, c \\in B$ berlaku aksioma (postulat Huntington) berikut:\n1. Identitas\n   (i) $a + 0 = a$\n   (ii) $a \\cdot 1 = a$\n2. Komutatif\n   (i) $a + b = b + a$\n   (ii) $a \\cdot b = b \\cdot a$\n3. Distributif\n   (i) $a \\cdot (b + c) = (a \\cdot b) + (a \\cdot c)$\n   (ii) $a + (b \\cdot c) = (a + b) \\cdot (a + c)$\n4. Komplemen\n   Untuk setiap $a \\in B$ terdapat elemen unik $a' \\in B$ sehingga\n   (i) $a + a' = 1$\n   (ii) $a \\cdot a' = 0$\nCatatan:\n- Operator + → Penjumlahan\n- Operator · → Perkalian\n- Operator ' → Komplemen\n- 0 = elemen terkecil (zero)\n- 1 = elemen terbesar (unit)\nGambar di kanan memuat ringkasan aksioma Huntington seperti tercantum di atas. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_6.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_7",
+    "page_number": 8,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_7.jpg",
+    "text": "Header: IK130 - Logika Informatika (slide 8)\nDefinisi\n• Berhubung elemen-elemen B tidak didefinisikan nilainya (kita bebas menentukan anggota-anggota B), maka terdapat banyak sekali aljabar Boolean.\n• Aljabar himpunan dan aljabar logika proposisi termasuk aljabar Boolean (adalah himpunan bagian / subset dari aljabar Boolean).\nDeskripsi gambar: Slide berjudul \"Definisi\" dengan teks seperti di atas; tidak ada diagram atau ilustrasi. Terdapat label vertikal \"IK130 - Logika Informatika\" di kiri dan nomor slide \"8\" di pojok kanan bawah. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_7.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_8",
+    "page_number": 9,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_8.jpg",
+    "text": "Definisi\nPada aljabar proposisi misalnya:\n- B berisi semua proposisi dengan n peubah.\n- dua elemen unik berbeda dari B adalah T dan F,\n- operator biner: ∨ dan ∧, operator unar: ~\n- semua aksioma pada definisi di atas dipenuhi\nDengan kata lain ⟨B, ∨, ∧, ~, F, T⟩ adalah aljabar Boolean URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_8.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_9",
+    "page_number": 10,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_9.jpg",
+    "text": "Definisi\nUntuk mempunyai sebuah aljabar Boolean, yang harus diperlihatkan:\n1. elemen-elemen himpunan B,\n2. kaidah/aturan operasi untuk dua operator biner dan operator unar,\n3. himpunan B, bersama-sama dengan dua operator tersebut, memenuhi keempat postulat Huntington\n(halaman 10) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_9.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_10",
+    "page_number": 11,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_10.jpg",
+    "text": "Perbedaan antara aljabar Boolean dan aljabar biasa\n1. Aljabar Boolean tidak memiliki kebalikan perkalian (multiple inverse) dan kebalikan penjumlahan; sehingga tidak ada operasi pembagian dan pengurangan dalam aljabar Boolean.\n2. Operator komplemen hanya tersedia pada aljabar Boolean.\n3. Aljabar biasa memperlakukan himpunan bilangan riil, sedangkan aljabar Boolean memperlakukan himpunan B yang sampai sekarang belum didefinisikan, tetapi biasanya menggunakan aljabar Boolean dua nilai (0 dan 1).\nCatatan gambar: Slide berjudul 'Perbedaan antara aljabar Boolean dan aljabar biasa'. Di sisi kiri terdapat teks vertikal 'IK130 - Logika Informatika' dan di kanan bawah nomor slide '12'. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_10.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_11",
+    "page_number": 12,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_11.jpg",
+    "text": "Aljabar Boolean Dua Nilai\n• Aljabar boolean dua-nilai didefinisikan pada himpunan B dengan dua buah elemen 0 dan 1\n• Pada aljabar 2-nilai:\n  (i) B = {0, 1}\n  (ii) operator biner: + dan ·, operator unar: '\n  (iii) Kaidah untuk operator biner dan operator unar:\nTabel kebenaran untuk operator biner dan unar:\n- a · b (AND):\n  a b | a · b\n  0 0 | 0\n  0 1 | 0\n  1 0 | 0\n  1 1 | 1\n- a + b (OR):\n  a b | a + b\n  0 0 | 0\n  0 1 | 1\n  1 0 | 1\n  1 1 | 1\n- a' (NOT / komplemen):\n  a | a'\n  0 | 1\n  1 | 0\n(iv) Keempat postulat Huntington di atas dipenuhi. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_11.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_12",
+    "page_number": 13,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_12.jpg",
+    "text": "Pengecekan Aljabar Boolean Dua Nilai\n• Identitas: jelas berlaku karena dari tabel dapat kita lihat bahwa:\n  (i) 0 + 1 = 1 + 0 = 1\n  (ii) 1 · 0 = 0 · 1 = 0\n• Komutatif: jelas berlaku dengan melihat simetri tabel operator biner\nSifat-sifat aljabar Boolean:\n1. Identitas\n   (i) a + 0 = a\n   (ii) a · 1 = a\n2. Komutatif\n   (i) a + b = b + a\n   (ii) a · b = b · a\n3. Distributif\n   (i) a · (b + c) = (a · b) + (a · c)\n   (ii) a + (b · c) = (a + b) · (a + c)\n4. Komplemen\n   Untuk setiap a ∈ B terdapat elemen unik a' ∈ B sehingga\n   (i) a + a' = 1\n   (ii) a · a' = 0\nTabel kebenaran:\nAND (a · b):\n a b | a · b\n 0 0 | 0\n 0 1 | 0\n 1 0 | 0\n 1 1 | 1\nOR (a + b):\n a b | a + b\n 0 0 | 0\n 0 1 | 1\n 1 0 | 1\n 1 1 | 1 URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_12.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_13",
+    "page_number": 14,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_13.jpg",
+    "text": "Pengecekan Aljabar Boolean Dua Nilai\nDistributif: (i) a · (b + c) = (a · b) + (a · c) dapat ditunjukkan benar dari tabel operator biner dengan membentuk tabel kebenaran.\nTabel kebenaran (kolom: a, b, c, b+c, a·(b+c), a·b, a·c, (a·b)+(a·c)) — semua 8 kombinasi a,b,c:\n- a=0, b=0, c=0: b+c=0, a·(b+c)=0, a·b=0, a·c=0, (a·b)+(a·c)=0\n- a=0, b=0, c=1: b+c=1, a·(b+c)=0, a·b=0, a·c=0, (a·b)+(a·c)=0\n- a=0, b=1, c=0: b+c=1, a·(b+c)=0, a·b=0, a·c=0, (a·b)+(a·c)=0\n- a=0, b=1, c=1: b+c=1, a·(b+c)=0, a·b=0, a·c=0, (a·b)+(a·c)=0\n- a=1, b=0, c=0: b+c=0, a·(b+c)=0, a·b=0, a·c=0, (a·b)+(a·c)=0\n- a=1, b=0, c=1: b+c=1, a·(b+c)=1, a·b=0, a·c=1, (a·b)+(a·c)=1\n- a=1, b=1, c=0: b+c=1, a·(b+c)=1, a·b=1, a·c=0, (a·b)+(a·c)=1\n- a=1, b=1, c=1: b+c=1, a·(b+c)=1, a·b=1, a·c=1, (a·b)+(a·c)=1 URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_13.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_14",
+    "page_number": 15,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_14.jpg",
+    "text": "Pengecekan Aljabar Boolean Dua Nilai\n• Hukum distributif (ii) a + (b · c) = (a + b) · (a + c) dapat ditunjukkan benar dengan membuat tabel kebenaran dengan cara yang sama seperti (i)\n• Komplemen:\n  (i) a + a' = 1, karena 0 + 0' = 0 + 1 = 1 dan 1 + 1' = 1 + 0 = 1\n  (ii) a · a' = 0, karena 0 · 0' = 0 · 1 = 0 dan 1 · 1' = 1 · 0 = 0\nKarena keempat postulat Huntington dipenuhi, maka terbukti bahwa B = {0,1} bersama-sama dengan operator biner + dan · serta operator komplemen ' merupakan aljabar Boolean URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_14.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_15",
+    "page_number": 16,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_15.jpg",
+    "text": "Ekspresi Boolean\nEkspresi Boolean dibentuk dari elemen-elemen B dan/atau peubah-peubah yang dapat dikombinasikan satu sama lain dengan operator +, ·, dan '.\nContoh 1:\na\nb\na + b\na · b\na' · (b + c)\na · b' + a · b · c' + b', dan sebagainya\nCatatan: slide berlabel \"IK130 - Logika Informatika\" (teks vertikal di kiri) dan nomor slide 17 di pojok kanan bawah. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_15.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_16",
+    "page_number": 17,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_16.jpg",
+    "text": "Contoh : Mengevaluasi Ekspresi Boolean Dua-Nilai\n• Contoh: $a' \\cdot (b + c)$\n  jika a = 0, b = 1, dan c = 0, maka hasil evaluasi ekspresi:\n  $0' \\cdot (1 + 0) = 1 \\cdot 1 = 1$\n• Dua ekspresi Boolean dikatakan ekivalen (dilambangkan dengan '=') jika keduanya mempunyai nilai yang sama untuk setiap pemberian nilai-nilai kepada n peubah.\nContoh:\n$a \\cdot (b + c) = (a \\cdot b) + (a \\cdot c)$ URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_16.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_17",
+    "page_number": 18,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_17.jpg",
+    "text": "Contoh : Mengevaluasi Ekspresi Boolean Dua-Nilai\nPersamaan: $a\\cdot(b + c) = (a\\cdot b) + (a\\cdot c)$\nTabel kebenaran lengkap:\nKolom: a b c | b+c | a·(b+c) | a·b | a·c | (a·b)+(a·c)\nBaris:\n0 0 0 | 0 | 0 | 0 | 0 | 0\n0 0 1 | 1 | 0 | 0 | 0 | 0\n0 1 0 | 1 | 0 | 0 | 0 | 0\n0 1 1 | 1 | 0 | 0 | 0 | 0\n1 0 0 | 0 | 0 | 0 | 0 | 0\n1 0 1 | 1 | 1 | 0 | 1 | 1\n1 1 0 | 1 | 1 | 1 | 0 | 1\n1 1 1 | 1 | 1 | 1 | 1 | 1 URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_17.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_18",
+    "page_number": 19,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_18.jpg",
+    "text": "Contoh :\nPerlihatkan bahwa a + a' b = a + b\nTabel kebenaran:\na b a' a'b a + a'b a + b\n0 0 1 0 0 0\n0 1 1 1 1 1\n1 0 0 0 1 1\n1 1 0 0 1 1 URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_18.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_19",
+    "page_number": 20,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_19.jpg",
+    "text": "Catatan\n• Dalam penulisan ekspresi Boolean selain tanda kurung (), operator ' (komplemen) mempunyai prioritas lebih tinggi daripada operator + dan ·\n• Sebagai contoh:\n  • a + b · c → a + (b · c), bukan (a + b) · c\n  • a · b' → a · (b'), bukan (a · b)'\n• Untuk menyederhanakan penulisan, kita boleh tidak menuliskan notasi · pada operasi perkalian. Contoh:\n  (i) a(b + c) = ab + ac\n  (ii) a + bc = (a + b)(a + c)\n  (iii) a · 0, bukan a0\n(Gambar menunjukkan rumus pada bagian Contoh: (i) \\(a(b+c)=ab+ac\\); (ii) \\(a+bc=(a+b)(a+c)\\); (iii) \\(a\\cdot 0\\), bukan \"a0\".) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_19.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_20",
+    "page_number": 21,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_20.jpg",
+    "text": "Prinsip Dualitas\n• Misalkan S adalah kesamaan (identity) di dalam aljabar Boolean yang melibatkan operator +, ·, dan komplemen, maka jika pernyataan S* diperoleh dengan cara mengganti:\n  - · dengan +\n  - + dengan ·\n  - 0 dengan 1\n  - 1 dengan 0\n• Dan membiarkan operator komplemen tetap apa adanya maka kesamaan S* juga benar. S* disebut sebagai dual dari S.\nContoh:\n(i) (a · 1)(0 + a') = 0  dualnya (a + 0) + (1 · a') = 1\n(ii) a(a' + b) = ab  dualnya a + a'b = a + b URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_20.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_21",
+    "page_number": 22,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_21.jpg",
+    "text": "Hukum-hukum Aljabar Boolean\n1. Hukum identitas:\n(i) $a + 0 = a$\n(ii) $a \\cdot 1 = a$\n2. Hukum idempoten:\n(i) $a + a = a$\n(ii) $a \\cdot a = a$\n3. Hukum komplemen:\n(i) $a + a^{\\prime} = 1$\n(ii) $a \\cdot a^{\\prime} = 0$\n4. Hukum dominansi:\n(i) $a \\cdot 0 = 0$\n(ii) $a + 1 = 1$\n5. Hukum involusi:\n(i) $(a^{\\prime})^{\\prime} = a$\n6. Hukum penyerapan:\n(i) $a + a b = a$\n(ii) $a (a + b) = a$\n7. Hukum komutatif:\n(i) $a + b = b + a$\n(ii) $a b = b a$\n8. Hukum asosiatif:\n(i) $a + (b + c) = (a + b) + c$\n(ii) $a (b c) = (a b) c$\n9. Hukum distributif:\n(i) $a + (b c) = (a + b)(a + c)$\n(ii) $a (b + c) = a b + a c$\n10. Hukum De Morgan:\n(i) $(a + b)^{\\prime} = a^{\\prime} b^{\\prime}$\n(ii) $(a b)^{\\prime} = a^{\\prime} + b^{\\prime}$\n11. Hukum 0/1:\n(i) $0^{\\prime} = 1$\n(ii) $1^{\\prime} = 0$ URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_21.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_22",
+    "page_number": 23,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_22.jpg",
+    "text": "Hukum aljabar boolean dengan hukum aljabar himpunan dan hukum logika\n• \\cup dengan + atau \\lor\n• \\cap dengan \\cdot atau \\land\n• U (himpunan semesta) dengan 1 atau T\n• \\emptyset dengan 0 atau F\nDeskripsi gambar: Slide berjudul 'Hukum aljabar boolean dengan hukum aljabar himpunan dan hukum logika' menampilkan empat poin yang memetakan operasi himpunan ke operasi logika/Boolean seperti tertulis di atas. (Nomor slide: 24) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_22.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_23",
+    "page_number": 24,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_23.jpg",
+    "text": "Contoh\nContoh 2: Buktikan bahwa untuk sembarang elemen a dan b dari aljabar Boolean maka kesamaan berikut:\na + a' b = a + b   dan   a(a' + b) = ab\nadalah benar.\nPenyelesaian:\n(i) a + a' b = (a + ab) + a' b    (Hukum Penyerapan)\n    = a + (ab + a' b)            (Hukum Asosiatif)\n    = a + (a + a') b            (Hukum Distributif)\n    = a + 1 · b                 (Hukum Komplemen)\n    = a + b                     (Hukum Identitas)\nCatatan: bukti untuk (ii) a(a' + b) = ab tidak ditampilkan pada slide.\nDeskripsi gambar: Slide berjudul \"Contoh\" (IK130 - Logika Informatika, slide 25) memuat pernyataan Contoh 2 dan penyelesaian bagian (i) seperti dijelaskan di atas. Di tepi kiri vertikal tertulis \"IK130 - Logika Informatika\". URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_23.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_24",
+    "page_number": 25,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_24.jpg",
+    "text": "Contoh\nContoh 2: Buktikan bahwa untuk sembarang elemen a dan b dari aljabar Boolean maka kesamaan berikut: a + a' b = a + b dan a(a' + b) = ab adalah benar.\nPenyelesaian:\n(i) a + a' b = (a + a b) + a' b                (Hukum Penyerapan)\n    = a + (a b + a' b)                         (Hukum Asosiatif)\n    = a + (a + a') b                           (Hukum Distributif)\n    = a + 1 · b                                (Hukum Komplemen)\n    = a + b                                    (Hukum Identitas)\n(ii) a(a' + b) = a a' + a b                    (Hukum Distributif)\n     = 0 + a b                                  (Hukum Komplemen)\n     = a b                                      (Hukum Identitas)\natau (ii) adalah dual dari (i)\nDeskripsi gambar: Slide berjudul \"Contoh\" dengan label \"IK130 - Logika Informatika\" di sisi kiri dan nomor slide \"26\" di kanan bawah. Teks menampilkan pernyataan Contoh 2 dan solusi langkah demi langkah beserta hukum-hukum yang digunakan. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_24.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_25",
+    "page_number": 26,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_25.jpg",
+    "text": "Tugas\n- Pelajari tentang gerbang logika\n  - Simbol\n  - Operasi\n  - Tabel kebenaran\n- Carilah tentang aplikasi aljabar Boolean\n- Buat pembahasan mengenai materi tersebut pada PPT\n- Tuliskan referensi pada PPT\n- Tugas dikumpulkan minggu depan di SPOT (deadline, 18 Okt 2021 09:00)\nDeskripsi gambar: Slide presentasi berjudul \"Tugas\" berisi daftar tugas seperti tercantum di atas. Di sisi kiri terdapat teks vertikal \"IK130 - Logika Informatika\", nomor halaman \"27\", dan footer berwarna biru. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_25.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_26",
+    "page_number": 27,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_26.jpg",
+    "text": "Fungsi Boolean\n- Fungsi Boolean = fungsi biner, pemetaan dari f: B^n \\to B.\n- Contoh-contoh fungsi Boolean:\n  - f(x) = x\n  - f(x, y) = x' y + x y' + y'\n  - f(x, y) = x' y'\n  - f(x, y) = (x + y)'\n  - f(x, y, z) = x y z'\n- Setiap peubah di dalam fungsi Boolean, termasuk dalam bentuk komplemennya, disebut literal.\n- Fungsi h(x, y, z) = x y z' terdiri dari 3 buah literal, yaitu x, y, dan z'.\n- Jika diberikan x = 1, y = 1, z = 0, maka nilai fungsinya:\n  h(1, 1, 0) = 1 \\cdot 1 \\cdot 0' = (1 \\cdot 1) \\cdot 1 = 1 \\cdot 1 = 1\n(Perbaikan notasi: mengganti karakter hasil OCR yang salah seperti \"\" menjadi \"\\to\" dan \"\" menjadi \"\\cdot\"; komplemen ditulis dengan tanda '.) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_26.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_27",
+    "page_number": 28,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_27.jpg",
+    "text": "Fungsi Boolean dengan Tabel Kebenaran\n- Untuk fungsi dengan n peubah, kombinasi dari nilai peubahnya sebanyak 2^n.\n- Cara membuat kombinasi tabel kebenaran:\n  - Untuk peubah pertama, isi 4 baris pertama dengan 0 dan 4 baris terakhir dengan 1.\n  - Untuk peubah kedua, isi 2 baris pertama dengan 0, 2 baris berikutnya dengan 1, ulangi sehingga total 8 baris.\n  - Untuk peubah ketiga, isi secara selang-seling dengan 0 dan 1 mulai baris pertama sampai baris terakhir.\nRumus fungsi: f(x,y,z) = xyz' (LaTeX: $f(x,y,z)=xyz'$)\nTabel kebenaran:\nx y z | z' | f(x,y,z)=xyz'\n0 0 0 | 1  | 0\n0 0 1 | 0  | 0\n0 1 0 | 1  | 0\n0 1 1 | 0  | 0\n1 0 0 | 1  | 0\n1 0 1 | 0  | 0\n1 1 0 | 1  | 1\n1 1 1 | 0  | 0\nCatatan: Kolom z' adalah negasi dari z. Hanya pada kombinasi x=1, y=1, z=0 fungsi bernilai 1. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_27.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_28",
+    "page_number": 29,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_28.jpg",
+    "text": "Fungsi Boolean dengan Tabel Kebenaran\n• Fungsi Boolean yang ekspresinya berbeda dapat menyatakan fungsi yang sama\nf(x,y,z) = x' y' z + x' y z + x y'\nDan\ng(x,y,z) = x' z + x y'\nTabel kebenaran (kolom: x, y, z, z', f = x' y' z + x' y z + x y', g = x' z + x y'):\n1) 0 0 0 1  f=0  g=0\n2) 0 0 1 0  f=1  g=1\n3) 0 1 0 1  f=0  g=0\n4) 0 1 1 0  f=1  g=1\n5) 1 0 0 1  f=1  g=1\n6) 1 0 1 0  f=1  g=1\n7) 1 1 0 1  f=0  g=0\n8) 1 1 1 0  f=0  g=0\nCatatan: Tabel menunjukkan bahwa f dan g bernilai sama untuk setiap kombinasi input, sehingga kedua ekspresi menyatakan fungsi yang sama. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_28.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_29",
+    "page_number": 30,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_29.jpg",
+    "text": "Penjumlahan dan Perkalian Dua Fungsi\n• Misalkan f dan g adalah dua buah fungsi Boolean dengan n peubah, maka penjumlahan f + g didefinisikan sebagai:\n(f + g)(x_1, x_2, x_3, …, x_n) = f(x_1, x_2, x_3, …, x_n) + g(x_1, x_2, x_3, …, x_n)\n• Sedangkan perkalian (f · g) didefinisikan sebagai:\n(f · g)(x_1, x_2, x_3, …, x_n) = f(x_1, x_2, x_3, …, x_n) g(x_1, x_2, x_3, …, x_n)\n• Contoh:\nf(x,y) = x y' + y dan g(x,y) = x' + y' maka h(x,y) = f + g = x y' + y + x' + y'\nYang bila disederhanakan lebih lanjut:\nh(x,y) = f + g = x y' + y + x' + y' = x y' + x' + (y + y') = x y' + x' + 1\ndan\ni(x,y) = f · g = (x y' + y)(x' + y') URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_29.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_30",
+    "page_number": 31,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_30.jpg",
+    "text": "Komplemen Fungsi Boolean\n• Fungsi komplemen dari suatu fungsi f = f'\n• Fungsi komplemen dapat dicari dengan dua cara berikut:\n1. Cara Pertama : Menggunakan hukum De Morgan\n  • Dua peubah x1 dan x2 adalah\n    (i) (x1 + x2)' = x1' x2'\n    (ii) (x1 x2)' = x1' + x2'\n  • Tiga peubah x1, x2, x3 adalah\n    (x1 + x2 + x3)' = (x1 + y)'  dimana y = x2 + x3\n    = x1' y' = x1' (x2 + x3)' = x1' x2' x3'\n  • Dan dualnya adalah\n    (x1 x2 x3)' = x1' + x2' + x3' URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_30.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_31",
+    "page_number": 32,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_31.jpg",
+    "text": "Komplemen Fungsi Boolean\n• Fungsi komplemen dari suatu fungsi $f = f'$\n• Fungsi komplemen dapat dicari dengan dua cara berikut:\n2. Cara Kedua : Menggunakan prinsip dualitas\nTentukan dual dari ekspresi Boolean yang direpresentasikan f, lalu komplementkan setiap literal di dalam dual tersebut. Bentuk akhir yang diperoleh menyatakan fungsi komplemen.\n(Keterangan tampilan: kata \"Tentukan dual\" dan \"komplementkan\" di slide diberi warna merah; terdapat label vertikal \"IK130 - Logika Informatika\" dan nomor slide 33.) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_31.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_32",
+    "page_number": 33,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_32.jpg",
+    "text": "Contoh : Komplemen Fungsi Boolean\nMisalkan f(x,y,z) = x(y' z' + y z) maka fungsi komplemennya adalah\nf'(x,y,z) = (x(y' z' + y z))'\n= x' + (y' z' + y z)'\n= x' + (y' z')'(y z)'\n= x' + (y + z)(y' + z') URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_32.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_33",
+    "page_number": 34,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_33.jpg",
+    "text": "Contoh : Komplemen Fungsi Boolean\nMisalkan f(x,y,z) = x(y' z' + y z) maka dual dari ekspresi Boolean-nya adalah\nDual: x + (y' + z')(y + z)\nKomplemenkan tiap literal dari dual di atas menjadi\nx' + (y + z)(y' + z') = f'\nSehingga f'(x,y,z) = x' + (y + z)(y' + z') URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_33.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_34",
+    "page_number": 35,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_34.jpg",
+    "text": "Bentuk Kanonik\n• Ekspresi Boolean yang menspesifikasikan suatu fungsi dapat disajikan dalam dua bentuk berbeda.\n• Pertama, sebagai penjumlahan dari hasil kali dan kedua sebagai perkalian dari hasil jumlah.\nContoh 3:\nf(x, y, z) = x’y’z + xy’z’ + xyz\ndan\ng(x, y, z) = (x + y + z)(x + y’ + z)(x + y’ + z’)(x’ + y + z’)(x’ + y’ + z)\nadalah dua buah fungsi yang sama.\nDeskripsi notasi matematika pada slide:\nf(x,y,z)=\\overline{x}\\,\\overline{y}\\,z + x\\,\\overline{y}\\,\\overline{z} + x\\,y\\,z\ng(x,y,z)=(x+y+z)\\,(x+\\overline{y}+z)\\,(x+\\overline{y}+\\overline{z})\\,(\\overline{x}+y+\\overline{z})\\,(\\overline{x}+\\overline{y}+z)\n(Keterangan: \\overline{\\cdot} menunjukkan komplemen/negasi variabel, mis. \\overline{x} = x') URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_34.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_35",
+    "page_number": 36,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_35.jpg",
+    "text": "Bentuk Kanonik\nMinterm: suku (term) di dalam ekspresi boolean mengandung literal yang lengkap dalam bentuk hasil kali.\nMaxterm: suku (term) di dalam ekspresi boolean mengandung literal yang lengkap dalam bentuk hasil jumlah.\nContoh 4:\nf(x, y, z) = x' y' z + x y' z' + x y z -> 3 buah minterm: x'y'z, xy'z', xyz\ng(x, y, z) = (x + y + z)(x + y' + z)(x + y' + z')(x' + y + z')(x' + y' + z) -> 5 buah maxterm: (x + y + z), (x + y' + z), (x + y' + z'), (x' + y + z'), dan (x' + y' + z) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_35.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_36",
+    "page_number": 37,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_36.jpg",
+    "text": "Bentuk Kanonik\nCara membentuk minterm dan maxterm:\nUntuk minterm, setiap peubah yang bernilai 0 dinyatakan dalam bentuk komplemen, sedangkan peubah yang bernilai 1 dinyatakan tanpa komplemen.\nSebaliknya, untuk maxterm, setiap peubah yang bernilai 0 dinyatakan tanpa komplemen, sedangkan peubah yang bernilai 1 dinyatakan dalam bentuk komplemen. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_36.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_37",
+    "page_number": 38,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_37.jpg",
+    "text": "Bentuk Kanonik\nCara membentuk minterm dan maxterm dari tabel kebenaran untuk dua peubah:\nTabel (isi):\n(x,y) = (0,0): Minterm suku = x' y', lambang = m_0; Maxterm suku = x + y, lambang = M_0\n(x,y) = (0,1): Minterm suku = x' y,  lambang = m_1; Maxterm suku = x + y', lambang = M_1\n(x,y) = (1,0): Minterm suku = x y',  lambang = m_2; Maxterm suku = x' + y, lambang = M_2\n(x,y) = (1,1): Minterm suku = x y,   lambang = m_3; Maxterm suku = x' + y', lambang = M_3\nDeskripsi singkat gambar: Tabel menunjukkan pemetaan setiap kombinasi nilai x dan y ke suku minterm (produk literalf) dan suku maxterm (jumlah literalf) beserta lambangnya m_0..m_3 dan M_0..M_3. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_37.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_38",
+    "page_number": 39,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_38.jpg",
+    "text": "Bentuk Kanonik\nCara membentuk minterm dan maxterm dari tabel kebenaran untuk tiga peubah:\nDaftar lengkap untuk setiap kombinasi (x y z):\n- 000: minterm = \\(x' y' z'\\) = m0 ; maxterm = \\(x + y + z\\) = M0\n- 001: minterm = \\(x' y' z\\) = m1 ; maxterm = \\(x + y + z'\\) = M1\n- 010: minterm = \\(x' y z'\\) = m2 ; maxterm = \\(x + y' + z\\) = M2\n- 011: minterm = \\(x' y z\\) = m3 ; maxterm = \\(x + y' + z'\\) = M3\n- 100: minterm = \\(x y' z'\\) = m4 ; maxterm = \\(x' + y + z\\) = M4\n- 101: minterm = \\(x y' z\\) = m5 ; maxterm = \\(x' + y + z'\\) = M5\n- 110: minterm = \\(x y z'\\) = m6 ; maxterm = \\(x' + y' + z\\) = M6\n- 111: minterm = \\(x y z\\) = m7 ; maxterm = \\(x' + y' + z'\\) = M7 URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_38.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_39",
+    "page_number": 40,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_39.jpg",
+    "text": "Bentuk Kanonik\nJika diberikan sebuah tabel kebenaran, kita dapat membentuk fungsi Boolean dalam bentuk kanonik (SOP atau POS) dari tabel tersebut dengan cara:\n- mengambil minterm dari setiap nilai fungsi yang bernilai 1 (untuk SOP)\natau\n- mengambil maxterm dari setiap nilai fungsi yang bernilai 0 (untuk POS).\nDeskripsi gambar: Slide berjudul \"Bentuk Kanonik\" dengan teks penjelasan tentang pembentukan fungsi Boolean dalam bentuk kanonik (SOP atau POS). Di sebelah kiri vertikal tertulis \"IK130 - Logika Informatika\". Di pojok kanan bawah terlihat nomor slide \"42\". Frasa \"nilai fungsi yang bernilai 1 (untuk SOP)\" dan \"nilai fungsi yang bernilai 0 (untuk POS)\" ditonjolkan dengan warna merah, sedangkan kata \"minterm\" dan \"maxterm\" dicetak miring. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_39.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_40",
+    "page_number": 41,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_40.jpg",
+    "text": "Contoh 5: Tinjau fungsi Boolean yang dinyatakan oleh Tabel di bawah ini. Nyatakan fungsi tersebut dalam bentuk kanonik SOP dan POS\nTabel kebenaran:\nx y z | f(x,y,z)\n0 0 0 | 0\n0 0 1 | 1\n0 1 0 | 0\n0 1 1 | 0\n1 0 0 | 1\n1 0 1 | 0\n1 1 0 | 0\n1 1 1 | 1\nPenyelesaian:\n• SOP\nKombinasi nilai-nilai peubah yang menghasilkan nilai fungsi sama dengan 1 adalah 001, 100, dan 111, maka fungsi Booleannya dalam bentuk kanonik SOP adalah\n\\(f(x,y,z) = x'y'z + xy'z' + xyz\\)\natau (dengan menggunakan lambang minterm),\n\\(f(x,y,z) = m_1 + m_4 + m_7 = \\Sigma(1,4,7)\\)\nCatatan: Slide hanya menampilkan bentuk kanonik SOP dan representasi minterm; bentuk kanonik POS tidak disajikan pada slide. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_40.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_41",
+    "page_number": 42,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_41.jpg",
+    "text": "Contoh 5: Tinjau fungsi Boolean yang dinyatakan oleh Tabel di bawah ini. Nyatakan fungsi tersebut dalam bentuk kanonik SOP dan POS\nPenyelesaian:\n• SOP\nKombinasi nilai-nilai peubah yang menghasilkan nilai fungsi sama dengan 1 adalah 001, 100, dan 111, maka fungsi Booleannya dalam bentuk kanonik SOP adalah\nf(x,y,z) = x'y'z + xy'z' + xyz\natau (dengan menggunakan lambang minterm),\nf(x,y,z) = m1 + m4 + m7 = Σ(1, 4, 7)\n• POS\nKombinasi nilai-nilai peubah yang menghasilkan nilai fungsi sama dengan 0 adalah 000, 010, 011, 101, dan 110 (m0, m2, m3, m5, m6), sehingga bentuk kanonik POS adalah\nf(x,y,z) = Π(M0, M2, M3, M5, M6) = ∏(0, 2, 3, 5, 6)\natau\nf(x,y,z) = (x + y + z)(x + y' + z)(x + y' + z')(x' + y + z')(x' + y' + z)\nTabel Minterm (m0..m7):\nm0 = x'y'z', m1 = x'y'z, m2 = x'y z', m3 = x'y z, m4 = x y'z', m5 = x y'z, m6 = x y z', m7 = x y z\nTabel Maxterm (M0..M7):\nM0 = x + y + z, M1 = x + y + z', M2 = x + y' + z, M3 = x + y' + z', M4 = x' + y + z, M5 = x' + y + z', M6 = x' + y' + z, M7 = x' + y' + z'. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_41.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_42",
+    "page_number": 43,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_42.jpg",
+    "text": "POS\nTabel kebenaran:\nx y z | f(x,y,z)\n0 0 0 | 0\n0 0 1 | 1\n0 1 0 | 0\n0 1 1 | 0\n1 0 0 | 1\n1 0 1 | 0\n1 1 0 | 0\n1 1 1 | 1\nKombinasi nilai-nilai peubah yang menghasilkan nilai fungsi sama dengan 0 adalah 000, 010, 011, 101, dan 110, maka fungsi Booleannya dalam bentuk kanonik POS adalah\nf(x, y, z) = (x + y + z)(x + y' + z)(x + y' + z')(x' + y + z')(x' + y' + z)\natau dalam bentuk lain,\nf(x, y, z) = M_0 M_2 M_3 M_5 M_6 = Π(0, 2, 3, 5, 6)\nDeskripsi gambar: Slide berisi tabel kebenaran (lihat di atas), persamaan POS kanonik, dan notasi produk dari maxterm. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_42.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_43",
+    "page_number": 44,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_43.jpg",
+    "text": "POS\nKombinasi nilai-nilai peubah yang menghasilkan nilai fungsi sama dengan 0 adalah 000, 010, 011, 101, dan 110, maka fungsi Boolean-nya dalam bentuk kanonik POS adalah\nf(x, y, z) = (x + y + z)(x + y' + z)(x + y' + z')(x' + y + z')(x' + y' + z)\natau dalam bentuk lain,\nf(x, y, z) = M0 M2 M3 M5 M6 = Π(0, 2, 3, 5, 6)\nDaftar minterm dan maxterm untuk semua kombinasi:\nMinterm: m0 = x'y'z', m1 = x'y'z, m2 = x'y z', m3 = x'y z, m4 = x y' z', m5 = x y' z, m6 = x y z', m7 = x y z.\nMaxterm: M0 = x + y + z, M1 = x + y + z', M2 = x + y' + z, M3 = x + y' + z', M4 = x' + y + z, M5 = x' + y + z', M6 = x' + y' + z, M7 = x' + y' + z'. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_43.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_44",
+    "page_number": 45,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_44.jpg",
+    "text": "Contoh 6: Nyatakan fungsi Boolean f(x, y, z) = x + y' z dalam bentuk kanonik SOP dan POS.\nPenyelesaian:\n(a) SOP\nLengkapi terlebih dahulu literal untuk setiap suku agar jumlahnya sama.\nx = x(y + y')\n    = xy + xy'\n    = xy(z + z') + xy'(z + z')\n    = xyz + xyz' + xy'z + xy'z'\ny'z = y'z(x + x') = xy'z + x'y'z\nJadi f(x, y, z) = x + y'z\n= xyz + xyz' + xy'z + xy'z' + xy'z + x'y'z  (duplikasi xy'z dihapus)\n= x'y'z + xy'z' + xy'z + xyz' + xyz\natau f(x, y, z) = m1 + m4 + m5 + m6 + m7 = Σ(1,4,5,6,7)\nTabel minterm dan maxterm (dari gambar):\n0 0 0 -> x'y'z' = m0 ; Maxterm: x + y + z = M0\n0 0 1 -> x'y'z  = m1 ; Maxterm: x + y + z' = M1\n0 1 0 -> x' y z' = m2 ; Maxterm: x + y' + z = M2\n0 1 1 -> x' y z  = m3 ; Maxterm: x + y' + z' = M3\n1 0 0 -> x y' z' = m4 ; Maxterm: x' + y + z = M4\n1 0 1 -> x y' z  = m5 ; Maxterm: x' + y + z' = M5\n1 1 0 -> x y z'  = m6 ; Maxterm: x' + y' + z = M6\n1 1 1 -> x y z   = m7 ; Maxterm: x' + y' + z' = M7 URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_44.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_45",
+    "page_number": 46,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_45.jpg",
+    "text": "(b) POS\nf(x, y, z) = x + y' z\n= (x + y')(x + z)\nLengkapi terlebih dahulu literal pada setiap suku agar jumlahnya sama:\nx + y' = x + y' + z z' = (x + y' + z)(x + y' + z')\nx + z = x + z + y y' = (x + y + z)(x + y' + z)\nJadi, f(x, y, z) = (x + y' + z)(x + y' + z')(x + y + z)(x + y' + z)\n= (x + y + z)(x + y' + z)(x + y' + z')\natau f(x, y, z) = M0 M2 M3 = ∏(0, 2, 3) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_45.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_46",
+    "page_number": 47,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_46.jpg",
+    "text": "Contoh 7: Nyatakan fungsi Boolean f(x, y, z) = xy + x' z dalam bentuk kanonik POS.\nPenyelesaian:\nf(x, y, z) = xy + x' z\n= (xy + x') (xy + z)\n= (x + x') (y + x') (x + z) (y + z)\n= (x' + y) (x + z) (y + z)\nLengkapi literal untuk setiap suku agar jumlahnya sama:\nx' + y = x' + y + zz' = (x' + y + z) (x' + y + z')\nx + z = x + z + yy'  = (x + y + z) (x + y' + z)\ny + z = y + z + xx'  = (x + y + z) (x' + y + z)\nJadi, f(x, y, z) = (x + y + z) (x + y' + z) (x' + y + z) (x' + y + z')\natau f(x, y, z) = M0 M2 M4 M5 = Π(0,2,4,5)\nDeskripsi gambar: Slide berisi teks dan langkah aljabar untuk mengubah fungsi Boolean menjadi bentuk kanonik POS, dengan hasil akhir seperti tercantum di atas. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_46.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_47",
+    "page_number": 48,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_47.jpg",
+    "text": "Konversi Antar Bentuk Kanonik\nMisalkan f adalah fungsi Boolean dalam bentuk SOP dengan tiga peubah:\nf(x, y, z) = Σ(1, 4, 5, 6, 7)\ndan f' adalah fungsi komplemen dari f,\nf'(x, y, z) = Σ(0, 2, 3) = m0 + m2 + m3\nDengan menggunakan hukum De Morgan, kita dapat memperoleh fungsi f dalam bentuk POS:\nf(x, y, z) = (f'(x, y, z))' = (m0 + m2 + m3)' = m0' · m2' · m3'\n= (x'y'z')' (x' y z')' (x' y z)'\n= (x + y + z) (x + y' + z) (x + y' + z')\n= M0 M2 M3 = ∏(0,2,3)\nJadi, f(x, y, z) = Σ(1, 4, 5, 6, 7) = ∏(0,2,3).\nKesimpulan: m_j' = M_j\nDeskripsi gambar: Slide berjudul \"Konversi Antar Bentuk Kanonik\" yang menampilkan langkah-langkah konversi SOP ke POS menggunakan hukum De Morgan, termasuk notasi Σ untuk minterm dan ∏ untuk maxterm serta ekspansi literal seperti (x + y + z) dll. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_47.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_48",
+    "page_number": 49,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_48.jpg",
+    "text": "Rangkaian Logika\n• Fungsi Boolean dapat juga direpresentasikan dalam bentuk rangkaian logika.\n• Ada tiga gerbang logika dasar: gerbang AND, gerbang OR, dan gerbang NOT.\nGerbang AND dua-masukan: masukan x, y → keluaran xy\nGerbang OR dua-masukan: masukan x, y → keluaran x + y\nGerbang NOT (inverter): masukan x → keluaran x' URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_48.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_49",
+    "page_number": 50,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_49.jpg",
+    "text": "Rangkaian Logika\nContoh 8: Nyatakan fungsi f(x, y, z) = xy + x’y ke dalam rangkaian logika.\nPenyelesaian: Ada beberapa cara penggambaran.\nCara pertama: Dua gerbang AND terpisah menghasilkan 'xy' dan 'x'y' (dengan inverter pada x untuk menghasilkan x'), lalu kedua keluaran di-OR menjadi 'xy + x'y'.\nCara kedua: Implementasi serupa tetapi dengan pengkabelan/tap ulang pada garis x dan y sehingga kabel digunakan bersama sebelum masuk ke gerbang AND; inverter masih digunakan pada x untuk menghasilkan x' dan menghasilkan 'x'y'. Keluaran-keluaran AND adalah 'xy' dan 'x'y' yang kemudian di-OR menjadi 'xy + x'y'.\nCara ketiga: Sinyal x dan y digambarkan sebagai bus vertikal dengan titik pengambilan ke masing-masing gerbang AND; salah satu jalur x melewati inverter menjadi x' sebelum ke AND kedua. Keluaran AND diberi label 'xy' dan 'x'y', dan hasil OR adalah 'xy + x'y'.\nCatatan pada rangkaian: inverter pada masukan x menghasilkan x'. Dua gerbang AND menghasilkan sinyal 'xy' dan 'x'y'. Kedua hasil AND digabungkan oleh gerbang OR menghasilkan 'xy + x'y'. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_49.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_50",
+    "page_number": 51,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_50.jpg",
+    "text": "Rangkaian Logika\nGerbang-gerbang dasar (dari kiri ke kanan):\n- Gerbang NAND: input x, y → output (xy)'\n- Gerbang NOR: input x, y → output (x+y)'\n- Gerbang XOR: input x, y → output x ⊕ y\n- Gerbang XNOR: input x, y → output (x ⊕ y)'\nKeempat gerbang di atas merupakan kombinasi dari gerbang-gerbang dasar, misalnya gerbang NOR disusun oleh kombinasi gerbang OR dan gerbang NOT: OR menghasilkan x + y, kemudian NOT menghasilkan (x + y)'.\nSelain itu, dengan menggunakan hukum De Morgan, kita juga dapat membuat gerbang logika yang ekivalen dengan gerbang NOR dan NAND di atas: (ilustrasi pada slide menunjukkan kombinasi dengan input x' dan y' yang dinyatakan ekivalen dengan (x + y)'). URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_50.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_51",
+    "page_number": 52,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_51.jpg",
+    "text": "Penyederhanaan Fungsi Boolean\nMenyederhanakan fungsi Boolean artinya mencari bentuk fungsi lain yang ekivalen tetapi dengan jumlah literal atau operasi yang lebih sedikit.\nContoh: f(x, y) = x' y + x y' + y' disederhanakan menjadi f(x, y) = x' + y'.\nDipandang dari segi aplikasi aljabar Boolean, fungsi Boolean yang lebih sederhana berarti rangkaian logikanya juga lebih sederhana (menggunakan jumlah gerbang logika lebih sedikit). URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_51.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_52",
+    "page_number": 53,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_52.jpg",
+    "text": "Penyederhanaan Fungsi Boolean\nTiga metode yang dapat digunakan untuk menyederhanakan fungsi Boolean:\n1. Secara aljabar, menggunakan hukum-hukum aljabar Boolean.\n2. Metode Peta Karnaugh. (angka 2 diberi lingkaran merah pada slide)\n3. Metode Quine-McCluskey (metode tabulasi)\nYang dibahas hanyalah Metode Peta Karnaugh URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_52.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_53",
+    "page_number": 54,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_53.jpg",
+    "text": "Peta Karnaugh\n• Peta Karnaugh (atau K-map) merupakan metode grafis untuk menyederhanakan fungsi Boolean.\n• Metode ini ditemukan oleh Maurice Karnaugh pada tahun 1953. Peta Karnaugh adalah sebuah diagram/peta yang terbentuk dari kotak-kotak (berbentuk bujursangkar) yang bersisian.\n• Tiap kotak merepresentasikan sebuah minterm.\n• Tiap kotak dikatakan bertetangga jika minterm-minterm yang merepresentasikannya berbeda hanya 1 buah literal. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_53.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_54",
+    "page_number": 55,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_54.jpg",
+    "text": "Peta Karnaugh dengan dua peubah\nPenyajian 1:\n- m_0 (atas-kiri), m_1 (atas-kanan), m_2 (bawah-kiri), m_3 (bawah-kanan).\nPenyajian 2:\n- Kolom: y = 0, 1\n- Baris: x = 0, 1\n- Sel:\n  - (x=0, y=0): $x'y'$\n  - (x=0, y=1): $x'y$\n  - (x=1, y=0): $xy'$\n  - (x=1, y=1): $xy$\nPenyajian 3:\n- Kolom: $y'$, $y$\n- Baris: $x'$, $x$\n- Sel:\n  - (x', y'): $x'y'$\n  - (x', y): $x'y$\n  - (x, y'): $xy'$\n  - (x, y): $xy$ URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_54.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_55",
+    "page_number": 56,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_55.jpg",
+    "text": "Peta Karnaugh dengan tiga peubah\nKolom (yz): 00  01  11  10\nBaris (x): 0 (atas), 1 (bawah)\nBaris x = 0 (dari kolom 00,01,11,10):\n- x'y'z' , x'y'z , x'yz , x'yz'\nBaris x = 1 (dari kolom 00,01,11,10):\n- xy'z' , xy'z , xyz , xyz'\nPenomoran minterm (susunan 2x4 kiri):\nBaris atas (kiri->kanan): m0, m1, m3, m2\nBaris bawah (kiri->kanan): m4, m5, m7, m6\nPemetaan minterm ke ekspresi:\n- m0 = x'y'z'\n- m1 = x'y'z\n- m3 = x'yz\n- m2 = x'yz'\n- m4 = xy'z'\n- m5 = xy'z\n- m7 = xyz\n- m6 = xyz' URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_55.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_56",
+    "page_number": 57,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_56.jpg",
+    "text": "Peta Karnaugh dengan empat peubah\nLabel kolom (yz): 00  01  11  10\nLabel baris (wx): 00  01  11  10\nPeta indeks minterm (kiri):\nwx = 00: m0   m1   m3   m2\nwx = 01: m4   m5   m7   m6\nwx = 11: m12  m13  m15  m14\nwx = 10: m8   m9   m11  m10\nPeta ekspresi literal (kanan):\nwx = 00: w'x'y'z' , w'x'y'z , w'x'yz , w'x'yz'\nwx = 01: w'xy'z' , w'xy'z , w'xyz , w'xyz'\nwx = 11: wxy'z'  , wxy'z  , wxyz  , wxyz'\nwx = 10: wx'y'z' , wx'y'z , wx'yz , wx'yz'. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_56.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_57",
+    "page_number": 58,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_57.jpg",
+    "text": "Pengisian peta Karnaugh dari tabel kebenaran\nTinjau hanya nilai fungsi yang memberikan 1. Fungsi Boolean yang merepresentasikan tabel kebenaran adalah f(x,y,z) = x'y'z + xy'z' + xy'z + xyz.\nTabel kebenaran (x y z -> f): 000 -> 0; 001 -> 1; 010 -> 0; 011 -> 0; 100 -> 1; 101 -> 1; 110 -> 0; 111 -> 1.\nPeta Karnaugh (kolom yz: 00, 01, 11, 10; baris x: 0, 1) berisi:\n- x=0: [00]=0, [01]=1, [11]=0, [10]=0\n- x=1: [00]=1, [01]=1, [11]=1, [10]=0 URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_57.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_58",
+    "page_number": 59,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_58.jpg",
+    "text": "Teknik Minimisasi Fungsi Boolean dengan Peta Karnaugh\n• Penggunaan Peta Karnaugh dalam penyederhanaan fungsi Boolean dilakukan dengan cara menggabungkan kotak-kotak yang bernilai 1 dan saling bersisian.\n• Kelompok kotak yang bernilai 1 dapat membentuk:\n- pasangan (dua),\n- kuad (empat),\n- oktet (delapan).\nDeskripsi gambar: Slide berisi judul besar, teks vertikal \"IK130 - Logika Informatika\" di kiri, poin-poin tentang penggabungan kotak bernilai 1 pada Peta Karnaugh, dan pita bergradasi biru di bagian bawah dengan nomor halaman 63. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_58.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_59",
+    "page_number": 60,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_59.jpg",
+    "text": "Pasangan\nK-map 4x4 dengan kolom yz = 00, 01, 11, 10 dan baris wx = 00, 01, 11, 10. Dua sel bernilai 1 berada pada (wx=11, yz=11) dan (wx=11, yz=10) dan dikelompokkan sebagai pasangan.\nBukti secara aljabar:\nf(w, x, y, z) = wxyz + wxyz'\n= wxy(z + z')\n= wxy(1)\n= wxy\nSebelum disederhanakan: f(w, x, y, z) = wxyz + wxyz'\nSesudah disederhanakan: f(w, x, y, z) = wxy URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_59.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_60",
+    "page_number": 61,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_60.jpg",
+    "text": "Kuad (1)\nPeta Karnaugh: semua sel pada baris wx = 11 adalah 1 dan dikelompokkan sebagai satu quad (empat 1 bersebelahan pada row wx=11, kolom yz = 00,01,11,10).\nSebelum: f(w, x, y, z) = wxy'z' + wxy'z + wxyz + wxyz'\nLangkah aljabar: f(w,x,y,z) = wxy'z' + wxy'z + wxyz + wxyz' = wx y'(z' + z) + wx y(z + z') = wxy' + wxy = wx(y' + y) = wx\nSesudah: f(w, x, y, z) = wx URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_60.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_61",
+    "page_number": 62,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_61.jpg",
+    "text": "Kuad (2)\nGambar: Peta Karnaugh 4 variabel dengan kuad (2x2) di sudut kiri-bawah (baris wx = 11 dan 10; kolom yz = 00 dan 01).\nSebelum: f(w, x, y, z) = w x y' z' + w x y' z + w x' y' z' + w x' y' z\nSesudah: f(w, x, y, z) = w y' URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_61.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_62",
+    "page_number": 63,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_62.jpg",
+    "text": "Oktet\nGambar: Peta Karnaugh 4x4 dengan wx pada baris (00, 01, 11, 10) dan yz pada kolom (00, 01, 11, 10). Semua sel pada baris wx = 11 dan wx = 10 berisi 1 dan dilingkari sebagai satu oktet (8 sel). Baris wx = 00 dan wx = 01 berisi 0.\nSebelum: f(w, x, y, z) adalah jumlah dari delapan produk (minterm) yang mencakup semua kombinasi untuk sel-sel dimana w = 1.\nSesudah: f(w, x, y, z) = w URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_62.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_63",
+    "page_number": 64,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_63.jpg",
+    "text": "Penggulungan (1)\nKolom: y'z', y'z, yz, yz'.\nBaris: x', x.\nGambar (a) Peta Karnaugh \"normal\" dengan 3 peubah. (b) Peta Karnaugh dengan sisi kiri dan sisi kanan ditautkan (seperti digulung).\nGambar berisi dua subgambar (a) dan (b). (a) Peta Karnaugh berbentuk kotak 2 baris x 4 kolom kosong. Kolom-kolom diberi label dari kiri ke kanan: y'z', y'z, yz, yz'. Baris atas diberi label x' dan baris bawah diberi label x. (b) Representasi silinder dari peta Karnaugh yang menunjukkan bahwa sisi kiri dan sisi kanan peta disambungkan (digulung). Pada bagian atas silinder terlihat label kolom yang sama (y'z', y'z, yz, yz'), dan pada sisi silinder terlihat label baris x' (atas) dan x (bawah). Terdapat garis putus-putus melintang pada silinder untuk mengilustrasikan keterkaitan sel secara melingkar. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_63.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_64",
+    "page_number": 65,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_64.jpg",
+    "text": "Penggulungan (2)\nContoh: Sederhanakan f(x,y,z) = x'yz + xy'z' + xyz + xyz'.\nSebelum: f(x,y,z) = x'yz + xy'z' + xyz + xyz'\nSesudah: f(x,y,z) = yz + xz'\nDeskripsi K-map: kolom (yz) = 00, 01, 11, 10; baris x = 0 (atas), 1 (bawah). Nilai sel: (x=0) 00→0, 01→0, 11→1, 10→0; (x=1) 00→1, 01→0, 11→1, 10→1. Pengelompokan: pasangan vertikal di kolom 11 → yz; pasangan horizontal pada baris x=1 antara kolom 00 dan 10 → x z'. Hasil penyederhanaan: f(x,y,z) = yz + xz'. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_64.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_65",
+    "page_number": 66,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_65.jpg",
+    "text": "Tips menyederhanakan dengan Peta Karnaugh\n- Kelompokkan 1 yang bertetangga sebanyak mungkin\n- Dimulai dengan mencari oktet sebanyak-banyaknya terlebih dahulu, kemudian kuad, dan terakhir pasangan.\nHalaman: 70 URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_65.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_66",
+    "page_number": 67,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_66.jpg",
+    "text": "Contoh minimisasi 1:\nPeta Karnaugh 4 variabel (wx vs yz) seperti dijelaskan di image_description di atas.\nHasil penyederhanaan: f(w, x, y, z) = wy' + yz' + w'x'z URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_66.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_67",
+    "page_number": 68,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_67.jpg",
+    "text": "Contoh minimisasi 2:\nPeta Karnaugh 4x4 berlabel baris wx = 00, 01, 11, 10 dan kolom yz = 00, 01, 11, 10. Terdapat beberapa sel bernilai 1 dan tiga pengelompokan (satu loop 4 pada kolom tengah, satu loop 4 berbentuk kotak 2x2 di kanan-tengah, dan satu loop 2 pada pojok kiri-bawah).\nHasil penyederhanaan: f(w, x, y, z) = z + xy + wx' y'. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_67.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_68",
+    "page_number": 69,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_68.jpg",
+    "text": "Contoh minimisasi 3:\n(Peta Karnaugh 4x4 dengan sumbu baris 'wx' = 00, 01, 11, 10 dan sumbu kolom 'yz' = 00, 01, 11, 10. Terdapat kelompok-lingkar pada peta: satu grup 4 di baris wx=11 → term wx; satu grup untuk w=1 dan z=1 → term wz; satu grup untuk w=1 dan y=1 → term wy; dan satu sel tunggal pada posisi x=1,y=1,z=1 → term xyz.)\nHasil penyederhanaan: f(w,x,y,z) = wx + wz + wy + xyz URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_68.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_69",
+    "page_number": 70,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_69.jpg",
+    "text": "Contoh minimisasi 4:\nTentukan bentuk sederhana dari fungsi Boolean yang merepresentasikan tabel kebenaran berikut dalam bentuk baku SOP dan bentuk baku POS.\nTabel kebenaran (x y z -> f(x,y,z)):\n0 0 0 -> 0\n0 0 1 -> 1\n0 1 0 -> 0\n0 1 1 -> 1\n1 0 0 -> 1\n1 0 1 -> 0\n1 1 0 -> 1\n1 1 1 -> 0 URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_69.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_70",
+    "page_number": 71,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_70.jpg",
+    "text": "Penyelesaian:\n(a) Bentuk baku SOP: kelompokkan 1\n[Peta Karnaugh 3-variabel: x pada sumbu vertikal; yz = 00, 01, 11, 10 pada sumbu horizontal. Nilai 1 pada sel: (x=0,yz=01), (x=0,yz=11), (x=1,yz=00), (x=1,yz=10). Dua grup pasangan 1: baris atas (01 & 11) dan baris bawah (00 & 10, dengan pembungkus).]\nFungsi minimasi: f(x,y,z) = x^{\\prime}z + xz^{\\prime}\n(b) Bentuk baku POS: kelompokkan 0\n[Peta Karnaugh 3-variabel untuk 0 dengan pengelompokan nol menghasilkan bentuk POS minimal.]\nFungsi minimasi: f(x,y,z) = (x^{\\prime} + z^{\\prime})(x + z) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_70.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_71",
+    "page_number": 72,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_71.jpg",
+    "text": "Contoh minimisasi 5:\nMinimisasi fungsi Boolean f(x, y, z) = (0, 2, 4, 5, 6)\n \n \n \n \nMinterm \nMaxterm \nx \ny \nz \nSuku \nLambang \nSuku \nLambang \nx’y’z’ \nx’y’z \nx‘y z’ \nx’y z \nx y’z’ \nx y’z \nx y z’ \nx y z \nm0 \nm1 \nm2 \nm3 \nm4 \nm5 \nm6 \nm7 \nx + y + z \n x + y + z’ \nx + y’+z \nx + y’+z’ \nx’+ y + z \nx’+ y + z’ \nx’+ y’+ z \nx’+ y’+ z’ \nM0 \nM1 \nM2 \nM3 \nM4 \nM5 \nM6 \nM7 URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_71.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_72",
+    "page_number": 73,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_72.jpg",
+    "text": "Contoh minimisasi 6:\nMinimisasi: f(w, x, y, z) = w'x'y' + x'yz' + w'xyz' + wx'y'\nPenyelesaian:\nPeta Karnaugh (kolom yz = 00, 01, 11, 10; baris wx = 00, 01, 11, 10). Sel bernilai 1 pada (wx,yz): (00,00), (00,01), (00,10), (01,10), (10,00), (10,01), (10,10). Beberapa sel dilingkari pada peta untuk pengelompokan minimisasi.\nHasil penyederhanaan: f(w, x, y, z) = x'y' + x'z' + w'yz'\nCatatan tambahan di slide: \"IK130 - Logika Informatika\" dan nomor halaman \"78\". URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_72.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_73",
+    "page_number": 74,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_73.jpg",
+    "text": "Contoh minimisasi 8:\nSederhanakan fungsi f(w,x,y,z) = (w + x')(w + x + y)(w' + x' + y')(w' + x + y + z'). Hasil penyederhanaan dalam bentuk baku SOP dan POS.\nPenyelesaian:\n(Peta Karnaugh 4x4; kolom = yz: 00, 01, 11, 10; baris = wx: 00, 01, 11, 10)\nHasil penyederhanaan\nSOP: f(w, x, y, z) = x' y + w x y' + w y' z'  (garis penuh)\nPOS: f(w, x, y, z) = (x' + y')(w + y)(x + y + z')  (garis putus-putus) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_73.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_74",
+    "page_number": 75,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_74.jpg",
+    "text": "Contoh minimisasi 9:\nSederhanakan fungsi f(x, y, z, t) = x y' + x y z + x' y' z' + x' y z t'\nPenyelesaian:\n- Peta Karnaugh (4×4) dengan baris xy (00, 01, 11, 10) dan kolom zt (00, 01, 11, 10).\n- Sel bernilai 1 berada pada: (xy=00, zt=00), (00,01), (01,10), (11,11), (11,10), dan semua sel pada baris xy=10 (zt=00,01,11,10).\n- Peta kiri: \"Pengelompokan yang berlebihan\" (pengelompokan yang overlap/terlalu besar).\n- Peta kanan: \"Pengelompokan yang benar\" (pengelompokan yang tepat menutupi semua 1).\nFungsi minimasi: f(x, y, z, t) = y' z' + x z + y z t'.\nDeskripsi gambar: Terdapat dua peta Karnaugh (4×4) bersebelahan. Sumbu baris dilabeli 'xy' dengan urutan Gray code 00, 01, 11, 10; sumbu kolom dilabeli 'zt' dengan urutan Gray code 00, 01, 11, 10. Pada kedua peta, sel berisi '1' berada pada: (xy=00, zt=00), (00,01), (01,10), (11,11), (11,10), dan keempat sel pada baris xy=10 (zt=00,01,11,10) semuanya bernilai 1. Peta kiri diberi judul \"Pengelompokan yang berlebihan\" dengan pengelompokan yang mencakup area lebih besar/berulang; peta kanan diberi judul \"Pengelompokan yang benar\" dengan pengelompokan yang lebih tepat (terlihat tiga kelompok yang menutupi semua sel bernilai 1). URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_74.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_75",
+    "page_number": 76,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_75.jpg",
+    "text": "Contoh minimisasi 10:\nMinimasi fungsi yang telah dipetakan ke peta Karnaugh di bawah ini dalam bentuk baku SOP dan bentuk baku POS.\nPeta Karnaugh (baris wx: 00, 01, 11, 10; kolom yz: 00, 01, 11, 10)\nIsi sel per baris:\n- wx = 00 : 0, 0, 1, 0\n- wx = 01 : 1, 1, 1, 0\n- wx = 11 : 0, 1, 1, 0\n- wx = 10 : 0, 1, 1, 0\nPenyelesaian:\nSOP: f(w, x, y, z) = yz + wz + xz + w' x y'  (garis penuh)\nPOS: f(w, x, y, z) = (y' + z)(w' + z)(x + z)(w + x + y)  (garis putus-putus) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_75.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_76",
+    "page_number": 77,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_76.jpg",
+    "text": "Contoh minimisasi 11:\nSederhanakan rangkaian logika berikut:\nDiagram menunjukkan empat gerbang AND dengan output: x'yz, x'yz', xy'z', xy'z. Keempat output ini di-OR menjadi fungsi:\nf = x'yz + x'yz' + xy'z' + xy'z. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_76.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_77",
+    "page_number": 78,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_77.jpg",
+    "text": "Penyelesaian: Fungsi yang berkoresponden dengan rangkaian logika tsb:\nf(x, y, z) = x' y z + x' y z' + x y' z' + x y' z\nKarnaugh map (yz kolom: 00, 01, 11, 10; x baris: 0 atas, 1 bawah):\n- x=0: [00]=1, [01]=0, [11]=1, [10]=1\n- x=1: [00]=1, [01]=1, [11]=0, [10]=0\n(GROUPING: pasangan pada baris atas kolom 11-10, dan pasangan pada baris bawah kolom 00-01)\nFungsi Boolean hasil minimisasi:\nf(x, y, z) = x' y + x y'\nRangkaian logika hasil penyederhanaan:\nDua gerbang AND yang menghasilkan x'y dan xy' (dengan inverter pada input yang sesuai), lalu kedua keluaran digabungkan dengan gerbang OR menjadi x'y + xy'.\nDeskripsi gambar: Karnaugh map seperti di atas dan diagram rangkaian yang mengimplementasikan f(x,y,z)=x'y+xy'. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_77.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_78",
+    "page_number": 79,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_78.jpg",
+    "text": "Keadaan don't care\n• Keadaan don't care adalah kondisi nilai peubah yang tidak diperhitungkan oleh fungsinya.\n• Artinya nilai 1 atau 0 dari peubah don't care tidak berpengaruh pada hasil fungsi tersebut.\n• Contoh:\n- peraga digital angka desimal 0 sampai 9.\n- Jumlah bit yang diperlukan untuk merepresentasikan = 4 bit. (kemungkinan ada kata yang hilang setelah 'merepresentasikan')\n- Bit-bit untuk angka 10-15 tidak terpakai URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_78.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_79",
+    "page_number": 80,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_79.jpg",
+    "text": "Tabel (w x y z -> Desimal):\n0000 -> 0\n0001 -> 1\n0010 -> 2\n0011 -> 3\n0100 -> 4\n0101 -> 5\n0110 -> 6\n0111 -> 7\n1000 -> 8\n1001 -> 9\n1010 -> X (don't care)\n1011 -> X (don't care)\n1100 -> X (don't care)\n1101 -> X (don't care)\n1110 -> X (don't care)\n1111 -> X (don't care)\nBaris dengan nilai 'X' diberi kurung kurawal dan dilabeli \"don't care\".\nHalaman: 85 URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_79.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_80",
+    "page_number": 81,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_80.jpg",
+    "text": "• Dalam menyederhanakan Peta Karnaugh yang mengandung keadaan don’t care, ada dua hal penting sebagai pegangan.\n• Pertama, kita anggap semua nilai don’t care (X) sama dengan 1 dan kemudian membentuk kelompok sebesar mungkin yang melibatkan angka 1 termasuk tanda X tersebut.\n• Kedua, semua nilai X yang tidak termasuk dalam kelompok tersebut kita anggap bernilai 0.\n• Dengan cara ini, keadaan-keadaan X telah dimanfaatkan semaksimal mungkin, dan kita boleh melakukannya secara bebas.\n(Nomor slide: 86) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_80.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_81",
+    "page_number": 82,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_81.jpg",
+    "text": "Contoh: Sebuah fungsi Boolean, f, dinyatakan dengan tabel berikut. Minimisasi fungsi f sesederhana mungkin.\nTabel kebenaran (transkripsi lengkap):\nw x y z | f(w,x,y,z)\n0 0 0 0 -> 1\n0 0 0 1 -> 0\n0 0 1 0 -> 0\n0 0 1 1 -> 1\n0 1 0 0 -> 1\n0 1 0 1 -> 1\n0 1 1 0 -> 0\n0 1 1 1 -> 1\n1 0 0 0 -> X\n1 0 0 1 -> X\n1 0 1 0 -> X\n1 0 1 1 -> X\n1 1 0 0 -> X\n1 1 0 1 -> X\n1 1 1 0 -> X\n1 1 1 1 -> X URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_81.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_82",
+    "page_number": 83,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_82.jpg",
+    "text": "Penyelesaian:\nPeta Karnaugh 4-variabel dengan baris wx = 00, 01, 11, 10 dan kolom yz = 00, 01, 11, 10.\nIsi sel (baris sesuai wx, kolom sesuai yz):\n  wx=00:  [00]=1, [01]=0, [11]=1, [10]=0\n  wx=01:  [00]=1, [01]=1, [11]=1, [10]=0\n  wx=11:  [00]=X, [01]=X, [11]=X, [10]=X\n  wx=10:  [00]=X, [01]=0, [11]=X, [10]=X\nCatatan: X = don't-care. Pada gambar juga terlihat lingkaran/grup sel untuk penyederhanaan.\nHasil penyederhanaan: f(w, x, y, z) = xz + y'z' + yz URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_82.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_83",
+    "page_number": 84,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_83.jpg",
+    "text": "Contoh: Minimisasi fungsi Boolean berikut (dalam bentuk baku SOP dan bentuk baku POS):\nf(w, x, y, z) = Σ(1, 3, 7, 11, 15)\ndengan kondisi don't care adalah d(w, x, y, z) = Σ(0, 2, 5).\nPenyelesaian:\n(Peta Karnaugh 4-variabel seperti tertera pada gambar — baris wx = 00, 01, 11, 10; kolom yz = 00, 01, 11, 10. Isi sel: m0= X, m1=1, m2= X, m3=1, m4=0, m5= X, m6=0, m7=1, m8=0, m9=0, m10=0, m11=1, m12=0, m13=0, m14=0, m15=1. Terdapat kelompok garis penuh dan kelompok garis putus-putus seperti terlihat pada gambar.)\nHasil penyederhanaan:\nSOP: f(w, x, y, z) = yz + w'z    (kelompok garis penuh)\nPOS: f(w, x, y, z) = z (w' + y)    (kelompok garis putus-putus) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_83.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_84",
+    "page_number": 85,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_84.jpg",
+    "text": "Perancangan Rangkaian Logika\n1. Majority gate merupakan sebuah rangkaian digital yang keluarannya sama dengan 1 jika mayoritas masukannya bernilai 1 (mayoritas = 50% + 1). Keluaran sama dengan 0 jika tidak memenuhi hal tersebut di atas. Dengan bantuan tabel kebenaran, carilah fungsi Boolean yang diimplementasikan dengan 3-input majority gate. Sederhanakan fungsinya, lalu gambarkan rangkaian logikanya.\nDeskripsi gambar: Slide presentasi berjudul \"Perancangan Rangkaian Logika\". Isi slide adalah paragraf soal terkait majority gate: definisi majority gate dan instruksi untuk mencari fungsi Boolean 3-input majority gate menggunakan tabel kebenaran, menyederhanakan fungsi, dan menggambarkan rangkaian logika. Tidak ada tabel kebenaran atau diagram rangkaian pada slide — hanya teks. Di sisi kiri terdapat teks vertikal \"IK130 - Logika Informatika\" dan di sudut kanan bawah angka halaman \"90\". URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_84.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_85",
+    "page_number": 86,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_85.jpg",
+    "text": "Penyelesaian:\nTabel kebenaran:\nx y z | f(x,y,z)\n0 0 0 | 0\n0 0 1 | 0\n0 1 0 | 0\n0 1 1 | 1\n1 0 0 | 0\n1 0 1 | 1\n1 1 0 | 1\n1 1 1 | 1\nPeta Karnaugh (yz = 00 01 11 10; x = 0,1) menunjukkan sel 1 pada kombinasi (0,1,1), (1,0,1), (1,1,0), (1,1,1) dan pengelompokan menghasilkan istilah xz, xy, yz.\nFungsi dari peta/K-map:\nf(x, y, z) = xz + xy + yz\nRangkaian logika: tiga gerbang AND menghasilkan xz, xy, yz yang kemudian digabung oleh satu gerbang OR menjadi f.\n(Image: Tabel kebenaran, Peta Karnaugh dengan kelompok yang melahirkan xz/xy/yz, dan diagram rangkaian dengan tiga AND dan satu OR sesuai fungsi di atas.) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_85.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_86",
+    "page_number": 87,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_86.jpg",
+    "text": "2. Gunakan Peta Karnaugh untuk merancang rangkaian logika yang dapat menentukan apakah sebuah angka desimal yang direpresentasikan dalam bit biner merupakan bilangan genap atau bukan (yaitu, memberikan nilai 1 jika genap dan 0 jika tidak).\nPenyelesaian:\nAngka desimal: 0..9 (direpresentasikan dalam 4 bit biner, misalkan $a_0, a_1, a_2, a_3$).\nFungsi $f(a_0,a_1,a_2,a_3)$ bernilai 1 jika representasi desimal dari $a_0a_1a_2a_3$ menyatakan bilangan genap, dan bernilai 0 jika tidak genap. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_86.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_87",
+    "page_number": 88,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_87.jpg",
+    "text": "Tabel Kebenaran:\nKolom: a0, a1, a2, a3 | Desimal | f(a0,a1,a2,a3)\n0000 | 0  | 1\n0001 | 1  | 0\n0010 | 2  | 1\n0011 | 3  | 0\n0100 | 4  | 1\n0101 | 5  | 0\n0110 | 6  | 1\n0111 | 7  | 0\n1000 | 8  | 1\n1001 | 9  | 0\n1010 | 10 | X\n1011 | 11 | X\n1100 | 12 | X\n1101 | 13 | X\n1110 | 14 | X\n1111 | 15 | X\nPeta Karnaugh (kolom a2a3 = 00, 01, 11, 10; baris a0a1 = 00, 01, 11, 10):\nBaris 00: 1, 0, 0, 1\nBaris 01: 1, 0, 0, 1\nBaris 11: X, X, X, X\nBaris 10: 1, 0, X, X\nFungsi:\nf(a0, a1, a2, a3) = a3'\nRangkaian logika:\na3 --[NOT]--> f URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_87.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_3_97040c00",
+    "slide_id": "920200419930811201_3_97040c00_88",
+    "page_number": 89,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_88.jpg",
+    "text": "REFERENSI\n1. Kenneth H. Rosen, Discrete Mathematics and Application to Computer Science 5th Edition, McGraw-Hill.\n2. Dr. Ir. Rinaldi Munir, M.T, Matematika Diskrit (Edisi Keempat), Bandung: Informatika, 2013.\n3. Richard Johsonbaugh, Discrete Mathematics, Prentice-Hall, 1997.\n(halaman 94) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_88.jpg"
+  }
+]

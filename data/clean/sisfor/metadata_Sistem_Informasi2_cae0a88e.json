@@ -1,0 +1,79 @@
+[
+  {
+    "doc_id": "Sistem Informasi2_cae0a88e",
+    "slide_id": "Sistem Informasi2_cae0a88e_0",
+    "page_number": 1,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_0.jpg",
+    "text": "Prodi Ilmu Komputer\nUNIVERSITAS PENDIDIKAN INDONESIA\nSISTEM INFORMASI\nParadigma Sistem Informasi\n(Effy Oz)\nDr. Asep Wahyudin, S.Kom, MT.\nIlmu Komputer\nFPMIFA - Universitas Pendidikan Indonesia\nSistem Informasi – Ilmu Komputer – FPMIPA UPI - Asep Wahyudin URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_0.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi2_cae0a88e",
+    "slide_id": "Sistem Informasi2_cae0a88e_1",
+    "page_number": 2,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_1.jpg",
+    "text": "Sistem Informasi – Ilmu Komputer – FPMIPA UPI - Asep Wahyudin\nTujuan:\nMemahami bisnis dan bagaimana bisnis tersebut berjalan pada sistem, bagaimana IT memberikan inovasi, apa saja rintangan/tantangan dalam menjalankan SI\nBagaimana sistem dari sisi pandang enterprise\n1. Korelasi antara sistem dan SI\n2. Memahami Kerangka Kerja Sistem Informasi\n3. Mengerti aktivitas sistem informasi dan dimensi kualitas informasi URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_1.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi2_cae0a88e",
+    "slide_id": "Sistem Informasi2_cae0a88e_2",
+    "page_number": 3,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_2.jpg",
+    "text": "Sistem Informasi – Ilmu Komputer – FPMIPA UPI - Asep Wahyudin\nKomponen Sistem informasi (People, Hardware, Software, Networks dan Data)\nInformation System Resources\nDiagram menunjukkan lima komponen utama sistem informasi yang mengelilingi pusat \"Information System Resources\":\n- People (atas)\n- Hardware (kanan atas)\n- Networks (kanan bawah)\n- Data (kiri bawah)\n- Software (kiri atas) URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_2.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi2_cae0a88e",
+    "slide_id": "Sistem Informasi2_cae0a88e_3",
+    "page_number": 4,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_3.jpg",
+    "text": "Sistem Informasi – Ilmu Komputer – FPMIPA UPI - Asep Wahyudin\nKerangka Kerja Sistem informasi\n(berhubungan dengan berbagai teknologi, konsep dan aplikasi yang komplek)\nKomponen kerangka kerja sistem informasi (dari diagram): Information Systems (tengah); Management Challenges; Information Technologies; Foundation Concepts; Development Processes; Business Applications. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_3.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi2_cae0a88e",
+    "slide_id": "Sistem Informasi2_cae0a88e_4",
+    "page_number": 5,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_4.jpg",
+    "text": "Sistem Informasi – Ilmu Komputer – FPMIPA UPI - Asep Wahyudin\nHalaman 5\nAktifitas Sistem informasi\n(hubungan antara komponen SI dengan aktifitas pengolahan data)\nKomponen/Sumber Daya pada diagram:\n- Sumber Daya Manusia (People Resources: End Users and IS Specialists)\n- Sumber Daya Perangkat Lunak (Software Resources: Programs and Procedures)\n- Sumber Daya Perangkat Keras (Hardware Resources: Machines and Media)\n- Sumber Daya Jaringan (Network Resources: Communications Media and Network Support)\n- Sumber Daya Data (Data Resources: Data and Knowledge Bases)\nAlur aktivitas pengolahan data (di tengah diagram):\n- Masukan Sumber Daya Data (Input of Data Resources)\n- Pemrosesan Data menjadi Informasi (Processing Data Into Information)\n- Keluaran Produk Informasi (Output of Information Products)\nElemen tambahan yang terhubung dengan pemrosesan:\n- Pengendalian Kinerja Sistem (Control of System Performance)\n- Penyimpanan Sumber Daya Data (Storage of Data Resources)\nDeskripsi singkat gambar: Diagram pentagon menunjukkan kelima jenis sumber daya sistem informasi di sekeliling proses input → pemrosesan → output, dengan pengendalian kinerja dan penyimpanan data yang mendukung pemrosesan. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_4.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi2_cae0a88e",
+    "slide_id": "Sistem Informasi2_cae0a88e_5",
+    "page_number": 6,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_5.jpg",
+    "text": "Sistem Informasi – Ilmu Komputer – FPMIPA UPI - Asep Wahyudin\nDimensi Kualitas informasi (Dimensi waktu, bentuk dan content)\nDimensi Waktu\nInformasi harus ada saat dibutuhkan (timeliness), selalu up-to-date (currency), disajikan berkali-kali sebanyak dibutuhkan (frequency), dan dapat menyajikan untuk periode sekarang-masa lalu-masa datang (time period).\nGambar: Kubus yang menunjukkan tiga dimensi kualitas informasi:\n- Time: Time, Timeliness, Currency, Frequency, Time Period\n- Content: Accuracy, Relevance, Completeness, Conciseness, Scope, Performance\n- Form: Clarity, Detail, Order, Presentation, Media URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_5.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi2_cae0a88e",
+    "slide_id": "Sistem Informasi2_cae0a88e_6",
+    "page_number": 7,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_6.jpg",
+    "text": "Dimensi Kualitas informasi (Dimensi waktu, bentuk dan content)\nDimensi Time:\nTime; Timeliness; Currency; Frequency; Time Period\nDimensi Content:\nContent: Accuracy; Relevance; Completeness; Conciseness; Scope; Performance\nPenjelasan Dimensi Content:\nInformasi harus bebas dari kesalahan (accuracy), berhubungan dengan kebutuhan penggunanya pada situasi tertentu (relevance), disajikan secara lengkap (completeness), hanya yang dibutuhkan yang disajikan (conciseness), dapat disajikan untuk lingkungan luas maupun terbatas atau internal/external fokus (scope), dapat menunjukkan kinerja dengan pengukuran aktivitas yang telah diselesaikan, kemajuan yang telah dicapai, sumber daya yang terkumpul (performance).\nDimensi Form:\nForm: Clarity; Detail; Order; Presentation; Media URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_6.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi2_cae0a88e",
+    "slide_id": "Sistem Informasi2_cae0a88e_7",
+    "page_number": 8,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_7.jpg",
+    "text": "Dimensi Kualitas informasi (Dimensi waktu, bentuk dan content)\nDimensi Bentuk\nInformasi harus dapat disajikan dalam bentuk yang mudah dimengerti (clarity), dapat disajikan secara detail atau ringkasan (detail), dapat diatur dalam urutan tertentu (order), dapat disajikan secara naratif, angka, grafik, lainnya (presentation), dapat disajikan dalam media cetak, video, display/media lain (media).\nDimensi Waktu (Time): Timeliness, Currency, Frequency, Time Period\nDimensi Content (Content): Accuracy, Relevance, Completeness, Conciseness, Scope, Performance\nDimensi Bentuk (Form): Clarity, Detail, Order, Presentation, Media URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_7.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi2_cae0a88e",
+    "slide_id": "Sistem Informasi2_cae0a88e_8",
+    "page_number": 9,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_8.jpg",
+    "text": "Sistem Informasi – Ilmu Komputer – FPMIPA UPI - Asep Wahyudin\nPeran Penerapan Sistem Informasi Dalam Penerapan Lingkungan Bisnis\n- Mendukung proses bisnis dan operasional\n- Mendukung pengambilan keputusan\n- Mendukung strategi untuk keunggulan kompetitif\nDiagram (piramida tiga tingkat):\nTingkat bawah: Support of Business Processes and Operations\nTingkat tengah: Support of Business Decision Making\nTingkat atas: Support of Strategies for Competitive Advantage\nDeskripsi singkat gambar: Piramida tiga tingkat yang merepresentasikan dukungan sistem informasi mulai dari proses dan operasi bisnis (dasar), melalui pengambilan keputusan (tengah), hingga mendukung strategi untuk keunggulan kompetitif (puncak). URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_8.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi2_cae0a88e",
+    "slide_id": "Sistem Informasi2_cae0a88e_9",
+    "page_number": 10,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_9.jpg",
+    "text": "Sistem Informasi – Ilmu Komputer – FPMIPA UPI - Asep Wahyudin\nSiklus Pengembangan Sistem Informasi\nDiagram siklus (searah jarum jam): Investigate -> Analyze -> Design -> Implement -> Maintain\nTeks di tengah diagram: Developing Information System Solutions\nSistem Informasi – Ilmu Komputer – FPMIPA UPI - Asep Wahyudin URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_9.jpg"
+  },
+  {
+    "doc_id": "Sistem Informasi2_cae0a88e",
+    "slide_id": "Sistem Informasi2_cae0a88e_10",
+    "page_number": 11,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_10.jpg",
+    "text": "Sistem Informasi – Ilmu Komputer – FPMIPA UPI - Asep Wahyudin\nSelesai URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/Sistem%20Informasi2_cae0a88e_10.jpg"
+  }
+]
