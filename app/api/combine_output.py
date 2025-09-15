@@ -30,8 +30,8 @@ async def SummariesOutput(query: str) -> str:
     # return "What is a program?\nA sequence of steps\nFor each step, an arithmetic or logical operation is done\nFor each operation, a different set of control signals is needed\nDeskripsi gambar: Slide menampilkan judul \"What is a program?\" di kiri atas; teks utama seperti di atas; ada logo kecil di pojok kiri bawah, footer \"Arskom\" di tengah bawah, dan nomor slide \"4\" di pojok kanan bawah. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_3.jpg"
 
 
-async def VideoEmbedOutput(query: str) -> List[dict]:
-    results = await query_twelve_labs(query_text=query, collection_name=os.getenv("TWELVE_LABS_COLLECTION"))
+def VideoEmbedOutput(query: str) -> List[dict]:
+    results = query_twelve_labs(query_text=query, collection_name=os.getenv("TWELVE_LABS_COLLECTION"))
     return results
     # return [{"url": "https: // samplelib.com/lib/preview/mp4/sample-10s.mp4",
     # "start_offset_sec": "0",

@@ -113,7 +113,7 @@ class VideoEmbedTool(BaseTool):
 
     def _run(self, query: str) -> str:
         # output list of dict (json)
-        output = asyncio.run(VideoEmbedOutput(query))
+        output = VideoEmbedOutput(query)
         # convert to string
         result = json.dumps(output, ensure_ascii=False, indent=2)
         return result
