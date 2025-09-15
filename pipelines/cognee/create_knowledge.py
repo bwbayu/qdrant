@@ -1,13 +1,17 @@
+from dotenv import load_dotenv
+load_dotenv()
 import os
 import json
 from pipelines.cognee.preprocessing import process_document
 from pipelines.cognee.utils.pipeline_utils import get_doc_id_from_filename
 from pipelines.cognee.utils.check_processed_docs import load_registry, save_registry
 from cognee_community_vector_adapter_qdrant import register
+from pipelines.cognee.utils.upload_to_gcs import upload_file
 from cognee import add, cognify
 
+BUCKET_NAME = os.environ.get("GCS_BUCKET_NAME")
 
-async def create_knowledge(raw_dir, clean_dir):
+async def create_knowledge(raw_dir, clean_dir, upload_metadata = False, job_id = None):
     # get json registry data
     registry = load_registry()
 
@@ -28,6 +32,7 @@ async def create_knowledge(raw_dir, clean_dir):
         # check if metadata already exists in clean_dir
         metadata_filename = f"metadata_{doc_id}.json"
         metadata_path = os.path.join(clean_dir, metadata_filename)
+
         if os.path.exists(metadata_path):
             print(f"Metadata exists for {filename}, loading...")
             with open(metadata_path, "r", encoding="utf-8") as f:
@@ -37,21 +42,17 @@ async def create_knowledge(raw_dir, clean_dir):
                 # processing new file
                 print(f"Processing {filename}")
                 metadata = process_document(pdf_path)
-                out_file = os.path.join(clean_dir, metadata_filename)
                 # write data
-                with open(out_file, "w", encoding="utf-8") as f:
+                with open(metadata_path, "w", encoding="utf-8") as f:
                     json.dump(metadata, f, ensure_ascii=False, indent=2)
+
+                # upload metadata
+                if upload_metadata == True and (job_id != None or job_id != ""):
+                    print("Upload metadata")
+                    upload_file(metadata_path, BUCKET_NAME, f"metadata/{job_id}/{metadata_filename}")
             except Exception as e:
                 print(f"Failed {filename}: {e}")
                 continue
-        
-        # all_text = "\n".join([data.get("text", "") for data in metadata if data.get("text")])
-
-        # if all_text:
-        #     await add(data=all_text)
-        #     print(f"Add: Finish created dataset for {doc_id}")
-        #     await cognify()
-        #     print(f"Cognify: Finish created knowledge for {doc_id}")
 
         # create knowledge base
         for data in metadata:
@@ -66,4 +67,5 @@ async def create_knowledge(raw_dir, clean_dir):
             "metadata_file": metadata_filename,
             "status": "done"
         }
+
         save_registry(registry)

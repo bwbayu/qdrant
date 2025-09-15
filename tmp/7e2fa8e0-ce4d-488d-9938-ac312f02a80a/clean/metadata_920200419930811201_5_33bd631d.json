@@ -1,0 +1,30 @@
+[
+  {
+    "doc_id": "920200419930811201_5_33bd631d",
+    "slide_id": "920200419930811201_5_33bd631d_0",
+    "page_number": 1,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_5_33bd631d_0.jpg",
+    "text": "IK-130\nLOGIKA INFORMATIKA\nGRAPH\nAni Anisyah, M.T.\nDeskripsi gambar: Slide berlatarkan putih dengan tulisan besar 'GRAPH' di bagian kiri tengah. Di pojok kanan atas terdapat logo institusi bundar berwarna merah, hitam, dan kuning. Di bagian bawah terdapat pita berwarna biru tua yang memuat teks 'IK-130' dan 'LOGIKA INFORMATIKA' di sisi kiri serta nama pengajar 'Ani Anisyah, M.T.' di sisi kanan. Di tepi kiri ada teks vertikal kecil 'IK130 - Logika Informatika'. Di pojok kanan bawah ada nomor halaman '1'. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_5_33bd631d_0.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_5_33bd631d",
+    "slide_id": "920200419930811201_5_33bd631d_1",
+    "page_number": 2,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_5_33bd631d_1.jpg",
+    "text": "OUTLINE\n• Pendahuluan\n• Sejarah Graph\n• Definisi\n• Jenis-jenis Graf\n• Terminologi Graf\n• Representasi Graf\n• Lintasan dan Sirkuit\n• Aplikasi Graf\nDeskripsi gambar: Slide memiliki dua kolom — kolom kiri biru gelap dengan teks vertikal \"IK130 - Logika Informatika\" dan judul besar \"OUTLINE\", kolom kanan putih berisi daftar poin di atas. Nomor slide: 2. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_5_33bd631d_1.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_5_33bd631d",
+    "slide_id": "920200419930811201_5_33bd631d_2",
+    "page_number": 3,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_5_33bd631d_2.jpg",
+    "text": "PENDAHULUAN\n• Graf digunakan untuk merepresentasikan objek-objek diskrit dan hubungan antara objek-objek tersebut.\n• Gambar di bawah ini sebuah graf yang menyatakan peta jaringan jalan raya yang menghubungkan sejumlah kota di Provinsi Jawa Tengah.\nGambar/ilustrasi: Diagram berupa graf tak berarah yang memetakan jaringan jalan raya yang menghubungkan sejumlah kota di Provinsi Jawa Tengah. Graf menampilkan simpul berlabel kota-kota berikut: Brebes, Tegal, Slawi, Pemalang, Pekalongan, Kendal, Semarang, Demak, Kudus, Rembang, Blora, Purwodadi, Sragen, Solo, Sukoharjo, Wonogiri, Boyolali, Klaten, Magelang, Salatiga, Purworejo, Kebumen, Kroya, Cilacap, Purwokerto, Purbalingga, Banjarnegara, Wonosobo, Temanggung. URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_5_33bd631d_2.jpg"
+  },
+  {
+    "doc_id": "920200419930811201_5_33bd631d",
+    "slide_id": "920200419930811201_5_33bd631d_3",
+    "page_number": 4,
+    "gcs_url": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_5_33bd631d_3.jpg",
+    "text": "SEJARAH GRAF\n• Masalah Jembatan Königsberg (tahun 1736)\nGambar 1. Masalah Jembatan Königsberg\n• Graf yang merepresentasikan jembatan Königsberg:\n  Simpul (vertex) → menyatakan daratan\n  Sisi (edge)   → menyatakan jembatan\n  Label simpul pada graf: C (atas), A (tengah), B (bawah), D (kanan).\n• Bisakah melalui setiap jembatan tepat sekali dan kembali lagi ke tempat semula? URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_5_33bd631d_3.jpg"
+  }
+]

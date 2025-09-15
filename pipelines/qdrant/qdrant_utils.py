@@ -6,8 +6,8 @@ load_dotenv()
 
 # Initialize the Qdrant client with the URL, API key, and a connection timeout
 qdrant = QdrantClient(
-    url=os.getenv("QDRANT_URL"),
-    api_key=os.getenv("QDRANT_API_KEY"),
+    url=os.getenv("QDRANT_URL2"),
+    api_key=os.getenv("QDRANT_API_KEY2"),
     timeout=60.0 # Time out set to prevents application from getting stuck waiting
 )
 

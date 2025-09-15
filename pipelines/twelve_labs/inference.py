@@ -6,8 +6,8 @@ from twelvelabs import AsyncTwelveLabs, TwelveLabs
 import asyncio
 # Initialize an synchronous Qdrant client for database operations.
 qdrant_client_async = qdrant_client.QdrantClient(
-    url=os.getenv("QDRANT_URL"),
-    api_key=os.getenv("QDRANT_API_KEY"),
+    url=os.getenv("QDRANT_URL2"),
+    api_key=os.getenv("QDRANT_API_KEY2"),
     timeout=60.0,
 )
 

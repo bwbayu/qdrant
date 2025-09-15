@@ -8,7 +8,7 @@ from cognee_community_vector_adapter_qdrant import register  # noqa: F401
 from cognee import config, prune
 from pipelines.cognee.create_knowledge import create_knowledge
 
-async def pipeline_cognee(reset_data=False):
+async def pipeline_cognee(raw_dir, clean_dir, reset_data=False, upload_metadata=False ,job_id=None):
     # Setup config Cognee
     system_path = pathlib.Path(__file__).parent
     config.system_root_directory(path.join(system_path, ".cognee_system"))
@@ -23,7 +23,7 @@ async def pipeline_cognee(reset_data=False):
     config.set_vector_db_config(
         {
             "vector_db_provider": os.getenv("VECTOR_DB_PROVIDER", "qdrant"),
-            "vector_db_url": os.getenv("VECTOR_DB_URL", "http://localhost:6333"),
+            "vector_db_url": os.getenv("VECTOR_DB_URL"),
             "vector_db_key": os.getenv("VECTOR_DB_KEY", ""),
         }
     )
@@ -39,11 +39,11 @@ async def pipeline_cognee(reset_data=False):
         await prune.prune_system(metadata=True)
 
     # create knowledge based on file at data/raw
-    # TODO: dynamic raw_dir and clean_dir
-    raw_dir = "data/raw/sisfor"
-    clean_dir = "data/clean/sisfor"
-    await create_knowledge(raw_dir, clean_dir)
+    await create_knowledge(raw_dir, clean_dir, upload_metadata=upload_metadata, job_id=job_id)
 
-if __name__ == "__main__":
-    # create knowledge
-    asyncio.run(pipeline_cognee())
+
+# if __name__ == "__main__":
+#     # create knowledge
+#     # raw_dir = "data/raw/sisfor"
+#     # clean_dir = "data/clean/sisfor"
+#     asyncio.run(pipeline_cognee())
