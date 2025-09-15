@@ -13,39 +13,61 @@ from skimage.metrics import structural_similarity as ssim
 from dotenv import load_dotenv
 load_dotenv()
 
+# Initialize the Twelve Labs client using an API key
 client = TwelveLabs(api_key=os.getenv("TWELVE_LABS_API_KEY"))
 
-
 def url_to_id(url: str):
+    """
+    Generates a unique and consistent MD5 hash from a URL string.
+
+    Args:
+        url (str): The URL to be hashed.
+    """
     return hashlib.md5(url.encode()).hexdigest()
 
 
 def embed_and_store_video(video_url: str, collection_name: str, qdrant_client):
-    """Embed video ke TwelveLabs, ambil transcription, lalu simpan ke Qdrant"""
+    """
+    Processes a video with TwelveLabs to get embeddings and transcriptions,
+    then stores the resulting data into a Qdrant collection.
+
+    Args:
+        video_url (str): The public URL of the video to be processed.
+        collection_name (str): The name of the Qdrant collection where the data will be stored.
+        qdrant_client: An initialized Qdrant client instance.
+    """
+    # Retrieve an existing index from Twelve Labs
     index = client.indexes.list()
     index_id = None
+    
+    # Use the first available index found
     for idx in index.items:
         index_id = idx.id
         break
 
+    # If no index exists, create a new one
     if index_id is None:
         print("Create index")
         index = client.indexes.create(
             index_name="my_index",
             models=[IndexesCreateRequestModelsItem(
                 model_name="marengo2.7",
-                model_options=["visual", "audio"]
+                model_options=["visual", "audio"] # Specify that we want both visual and audio features
             )]
         )
         index_id = index.id
 
+    # Create a task in Twelve Labs to process the video from the given URL
     task = client.tasks.create(index_id=index_id, video_url=video_url)
 
+    # Define a callback function to print the status of the task as it runs
     def on_task_update(task: TasksRetrieveResponse):
         print(f"  Status={task.status}")
 
+    # Wait for the video processing task to complete, using the callback for updates
     task = client.tasks.wait_for_done(task_id=task.id, callback=on_task_update)
 
+    # Retrieve the results: video embeddings and transcription
     result = client.indexes.videos.retrieve(
         index_id=index_id,
         video_id=task.video_id,
@@ -54,18 +76,22 @@ def embed_and_store_video(video_url: str, collection_name: str, qdrant_client):
     )
 
     points = []
+    # Iterate through each video segment (clip) that has an embedding
     for i, clip in enumerate(result.embedding.video_embedding.segments):
+        # Get data to store to qdrant
         vector = clip.float_
         start = clip.start_offset_sec
         end = clip.end_offset_sec
         option = clip.embedding_option
         scope = clip.embedding_scope
 
+        # Find all transcription words that fall within the current clip's timeframe
         clip_transcriptions = [
             t.value for t in result.transcription if t.start >= start and t.end <= end
         ]
         text = " ".join(clip_transcriptions)
 
+        # Create a Qdrant PointStruct with the vector and payload metadata
         points.append(
             PointStruct(
                 id=i,
@@ -81,33 +107,11 @@ def embed_and_store_video(video_url: str, collection_name: str, qdrant_client):
             )
         )
 
+    # Upsert (update or insert) all the created points into the specified Qdrant collection
     qdrant_client.upsert(collection_name=collection_name, points=points)
     print(f"Sukses simpan {len(points)} clip ke Qdrant di koleksi '{collection_name}'")
 
     return index_id
-
-
-def query_video(query_text: str, collection_name: str, qdrant_client, top_k: int = 3):
-    """Embed text query di TwelveLabs lalu cari di Qdrant"""
-    query_embedding = client.embed.create(
-        model_name="Marengo-retrieval-2.7",
-        text=query_text
-    )
-
-    vector = query_embedding.text_embedding.segments[0].float_
-
-    results = qdrant_client.search(
-        collection_name=collection_name,
-        query_vector=vector,
-        limit=top_k
-    )
-
-    # print("\n=== Hasil Pencarian ===")
-    # for r in results:
-    #     print(f"Score={r.score:.4f} | "
-    #           f"Transcription={r.payload.get('transcription')} | "
-    #           f"Time=({r.payload.get('start_offset_sec')} - {r.payload.get('end_offset_sec')})")
-    return results
 
 def extract_slides(video_path, output_dir, checks_per_second=5, change_threshold=0.97, deduplication_threshold=0.98):
     """
@@ -192,48 +196,29 @@ def extract_slides(video_path, output_dir, checks_per_second=5, change_threshold
     cap.release()
     print(f"\n✨ Done! Extracted {slide_count} unique slides.")
 
-# def extract_slides(video_path, output_dir="slides", threshold=15.0):
-#     os.makedirs(output_dir, exist_ok=True)
-
-#     cap = cv2.VideoCapture(video_path)
-#     last_mean = None
-#     slide_count = 0
-
-#     while True:
-#         ret, frame = cap.read()
-#         if not ret:
-#             break
-
-#         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-#         current_mean = np.mean(gray)
-
-#         if last_mean is not None:
-#             diff = abs(current_mean - last_mean)
-
-#             if diff > threshold:
-#                 slide_count += 1
-#                 filename = os.path.join(output_dir, f"slide_{slide_count:03d}.jpg")
-#                 cv2.imwrite(filename, frame)
-#                 print(f"[+] Slide {slide_count} tersimpan (diff={diff:.2f})")
-
-#         last_mean = current_mean
-
-#     cap.release()
-#     print(f"Selesai. Total {slide_count} slide tersimpan di folder '{output_dir}'.")
-
-
 def extract_slides_from_url(video_url, output_dir="slides"):
+    """
+    Downloads a video from a URL and then extracts slides from it.
+    
+    Args:
+        video_url (str): The public URL of the video to download.
+        output_dir (str, optional): The directory where the extracted slide
+            images will be saved. Defaults to "slides".
+    """
     tmp_file = "temp_video.mp4"
     print("[*] Downloading video...")
 
+    # Download the video file in chunks and save it to temporary file
     r = requests.get(video_url, stream=True)
     with open(tmp_file, "wb") as f:
         for chunk in r.iter_content(chunk_size=8192):
             if chunk:
                 f.write(chunk)
 
+    # Call the local slide extraction function 
     print("[*] Extracting slides...")
     extract_slides(tmp_file, output_dir=output_dir)
 
+    # Clean up by removing the temporary video file
     os.remove(tmp_file)
     print("[*] Selesai, file sementara dihapus.")
