@@ -22,9 +22,22 @@ def process_files(files, session_id):
     return summary
 
 
+def open_image(url):
+    try:
+        from PIL import Image
+        import requests
+        from io import BytesIO
+        response = requests.get(url)
+        img = Image.open(BytesIO(response.content))
+        return img
+    except Exception as e:
+        print("Error loading image:", e)
+        return None
 # ==============================
 # UI
 # ==============================
+
+
 def chat_page():
     with gr.Blocks(js="""
     () => {
@@ -76,23 +89,31 @@ def chat_page():
                 with gr.Row():
                     msg = gr.Textbox(
                         placeholder="Type your message, or upload a file ...", scale=4, label="Type your message")
-                    upload_button = gr.UploadButton(
-                        "📂 Upload Files",
-                        file_count="multiple"
-                    )
+                    # upload_button = gr.UploadButton(
+                    #     "📂 Upload Files",
+                    #     file_count="multiple"
+                    # )
 
                 summary = gr.Markdown("Summary will appear here...")
                 # container kosong untuk video
                 with gr.Column():
-                    video_container = []
+                    source_container = []
                     for i in range(MAX_VIDEOS):
                         with gr.Row() as slot:
                             v = gr.Video(
                                 visible=False, label=f"Video {i+1}", elem_id=f"myvideo-{i}")
                             t = gr.Markdown(
                                 "", elem_classes="video-title", visible=False)
-                            video_container.append(v)
-                            video_container.append(t)
+                            source_container.append(v)
+                            source_container.append(t)
+                    for i in range(MAX_VIDEOS):
+                        with gr.Row() as slot:
+                            v = gr.Image(
+                                visible=False, label=f"Image {i+1}", elem_id=f"myimage-{i}")
+                            t = gr.Markdown(
+                                "", elem_classes="image-title", visible=False)
+                            source_container.append(v)
+                            source_container.append(t)
                 gr.HTML("""
                 <script>
                 console.log("Seeked video:sdfasdfas");
@@ -123,13 +144,16 @@ def chat_page():
             for i in range(MAX_VIDEOS):
                 updates.append(gr.update(value=None, visible=False))
                 updates.append(gr.update(value="", visible=False))
+            for i in range(MAX_VIDEOS):
+                updates.append(gr.update(value=None, visible=False))
+                updates.append(gr.update(value="", visible=False))
             return session_id, gr.update(choices=sessions, value=f"{session_id}:{title}"), f"### {title}\n\n(no summary yet)", *updates
 
         new_chat_btn.click(
             start_new_chat,
             inputs=None,
             outputs=[state_session_id, sessions_dropdown,
-                     summary, *video_container]
+                     summary, *source_container]
         )
 
         # Event: Select session
@@ -147,29 +171,45 @@ def chat_page():
             for i in range(MAX_VIDEOS):
                 if i < len(vids):
                     url, title_vid = vids[i]
-                    updates.append(
-                        gr.update(value=url, visible=True))   # video
-                    updates.append(
-                        gr.update(value=f"**{title_vid}**", visible=True))  # title
-                else:
-                    updates.append(
-                        gr.update(value=None, visible=False))  # video
-                    updates.append(
-                        gr.update(value="", visible=False))    # t
+                    if url.split('.')[-1] not in ['png', 'jpg', 'jpeg']:
+                        updates.append(
+                            gr.update(value=url, visible=True))   # video
+                        updates.append(
+                            gr.update(value=f"**{title_vid}**", visible=True))  # title
+                        continue
+                updates.append(
+                    gr.update(value=None, visible=False))  # video
+                updates.append(
+                    gr.update(value="", visible=False))    # t
+                # save gambar
+            for i in range(MAX_VIDEOS):
+                if i < len(vids):
+                    url, title_vid = vids[i]
+                    if url.split('.')[-1] in ['png', 'jpg', 'jpeg'] and open_image(url) is not None:
+                        updates.append(
+                            gr.update(value=url, visible=True))   # video
+                        updates.append(
+                            gr.update(value=f"**{title_vid}**", visible=True))
+                        continue  # title
+
+                updates.append(
+                    gr.update(value=None, visible=False))  # video
+                updates.append(
+                    gr.update(value="", visible=False))    # t
             return session_id, gr.update(value=query), f"### {title}\n\n{summ}", *updates
 
         sessions_dropdown.change(
             load_session,
             inputs=sessions_dropdown,
-            outputs=[state_session_id, msg, summary, *video_container]
+            outputs=[state_session_id, msg, summary, *source_container]
         )
 
         # Event: Upload Files
-        upload_button.upload(
-            fn=process_files,
-            inputs=[upload_button, state_session_id],
-            outputs=summary
-        )
+        # upload_button.upload(
+        #     fn=process_files,
+        #     inputs=[upload_button, state_session_id],
+        #     outputs=summary
+        # )
 
         # Event: Save Video Link
         def save_generate(session_id, msg):
@@ -183,8 +223,24 @@ def chat_page():
             if session_id:
                 update_session(session_id, msg,
                                summary=summary, video_link=vids)
+                # save video
                 for i in range(MAX_VIDEOS):
                     if i < len(vids) and vids[i].get("embedding_scope", "") == "clip":
+                        url = vids[i].get("link", "")
+                        transcription = vids[i].get("transcription", "")
+                        updates.append(
+                            gr.update(value=url, visible=True))   # video
+                        updates.append(
+                            gr.update(value=f"**{transcription}**", visible=True))  # title
+                    else:
+                        updates.append(
+                            gr.update(value=None, visible=False))  # video
+                        updates.append(
+                            gr.update(value="", visible=False))    # t
+
+                # save gambar
+                for i in range(MAX_VIDEOS):
+                    if i < len(vids) and vids[i].get("link", "").split('.')[-1] in ['png', 'jpg', 'jpeg'] and open_image(vids[i].get("link", "")) is not None:
                         url = vids[i].get("link", "")
                         transcription = vids[i].get("transcription", "")
                         updates.append(
@@ -199,7 +255,7 @@ def chat_page():
             return summary, *updates
 
         msg.submit(save_generate, inputs=[
-                   state_session_id, msg], outputs=[summary, *video_container])
+                   state_session_id, msg], outputs=[summary, *source_container])
 
     return demo
 

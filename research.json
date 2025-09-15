@@ -1,85 +1,90 @@
 {
   "research_points": [
     {
-      "topic": "Bus Interconnection Scheme",
-      "findings": "System interconnection in computers relies heavily on bus structures, which serve as communication pathways linking components like the CPU, memory, and I/O modules. The bus interconnection scheme includes three primary types of lines: **Control Lines** (for signaling operations like read/write), **Address Lines** (to specify memory/peripheral locations), and **Data Lines** (to transfer actual data). These buses can be structured as single or multiple systems, with examples like the Control/Address/Data bus in PCs or the Unibus in DEC-PDP systems. All units (CPU, memory, I/O) must be interconnected, but the type of connection varies by unit type (e.g., memory vs. peripherals).",
-      "relevance": "This explains the foundational architecture of how components in a computer system communicate, which is critical for understanding system interconnection.",
+      "topic": "Program Execution in Computer Architecture",
+      "findings": "The process of program execution involves six key steps, as demonstrated in a video transcription:\n1. Fetch instruction from memory[300] → IR = 1940; PC = 300.\n2. Execute instruction 1940: Load memory[940] into AC → AC = 0003; PC = 301.\n3. Fetch instruction from memory[301] → IR = 5941; PC = 302.\n4. Execute instruction 5941: AC = AC + memory[941] → 0003 + 0002 = 0005.\n5. Fetch instruction from memory[302] → IR = 2941; PC = 303.\n6. Execute instruction 2941: Store AC into memory[941] → memory[941] = 0005.\n\nMemory states during execution:\n- memory[300] = 1940, memory[301] = 5940, memory[302] = 2941.\n- memory[940] = 0003, memory[941] = 0002 (updated to 0005 after execution).",
+      "relevance": "This finding illustrates the step-by-step interaction between the CPU, memory, and registers during program execution, a fundamental concept in computer organization.",
       "sources": [
         {
-          "type": "Chunk",
-          "link": "Arskom_Slide_25_31",
-          "transcription": "Bus Interconnection Scheme\nCPU\nMemory\n...\nMemory\nI/O\n...\nI/O\nControl Lines\nAddress Lines\nData Lines\nBus\nArskom\nConnecting\n- All the units must be connected\n- Different type of connection for different type of unit\n  o Memory\n  o Input/Output\n  o CPU\n\nBuses\n• There are a number of possible interconnection systems\n• Single and multiple BUS structures are most common\n• e.g. Control/Address/Data bus (PC)\n• e.g. Unibus (DEC-PDP)",
-          "start_offset_sec": "N/A",
-          "end_offset_sec": "N/A",
-          "embedding_option": "N/A",
-          "embedding_scope": "N/A"
+          "title": "Example of Program Execution",
+          "type": "video",
+          "link": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
+          "transcription": "Example of Program Execution\nDiagram menampilkan enam langkah eksekusi program dengan keadaan memori dan register CPU.\nKondisi memori yang terlihat:\n- memori[300] = 1940\n- memori[301] = 5941\n- memori[302] = 2941\n- memori[940] = 0003\n- memori[941] = 0002\nLangkah-langkah (dilihat pada diagram):\nStep 1: Fetch instruksi dari memori[300] -> IR = 1940; PC menunjukkan 300.\nStep 2: Eksekusi instruksi 1940: muat isi memori[940] ke AC -> AC = 0003; PC = 301.\nStep 3: Fetch instruksi dari memori[301] -> IR = 5941; PC = 302.\nStep 4: Eksekusi instruksi 5941: AC = AC + memori[941] -> 0003 + 0002 = 0005.\nStep 5: Fetch instruksi dari memori[302] -> IR = 2941; PC = 303.\nStep 6: Eksekusi instruksi 2941: simpan AC ke memori[941] -> memori[941] = 0005.",
+          "start_offset_sec": "0",
+          "end_offset_sec": "5",
+          "embedding_option": "visual-text",
+          "embedding_scope": "clip"
         }
       ]
     },
     {
-      "topic": "CPU, Memory, and I/O Connections",
-      "findings": "The **CPU** reads instructions and data, processes them, and sends control signals to other units while handling interrupts. **Memory** receives/sends data, addresses, and control signals (e.g., read/write/timing). **I/O modules** act similarly to memory from the computer’s perspective: they receive/send data to/from peripherals (e.g., spinning a disk) and use control signals (e.g., port numbers for identification) and interrupts. A top-level view shows these components connected via a **System Bus**, which includes registers like PC (Program Counter), IR (Instruction Register), MAR (Memory Address Register), and MBR (Memory Buffer Register).",
-      "relevance": "This details the functional roles of core components in system interconnection, emphasizing how data and control signals flow between them.",
+      "topic": "General-Purpose Hardware vs. Hardwired Systems",
+      "findings": "Hardwired systems are inflexible and designed for specific tasks. In contrast, general-purpose hardware can perform diverse tasks by supplying different control signals. This flexibility eliminates the need for physical rewiring, enabling adaptability to various programs and operations.",
+      "relevance": "This distinction is critical in understanding the evolution of computer architecture from fixed-function to programmable systems.",
       "sources": [
         {
-          "type": "Chunk",
-          "link": "Arskom_Slide_27_30",
-          "transcription": "Memory Connection\n• Receives and sends data\n• Receives addresses (of locations)\n• Receives control signals\n  ○ Read\n  ○ Write\n  ○ Timing\n\nCPU Connection\n● Reads instruction and data\n● Writes out data (after processing)\n● Sends control signals to other units\n● Receives (& acts on) interrupts\n\nInput/Output Connection\n• Similar to memory from computer's viewpoint\n• Output\n  ○ Receive data from computer\n  ○ Send data to peripheral\n• Input\n  ○ Receive data from peripheral\n  ○ Send data to computer\n\nComputer Components: Top Level View\nDiagram: CPU, Main Memory, and I/O Module terhubung oleh System Bus.\nCPU (komponen di kotak):\n- PC, IR, MAR, MBR, I/O AR, I/O BR, Execution unit",
-          "start_offset_sec": "N/A",
-          "end_offset_sec": "N/A",
-          "embedding_option": "N/A",
-          "embedding_scope": "N/A"
+          "title": "Program Concept: Hardwired vs. General-Purpose Hardware",
+          "type": "text",
+          "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_2.jpg",
+          "transcription": "Program Concept\n• Hardwired systems are inflexible\n• General purpose hardware can do different tasks, given correct control signals\n• Instead of re-wiring, supply a new set of control signals",
+          "start_offset_sec": "",
+          "end_offset_sec": "",
+          "embedding_option": "",
+          "embedding_scope": ""
         }
       ]
     },
     {
-      "topic": "Control Bus and Signal Management",
-      "findings": "The **Control Bus** manages critical operations such as memory read/write signals, interrupt requests, and clock signals. It ensures synchronized communication between components by transmitting control and timing information. For example, when a peripheral device (e.g., a disk) needs attention, it sends an **interrupt request** via the control bus to the CPU, which then prioritizes and processes the request. Clock signals maintain the rhythm of data transfers, ensuring components operate in harmony.",
-      "relevance": "This highlights the role of the control bus in coordinating actions across the system, which is essential for stable and efficient interconnection.",
+      "topic": "Definition of a Program",
+      "findings": "A program is defined as a sequence of steps, where each step involves an arithmetic or logical operation. Each operation requires a unique set of control signals to execute. This structured approach allows computers to perform complex tasks by breaking them into manageable instructions.",
+      "relevance": "This definition lays the foundation for understanding how software interacts with hardware in computer organization.",
       "sources": [
         {
-          "type": "Chunk",
-          "link": "Arskom_Slide_ControlBus",
-          "transcription": "Control Bus\n• Control and timing information\n  ○ Memory read/write signal\n  ○ Interrupt request\n  ○ Clock signals",
-          "start_offset_sec": "N/A",
-          "end_offset_sec": "N/A",
-          "embedding_option": "N/A",
-          "embedding_scope": "N/A"
+          "title": "What is a Program?",
+          "type": "summary",
+          "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_3.jpg",
+          "transcription": "What is a program?\nA sequence of steps\nFor each step, an arithmetic or logical operation is done\nFor each operation, a different set of control signals is needed\nDeskripsi gambar: Slide menampilkan judul \"What is a program?\" di kiri atas; teks utama seperti di atas; ada logo kecil di pojok kiri bawah, footer \"Arskom\" di tengah bawah, dan nomor slide \"4\" di pojok kanan bawah.",
+          "start_offset_sec": "",
+          "end_offset_sec": "",
+          "embedding_option": "",
+          "embedding_scope": ""
         }
       ]
     },
     {
-      "topic": "Input/Output (I/O) Connection Mechanics",
-      "findings": "I/O connections mirror memory interactions but are tailored for peripherals. For **output operations**, the computer sends data to the I/O module, which forwards it to the peripheral (e.g., a printer). For **input operations**, the I/O module receives data from the peripheral (e.g., a keyboard) and sends it to the computer. Control signals manage these transfers, including addressing peripherals via port numbers and handling interrupts (e.g., a disk signaling it’s ready to read/write).",
-      "relevance": "This clarifies how peripherals integrate into the system, extending the interconnection framework beyond core components like CPU and memory.",
+      "topic": "Function of the Control Unit",
+      "findings": "The Control Unit (CU) plays a pivotal role in computer architecture by interpreting operation codes (e.g., ADD, MOVE) and issuing the corresponding control signals to hardware components. This process enables the execution of instructions and coordinates the interaction between the CPU, memory, and other units.\n- Each operation has a unique code.\n- The CU decodes these codes and generates control signals.\n- This mechanism is essential for the computer's ability to perform diverse tasks.",
+      "relevance": "The Control Unit is a core component of the CPU, and its functionality is central to the execution of programs and the organization of computational tasks.",
       "sources": [
         {
-          "type": "Chunk",
-          "link": "Arskom_Slide_28_29",
-          "transcription": "Input/Output Connection\n• Similar to memory from computer's viewpoint\n• Output\n  ○ Receive data from computer\n  ○ Send data to peripheral\n• Input\n  ○ Receive data from peripheral\n  ○ Send data to computer\n\nInput/Output Connection (2)\n• Receive control signals from computer\n• Send control signals to peripherals\n  ○ e.g. spin disk\n• Receive addresses from computer\n  ○ e.g. port number to identify peripheral\n• Send interrupt signals (control)",
-          "start_offset_sec": "N/A",
-          "end_offset_sec": "N/A",
-          "embedding_option": "N/A",
-          "embedding_scope": "N/A"
+          "title": "Function of Control Unit",
+          "type": "graph",
+          "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_4.jpg",
+          "transcription": "Function of Control Unit\nFor each operation a unique code is provided\ne.g. ADD, MOVE\nA hardware segment accepts the code and issues the control signals\nWe have a COMPUTER!\nFooter: Arskom (tengah bawah), slide number 5 (kanan bawah)\nLogo: lingkaran merah di pojok kiri bawah berisi gambar buku terbuka, lingkaran kuning di atas, dan pola hitam di bawah.",
+          "start_offset_sec": "",
+          "end_offset_sec": "",
+          "embedding_option": "",
+          "embedding_scope": ""
         }
       ]
     },
     {
-      "topic": "System Bus as a Broadcast Communication Pathway",
-      "findings": "A **bus** is a shared communication pathway that links multiple devices in a broadcast manner. For example, a 32-bit data bus consists of 32 parallel lines, each carrying one bit of data simultaneously. Buses are fundamental to system interconnection because they enable efficient, scalable communication between components without requiring direct point-to-point connections. While power lines are often omitted in diagrams for simplicity, they are implicitly part of the physical interconnection.",
-      "relevance": "This defines the bus as the backbone of system interconnection, explaining its scalability and role in parallel data transfer.",
+      "topic": "Core Components of Computer Architecture",
+      "findings": "Computer architecture comprises several key components:\n1. **Central Processing Unit (CPU)**: Consists of the Control Unit (CU) and the Arithmetic and Logic Unit (ALU).\n2. **Input/Output (I/O)**: Facilitates the transfer of data and instructions into and out of the system.\n3. **Main Memory**: Provides temporary storage for code and results during execution.\nThese components work together to enable computation, data processing, and program execution.",
+      "relevance": "This breakdown highlights the essential building blocks of computer architecture, emphasizing their roles and interactions.",
       "sources": [
         {
-          "type": "Summary",
-          "link": "Arskom_Bus_Summary",
-          "transcription": "Components of a computer system\nA bus is a communication pathway linking multiple devices, typically broadcast; it often comprises grouped channels (e.g., a 32-bit data bus contains 32 single-bit lines). Power lines may be omitted in diagrams.",
-          "start_offset_sec": "N/A",
-          "end_offset_sec": "N/A",
-          "embedding_option": "N/A",
-          "embedding_scope": "N/A"
+          "title": "Components of Computer Architecture",
+          "type": "rag_completion",
+          "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_5.jpg",
+          "transcription": "Components\n• The Control Unit and the Arithmetic and Logic Unit constitute the Central Processing Unit\n• Data and instructions need to get into the system and results out\n  ○ Input/output\n• Temporary storage of code and results is needed\n  ○ Main memory\nSlide description (Indonesian): Slide berjudul \"Components\" dengan daftar berpoin. Poin utama: 1) \"The Control Unit and the Arithmetic and Logic Unit constitute the Central Processing Unit\"; 2) \"Data and instructions need to get into the system and results out\" dengan subpoin \"Input/output\"; 3) \"Temporary storage of code and results is needed\" dengan subpoin \"Main memory\". Di pojok kiri bawah terdapat sebuah logo bundar berwarna merah/putih/hitam. Di tengah bawah tercantum kata \"Arskom\" dan di sudut kanan bawah nomor slide \"6\".",
+          "start_offset_sec": "",
+          "end_offset_sec": "",
+          "embedding_option": "",
+          "embedding_scope": ""
         }
       ]
     }
   ],
-  "summary": "System interconnection in computers is primarily achieved through **bus structures**, which act as shared communication pathways for the CPU, memory, and I/O modules. These buses are categorized into **control**, **address**, and **data lines**, each serving distinct roles in signal management, location specification, and data transfer. Components like the CPU, memory, and I/O modules interact via these buses, with the **control bus** coordinating operations through signals (e.g., interrupts, clock synchronization). I/O connections extend this framework to peripherals, mirroring memory interactions but with added complexity for device-specific control. The **system bus** enables scalable, broadcast-style communication, forming the backbone of intercomponent connectivity. Together, these elements ensure efficient, synchronized, and modular system operation."
+  "summary": "This research consolidates key aspects of **computer architecture and organization**, covering program execution, hardware flexibility, program definition, the role of the Control Unit, and core architectural components. The findings are grounded in video transcriptions, text chunks, summaries, graph-based insights, and RAG-completed explanations, providing a holistic view of how computers are structured and operate. The interplay between hardware (CPU, memory, I/O) and software (programs, control signals) is emphasized, illustrating the foundational principles of modern computing."
 }

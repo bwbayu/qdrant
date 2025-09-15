@@ -3,7 +3,7 @@ env/
 __pycache__/
 keys/
 neo4j/
-.venv/
+.venv*/
 */.env
 qdrant_data/
 .cognee_system/

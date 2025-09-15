@@ -1,43 +1,43 @@
 {
-  "report_title": "System Interconnection in Computers: Bus Architectures and Component Interaction",
+  "report_title": "Fundamentals of Computer Architecture: Program Execution, Hardware Design, and Core Components",
   "generation_date": "2023-10-05",
-  "summary": "Computer system interconnection relies on **bus architectures**—shared communication pathways comprising **control**, **address**, and **data lines**—to link core components like the CPU, memory, and I/O modules. These buses enable synchronized data transfer, signal management, and peripheral integration, forming the backbone of modular and scalable system design.  The **CPU** processes instructions and dispatches control signals, while **memory** and **I/O modules** handle data storage and peripheral communication, respectively. The **control bus** orchestrates operations via interrupts, timing signals, and read/write commands, ensuring harmonized interactions. I/O connections extend this framework to peripherals (e.g., disks, keyboards), using port addresses and interrupts to manage bidirectional data flow. Together, these elements create a robust interconnection scheme that balances efficiency, flexibility, and scalability in computer systems.",
+  "summary": "This report synthesizes critical concepts in **computer architecture and organization**, focusing on the interplay between hardware and software during program execution. The analysis covers six key areas:\n\n1. **Program Execution Process**: A step-by-step breakdown of CPU-memory interactions, demonstrating how instructions are fetched, decoded, and executed. The example highlights register updates (e.g., `AC = 0003 → 0005`) and memory modifications (`memory[941] = 0002 → 0005`), illustrating the dynamic state changes during computation.\n\n2. **Hardware Flexibility**: A comparison between **hardwired systems** (inflexible, task-specific) and **general-purpose hardware**, which adapts to diverse tasks via control signals without physical rewiring. This distinction underscores the evolution from fixed-function to programmable architectures.\n\n3. **Program Definition**: Programs are defined as sequences of arithmetic/logical operations, each requiring unique control signals. This modularity enables complex task decomposition, forming the bridge between software instructions and hardware execution.\n\n4. **Control Unit (CU) Functionality**: The CU decodes operation codes (e.g., `ADD`, `MOVE`) into control signals, orchestrating interactions between the CPU, memory, and I/O. Its role is pivotal in translating instructions into actionable hardware commands.\n\n5. **Core Architectural Components**: The **CPU** (comprising CU and ALU), **I/O systems**, and **main memory** are identified as the foundational blocks of computer architecture. Their collaboration enables data processing, storage, and communication, forming the backbone of computational systems.\n\n6. **Cross-Topic Synthesis**: The report reveals a **unified narrative**: programs (as instruction sequences) rely on the CU to generate control signals, which activate hardware components (CPU, memory, I/O) to perform tasks. The contrast between hardwired and general-purpose systems further emphasizes the CU’s role in enabling adaptability. Memory state transitions during execution (e.g., `memory[941]` updates) exemplify the tangible outcomes of this coordination.\n\n**Key Insight**: The **Control Unit** emerges as the linchpin, bridging abstract programs with physical hardware operations. Its ability to interpret operation codes and issue control signals enables the flexibility and programmability that define modern computing. The step-by-step execution example reinforces this by showing how instructions (`1940`, `5941`) trigger register/memory updates, all governed by the CU.\n\n**Actionable Implications**:\n- For **educators**: Use the program execution example (with memory/register states) to demonstrate real-time CPU-memory interactions.\n- For **architects**: Prioritize CU design to balance flexibility (general-purpose) with efficiency (hardwired optimizations).\n- For **developers**: Understand that software instructions directly map to hardware control signals, influencing performance and resource usage.",
   "lists": [
     {
-      "link": "Arskom_Slide_25_31",
-      "transcription": "Bus Interconnection Scheme\nCPU\nMemory\n...\nMemory\nI/O\n...\nI/O\nControl Lines\nAddress Lines\nData Lines\nBus\nArskom\nConnecting\n- All the units must be connected\n- Different type of connection for different type of unit\n  o Memory\n  o Input/Output\n  o CPU\n\nBuses\n• There are a number of possible interconnection systems\n• Single and multiple BUS structures are most common\n• e.g. Control/Address/Data bus (PC)\n• e.g. Unibus (DEC-PDP)",
+      "link": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
+      "transcription": "Example of Program Execution\nDiagram menampilkan enam langkah eksekusi program dengan keadaan memori dan register CPU.\nKondisi memori yang terlihat:\n- memori[300] = 1940\n- memori[301] = 5941\n- memori[302] = 2941\n- memori[940] = 0003\n- memori[941] = 0002\nLangkah-langkah (dilihat pada diagram):\nStep 1: Fetch instruksi dari memori[300] -> IR = 1940; PC menunjukkan 300.\nStep 2: Eksekusi instruksi 1940: muat isi memori[940] ke AC -> AC = 0003; PC = 301.\nStep 3: Fetch instruksi dari memori[301] -> IR = 5941; PC = 302.\nStep 4: Eksekusi instruksi 5941: AC = AC + memori[941] -> 0003 + 0002 = 0005.\nStep 5: Fetch instruksi dari memori[302] -> IR = 2941; PC = 303.\nStep 6: Eksekusi instruksi 2941: simpan AC ke memori[941] -> memori[941] = 0005.",
+      "start_offset_sec": "0",
+      "end_offset_sec": "5",
+      "embedding_option": "visual-text",
+      "embedding_scope": "clip"
+    },
+    {
+      "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_2.jpg",
+      "transcription": "Program Concept\n• Hardwired systems are inflexible\n• General purpose hardware can do different tasks, given correct control signals\n• Instead of re-wiring, supply a new set of control signals",
       "start_offset_sec": "",
       "end_offset_sec": "",
       "embedding_option": "",
       "embedding_scope": ""
     },
     {
-      "link": "Arskom_Slide_27_30",
-      "transcription": "Memory Connection\n• Receives and sends data\n• Receives addresses (of locations)\n• Receives control signals\n  ○ Read\n  ○ Write\n  ○ Timing\n\nCPU Connection\n● Reads instruction and data\n● Writes out data (after processing)\n● Sends control signals to other units\n● Receives (& acts on) interrupts\n\nInput/Output Connection\n• Similar to memory from computer's viewpoint\n• Output\n  ○ Receive data from computer\n  ○ Send data to peripheral\n• Input\n  ○ Receive data from peripheral\n  ○ Send data to computer\n\nComputer Components: Top Level View\nDiagram: CPU, Main Memory, and I/O Module terhubung oleh System Bus.\nCPU (komponen di kotak):\n- PC, IR, MAR, MBR, I/O AR, I/O BR, Execution unit",
+      "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_3.jpg",
+      "transcription": "What is a program?\nA sequence of steps\nFor each step, an arithmetic or logical operation is done\nFor each operation, a different set of control signals is needed\nDeskripsi gambar: Slide menampilkan judul \"What is a program?\" di kiri atas; teks utama seperti di atas; ada logo kecil di pojok kiri bawah, footer \"Arskom\" di tengah bawah, dan nomor slide \"4\" di pojok kanan bawah.",
       "start_offset_sec": "",
       "end_offset_sec": "",
       "embedding_option": "",
       "embedding_scope": ""
     },
     {
-      "link": "Arskom_Slide_ControlBus",
-      "transcription": "Control Bus\n• Control and timing information\n  ○ Memory read/write signal\n  ○ Interrupt request\n  ○ Clock signals",
+      "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_4.jpg",
+      "transcription": "Function of Control Unit\nFor each operation a unique code is provided\ne.g. ADD, MOVE\nA hardware segment accepts the code and issues the control signals\nWe have a COMPUTER!\nFooter: Arskom (tengah bawah), slide number 5 (kanan bawah)\nLogo: lingkaran merah di pojok kiri bawah berisi gambar buku terbuka, lingkaran kuning di atas, dan pola hitam di bawah.",
       "start_offset_sec": "",
       "end_offset_sec": "",
       "embedding_option": "",
       "embedding_scope": ""
     },
     {
-      "link": "Arskom_Slide_28_29",
-      "transcription": "Input/Output Connection\n• Similar to memory from computer's viewpoint\n• Output\n  ○ Receive data from computer\n  ○ Send data to peripheral\n• Input\n  ○ Receive data from peripheral\n  ○ Send data to computer\n\nInput/Output Connection (2)\n• Receive control signals from computer\n• Send control signals to peripherals\n  ○ e.g. spin disk\n• Receive addresses from computer\n  ○ e.g. port number to identify peripheral\n• Send interrupt signals (control)",
-      "start_offset_sec": "",
-      "end_offset_sec": "",
-      "embedding_option": "",
-      "embedding_scope": ""
-    },
-    {
-      "link": "Arskom_Bus_Summary",
-      "transcription": "Components of a computer system\nA bus is a communication pathway linking multiple devices, typically broadcast; it often comprises grouped channels (e.g., a 32-bit data bus contains 32 single-bit lines). Power lines may be omitted in diagrams.",
+      "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_5.jpg",
+      "transcription": "Components\n• The Control Unit and the Arithmetic and Logic Unit constitute the Central Processing Unit\n• Data and instructions need to get into the system and results out\n  ○ Input/output\n• Temporary storage of code and results is needed\n  ○ Main memory\nSlide description (Indonesian): Slide berjudul \"Components\" dengan daftar berpoin. Poin utama: 1) \"The Control Unit and the Arithmetic and Logic Unit constitute the Central Processing Unit\"; 2) \"Data and instructions need to get into the system and results out\" dengan subpoin \"Input/output\"; 3) \"Temporary storage of code and results is needed\" dengan subpoin \"Main memory\". Di pojok kiri bawah terdapat sebuah logo bundar berwarna merah/putih/hitam. Di tengah bawah tercantum kata \"Arskom\" dan di sudut kanan bawah nomor slide \"6\".",
       "start_offset_sec": "",
       "end_offset_sec": "",
       "embedding_option": "",

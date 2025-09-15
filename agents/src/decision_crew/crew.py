@@ -11,6 +11,7 @@ from typing import List, Dict
 
 
 class ResearchSource(BaseModel):
+    title: str = Field(description="Title of the source")
     type: str = Field(
         description="Type of the source, e.g., 'video', 'cognee tool', etc.")
     link: str = Field(
