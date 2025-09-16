@@ -3,11 +3,15 @@ import cv2
 import numpy as np
 import requests
 import hashlib
+import uuid
+import json
 
 from twelvelabs import TwelveLabs
 from twelvelabs.indexes import IndexesCreateRequestModelsItem
 from twelvelabs.tasks import TasksRetrieveResponse
 from qdrant_client.models import PointStruct
+from pipelines.cognee.utils.upload_to_gcs import upload_file
+from pipelines.cognee.utils.describe_image_llm import describe_image_llm
 
 from skimage.metrics import structural_similarity as ssim
 from moviepy import VideoFileClip
@@ -15,7 +19,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Initialize the Twelve Labs client using an API key
+BUCKET_NAME = os.environ.get("GCS_BUCKET_NAME")
 client = TwelveLabs(api_key=os.getenv("TWELVE_LABS_API_KEY"))
+TMP_DIR = "tmp"  # Temporary directory for file processing
+CACHE_FILE = os.path.join(TMP_DIR, "extracted_image_cache.json")
 
 def url_to_id(url: str):
     """
@@ -26,6 +33,31 @@ def url_to_id(url: str):
     """
     return hashlib.md5(url.encode()).hexdigest()
 
+EXTRACTED_TEXT_FILE = os.path.join(TMP_DIR, f"text_extracted.json")
+
+# contoh fungsi untuk simpan extracted_text ke JSON
+def save_extracted_text(start_sec, end_sec, extracted_text, file_path=EXTRACTED_TEXT_FILE):
+    """
+    Save extracted texts with start and end times per clip to JSON file
+    """
+    data = []
+    if os.path.exists(file_path):
+        with open(file_path, "r", encoding="utf-8") as f:
+            try:
+                data = json.load(f)
+            except json.JSONDecodeError:
+                data = []
+
+    # append new clip data
+    data.append({
+        "start": start_sec,
+        "end": end_sec,
+        "text": extracted_text.strip()
+    })
+
+    os.makedirs(os.path.dirname(file_path), exist_ok=True)
+    with open(file_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
 def embed_and_store_video(video_url: str, temp_file:str, collection_name: str, qdrant_client):
     """
@@ -86,10 +118,30 @@ def embed_and_store_video(video_url: str, temp_file:str, collection_name: str, q
         option = clip.embedding_option
         scope = clip.embedding_scope
 
-        # Extract slide for each clip
-        temp_clip_file = "clip.mp4"
+        # create temp file for clip
+        temp_clip_file = os.path.join(TMP_DIR, "clip.mp4")
+        
+        # create temp dir for extracted image from clip
+        img_clip_dir = os.path.join(TMP_DIR, "clips")
+        os.makedirs(img_clip_dir, exist_ok=True)
+
+        # Cut video to clip and save it locally
         cut_video(temp_file, temp_clip_file, start, end)
-        extract_slides(temp_clip_file, "dir")
+        # Extract slide for each clip
+        extract_slides(temp_clip_file, img_clip_dir)
+        # store extracted image to GCS and generate description using LLM
+        extracted_texts = ""
+        for img_file in os.listdir(img_clip_dir):
+            # upload to gcs
+            img_path = os.path.join(img_clip_dir, img_file)
+            gcs_url = upload_file(img_path, BUCKET_NAME, "clips/extracted_image.png")
+
+            # generate description
+            text = describe_image_llm(gcs_url=gcs_url)
+            extracted_texts += f"\n{text}"
+
+        # (OPTIONAL) See output of extracted text 
+        save_extracted_text(start, end, extracted_texts)
 
         # Find all transcription words that fall within the current clip's timeframe
         clip_transcriptions = [
@@ -108,7 +160,7 @@ def embed_and_store_video(video_url: str, temp_file:str, collection_name: str, q
                     "end_offset_sec": end,
                     "embedding_option": option,
                     "embedding_scope": scope,
-                    "transcription": text,
+                    "transcription": text + "\n" + extracted_texts,
                 }
             )
         )

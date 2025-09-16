@@ -110,16 +110,7 @@ def process_video(files, job_id, job_dir):
         gcs_urls.append(video_url)
 
         # pipeline twelve labs to embed and store video to vector db
-        pipeline_twelvelabs(video_url=video_url)
-
-        # extract image from video for more context about video
-        extract_slides(local_path, img_dir)
-
-        for img_file in os.listdir(img_dir):
-            # upload extracted image to gcs
-            img_path = os.path.join(img_dir, img_file)
-            gcs_url = upload_file(img_path, BUCKET_NAME, f"images/{job_id}/{img_file}")
-            gcs_urls.append(gcs_url)
+        pipeline_twelvelabs(video_url=video_url, local_path=local_path)
 
     return gcs_urls
 

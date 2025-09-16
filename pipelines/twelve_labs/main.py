@@ -6,7 +6,7 @@ from pipelines.qdrant.qdrant_utils import qdrant, create_collection_if_not_exist
 # Define the path to the JSON file that acts as a registry for processed videos.
 JSON_FILE = "data/registry/videos.json"
 
-def pipeline_twelvelabs(video_url: str):
+def pipeline_twelvelabs(video_url: str, local_path: str):
     """
     Orchestrates the entire video processing workflow. It checks if a video has
     already been processed, and if not, it sends it to Twelve Labs for embedding
@@ -53,12 +53,9 @@ def pipeline_twelvelabs(video_url: str):
         print("Video baru ditambahkan ke JSON")
 
         # Process the video with TwelveLabs and store embeddings in Qdrant.
-        temp_file = "temp_video.mp4"
-        download_video_from_url(video_url, temp_file)
-        embed_and_store_video(video_url, temp_file, collection, qdrant)
-        # Download the video and extract its slides to a dedicated folder.
-        # TODO: output_dir change to gcs dir
-        # extract_slides_from_url(video_url, output_dir=f"data/raw/{external_id}")
+        # temp_file = "temp_video.mp4"
+        # download_video_from_url(video_url, temp_file)
+        embed_and_store_video(video_url, local_path, collection, qdrant)
     else:
         print("Video sudah ada di JSON, tidak ditambahkan lagi")
 
