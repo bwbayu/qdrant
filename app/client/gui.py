@@ -4,6 +4,7 @@ from app.client.db import init_db, get_all_sessions, create_new_session, get_ses
 import sqlite3
 import datetime
 from app.api.combine import summary_generation
+from app.api.upload_data_pipeline import pipeline_process_files
 # from app.client.example import summary_generation
 MAX_VIDEOS = 5  # jumlah slot video yang kamu siapin
 
@@ -288,8 +289,10 @@ def chat_page():
 
 def data_page():
     with gr.Blocks() as demo:
-        gr.Markdown("## 📂 Data Page")
-        gr.File()
+        file_input = gr.File(file_types=[".pdf", ".png", ".jpg", ".jpeg", ".mp4", ".mov", ".avi"], file_count="multiple")
+        btn = gr.Button("Process Files")
+        output = gr.HTML(label="Result")
+        btn.click(pipeline_process_files, inputs=[file_input], outputs=[output])
     return demo
 
 
