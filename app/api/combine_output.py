@@ -31,7 +31,8 @@ async def SummariesOutput(query: str) -> str:
 
 
 def VideoEmbedOutput(query: str) -> List[dict]:
-    results = query_twelve_labs(query_text=query, collection_name=os.getenv("TWELVE_LABS_COLLECTION"))
+    results = query_twelve_labs(
+        query_text=query, collection_name=os.getenv("TWELVE_LABS_COLLECTION"))
     return results
     # return [{"url": "https: // samplelib.com/lib/preview/mp4/sample-10s.mp4",
     # "start_offset_sec": "0",
