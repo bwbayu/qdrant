@@ -26,17 +26,17 @@ def convert_to_pdf(input_file: str) -> str:
 
     ext = os.path.splitext(input_file)[1].lower()
 
-    # Case 1: already a PDF → just return the file path
+    # if already a PDF, just return the file path
     if ext == ".pdf":
         return input_file
 
-    # Case 2: DOCX → PDF (using docx2pdf library)
+    # convert DOCX to PDF using docx2pdf library
     elif ext == ".docx":
         out = input_file.replace(".docx", ".pdf")
         convert(input_file, out)
         return out
 
-    # Case 3: PPTX → PDF (using LibreOffice in headless mode)
+    # convert PPTX to PDF using LibreOffice in headless mode
     elif ext == ".pptx":
         out = input_file.replace(".pptx", ".pdf")
         subprocess.run([

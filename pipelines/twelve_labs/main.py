@@ -1,6 +1,6 @@
 import os
 import json
-from pipelines.twelve_labs.twelvelabs_utils import embed_and_store_video, extract_slides_from_url, query_video, url_to_id
+from pipelines.twelve_labs.twelvelabs_utils import embed_and_store_video, extract_slides_from_url, url_to_id
 from pipelines.qdrant.qdrant_utils import qdrant, create_collection_if_not_exists
 
 # Define the path to the JSON file that acts as a registry for processed videos.
@@ -56,7 +56,7 @@ def pipeline_twelvelabs(video_url: str):
         embed_and_store_video(video_url, collection, qdrant)
         # Download the video and extract its slides to a dedicated folder.
         # TODO: output_dir change to gcs dir
-        extract_slides_from_url(video_url, output_dir=f"data/raw/{external_id}")
+        # extract_slides_from_url(video_url, output_dir=f"data/raw/{external_id}")
     else:
         print("Video sudah ada di JSON, tidak ditambahkan lagi")
 

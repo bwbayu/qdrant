@@ -32,9 +32,9 @@ def query_slide_llm(image_url: str, extracted_text: str, model: str = "gpt-5-min
     system_msg = (
         "Kamu adalah asisten analisis slide.\n"
         "Tugasmu:\n"
-        "1. Tentukan apakah ada gambar/diagram/ilustrasi yang bisa dideskripsikan. Jika ada, deskripsikan dalam bahasa indonesia.\n"
+        "1. Tentukan apakah ada gambar/diagram/ilustrasi yang bisa dideskripsikan. Jika ada, deskripsikan dalam bahasa yang sama dengan teks dalam slide jika tersedia (ID/EN).\n"
         "Jika Gambar berupa notasi/simbol matematika maka gunakan format latex misalnya seperti notasi OR, AND, dll.\n"
-        "2. Periksa apakah teks hasil ekstraksi sudah lengkap. Jika ada teks yang hilang, tambahkan dalam bahasa indonesia.\n"
+        "2. Periksa apakah teks hasil ekstraksi sudah lengkap. Jika ada teks yang hilang, tambahkan bahasa yang sama dengan teks dalam slide jika tersedia (ID/EN).\n"
         "3. Jangan tambahkan informasi baru yang tidak ada di slide.\n"
         "4. Jika teks hasil ekstraksi jelek atau tidak sesuai atau tidak jelas maka hapus saja dan mungkin bisa diganti dengan teks hasil deskripsi dari gambar.\n"
         "5. Return hanya JSON dengan field: "
@@ -42,6 +42,24 @@ def query_slide_llm(image_url: str, extracted_text: str, model: str = "gpt-5-min
         "Field final_text = kombinasikan teks asli dan text_additions jika memang ada yang perlu diperbaiki dan image_description (jika relevan)."
         "Hapus kalimat/ide yang sama yang muncul lebih dari sekali"
     )
+
+    # english version system msg
+    system_msg_en = (
+        "You are a slide analysis assistant.\n"
+        "Your tasks:\n"
+        "1. Determine whether there are images/diagrams/illustrations that can be described. "
+        "If yes, describe them in the same language as the text in the slide if available (ID/EN).\n"
+        "   If the image contains mathematical notations/symbols, use LaTeX format (e.g., notation for OR, AND, etc.).\n"
+        "2. Check whether the extracted text is complete. If any text is missing, add it in the same language as the slide text (ID/EN).\n"
+        "3. Do not add new information that is not present in the slide.\n"
+        "4. If the extracted text is poor, inaccurate, or unclear, remove it and possibly replace it with the description of the image.\n"
+        "5. Return only JSON with the following fields: "
+        "{has_image (bool), image_description (string), text_additions (string), final_text (string)}.\n"
+        "   The 'final_text' field should combine the original text, any text additions (if needed), "
+        "and the image description (if relevant).\n"
+        "   Remove duplicate sentences/ideas that appear more than once."
+    )
+
 
     # Call the LLM API with both extracted text and image
     response = client.responses.create(

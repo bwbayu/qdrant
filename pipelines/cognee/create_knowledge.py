@@ -12,6 +12,29 @@ from cognee import add, cognify
 BUCKET_NAME = os.environ.get("GCS_BUCKET_NAME")
 
 async def create_knowledge(raw_dir, clean_dir, upload_metadata = False, job_id = None):
+    """
+    Process PDF documents to extract metadata, store knowledge, and update registry.
+
+    Steps performed:
+    1. Load the registry of already processed documents (to avoid duplicates).
+    2. Iterate over all PDFs in `raw_dir`.
+    3. For each PDF:
+       - Generate a document ID.
+       - Skip if it is already processed.
+       - Load metadata if it exists in `clean_dir`, otherwise process the PDF to create metadata.
+       - Optionally upload metadata to Google Cloud Storage (if `upload_metadata=True`).
+       - Send extracted text into Cognee (`add`) and generate knowledge (`cognify`).
+    4. Update the registry with the new document’s metadata file and processing status.
+
+    Args:
+        raw_dir (str): Path to the folder containing raw PDF files.
+        clean_dir (str): Path to the folder where processed metadata should be stored.
+        upload_metadata (bool, optional): Whether to upload metadata JSON to GCS. Defaults to False.
+        job_id (str, optional): Job identifier for organizing uploads in GCS. Defaults to None.
+
+    Returns:
+        None
+    """
     # get json registry data
     registry = load_registry()
 
@@ -57,8 +80,10 @@ async def create_knowledge(raw_dir, clean_dir, upload_metadata = False, job_id =
         # create knowledge base
         for data in metadata:
             if data.get("text"):
+                # create dataset for cognee
                 await add(data=data['text'])
                 print(f"Add: Finish created dataset for {data['slide_id']}")
+                # create knowledge using cognee
                 await cognify()
                 print(f"Cognify: Finish created knowledge for {data['slide_id']}")
 

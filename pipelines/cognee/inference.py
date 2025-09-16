@@ -9,17 +9,44 @@ from dotenv import load_dotenv
 load_dotenv()
 
 async def query_cognee(query: str, search_type = SearchType.RAG_COMPLETION):
+    """
+    Query the Cognee knowledge base and retrieve relevant text results.
+
+    This function configures the Cognee system and databases (relational, vector, and graph),
+    then performs a search for the input query using the specified search type.
+    The results are filtered and combined into a single text output.
+
+    Workflow:
+    1. Configure Cognee system root and data storage directories.
+    2. Set up database configurations:
+       - Relational DB (SQLite by default).
+       - Vector DB (Qdrant by default, configurable via environment variables).
+       - Graph DB (provider configurable via environment variables).
+    3. Execute a search on the knowledge base using the given query type.
+    4. Extract valid text from the search results:
+       - Append strings directly if non-empty.
+       - If result is a dict, extract the value of the "text" field if present.
+    5. Return the combined text results, or "text not found" if no results are available.
+
+    Args:
+        query (str): The user query string to search for.
+        search_type (SearchType, optional): Type of search to perform (default is RAG_COMPLETION).
+
+    Returns:
+        str: Combined search results as a single string, or "text not found" if no results.
+    """
     # Setup config Cognee
     system_path = pathlib.Path(__file__).parent
     config.system_root_directory(path.join(system_path, ".cognee_system"))
     config.data_root_directory(path.join(system_path, ".data_storage"))
 
-    # Setup database
+    # Setup relational database
     config.set_relational_db_config(
         {
             "db_provider": "sqlite",
         }
     )
+    # Setup vector database
     config.set_vector_db_config(
         {
             "vector_db_provider": os.getenv("VECTOR_DB_PROVIDER", "qdrant"),
@@ -27,6 +54,7 @@ async def query_cognee(query: str, search_type = SearchType.RAG_COMPLETION):
             "vector_db_key": os.getenv("VECTOR_DB_KEY"),
         }
     )
+    # Setup graph database
     config.set_graph_db_config(
         {
             "graph_database_provider": os.getenv("GRAPH_DATABASE_PROVIDER"),
@@ -40,18 +68,23 @@ async def query_cognee(query: str, search_type = SearchType.RAG_COMPLETION):
 
         for result in results:
             if isinstance(result, str) and result.strip():
+                # if resuls is string
                 texts.append(result)
             elif isinstance(result, dict):
+                # if result is dict, get value from 'text'
                 text_val = result.get("text")
                 if isinstance(text_val, str) and text_val.strip():
                     texts.append(text_val)
 
+        # concat results
         if texts:
             return "\n".join(texts)
         else:
+            # fallback
             return "text not found"
 
     except Exception as e:
+        # fallback
         return "text not found"
 
 

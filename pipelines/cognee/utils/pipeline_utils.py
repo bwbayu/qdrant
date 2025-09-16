@@ -88,6 +88,8 @@ def get_doc_id_from_filename(file_path: str) -> str:
     Returns:
         str: Document ID string.
     """
+
+    # get filename
     fname = os.path.basename(file_path)
     base, _ = os.path.splitext(fname)
     if " - " in base:

@@ -25,8 +25,9 @@ def upload_file(source, bucket_name: str, dest_path: str, content_type: str = No
         - If GOOGLE_APPLICATION_CREDENTIALS is set, it uses that JSON key file.
         - If not, it falls back to default GCP credentials (e.g., from environment).
         - Automatically handles Windows backslashes in `dest_path` by replacing with "/".
-        - If uploading from BytesIO, sets `content_type="image/jpeg"`. 
-          For other file types, adjust the `content_type` accordingly.
+        - If uploading image/from BytesIO, sets `content_type="image/jpeg"`. 
+        - If uploading video, sets `content_type="video/mp4"`. 
+        - If uploading document/pdf, sets `content_type="application/pdf"`. 
     """
     # Initialize GCS client (with explicit service account if provided)
     if GCS_CRED_JSON:
@@ -45,4 +46,5 @@ def upload_file(source, bucket_name: str, dest_path: str, content_type: str = No
     else:
         raise TypeError("source must be str (file path) or BytesIO")
 
+    # return gcs url
     return f"https://storage.googleapis.com/{bucket_name}/{blob_name}"
