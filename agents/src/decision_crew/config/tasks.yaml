@@ -7,8 +7,10 @@ research_task:
     - Always preserve the original key-value structure from the tools' outputs.
       Do not rename keys, do not change values, and do not reformat dictionaries.
     - Do not truncate or split transcription texts. Keep them whole and uncut.
-    - If the same link/source appears multiple times, include it only once in
-      the final sources list (deduplicated).
+    - If the same source link appears multiple times, include it only once in
+      the final sources list (deduplicated by link).
+    - Different findings from the same link (with different transcriptions or
+      start_offset_sec values) must still be preserved in research_points.
     - Do not add any external sources. Only use outputs from Cognee tools.
   expected_output: >
     A consolidated list with at least 5 bullet points highlighting the
@@ -16,7 +18,8 @@ research_task:
     grounded in the tools' outputs. 
     Always answer in English language.
     Always include dictionaries in their exact original form when relevant.
-    Deduplicate sources if links are identical.
+    Deduplicate sources list by link, but preserve distinct findings from the
+    same link if their transcription or start_offset_sec differ.
   agent: researcher
   output_file: research.json
 
@@ -27,8 +30,11 @@ reporting_task:
     reformatting, or modifying key-value pairs.
     IMPORTANT:
     - Do not truncate or split transcription texts. Keep them whole and uncut.
-    - If a link/source is repeated, include it only once in the final sources list
-      (deduplicated).
+    - Deduplicate sources list by link. If the same link appears multiple times,
+      include it only once in the final list.
+    - However, different findings tied to the same link (e.g., different
+      transcriptions or start_offset_sec values) must all be preserved in the
+      body of the report.
     - Do not add any external sources. Only use those provided in the context.
     Expand each bullet point into a concise section of a short report.
     Provide synthesis across findings, identify overlaps, and highlight unique
@@ -37,8 +43,8 @@ reporting_task:
   expected_output: >
     A short report summary formatted in markdown, with up to 1-2 concise paragraphs.
     For the list of sources, copy them exactly as provided in the context,
-    preserving their dictionary structure, and ensure duplicates are removed.
-    Always answer in English language.
+    preserving their dictionary structure, and ensure duplicates are removed
+    by link. Always answer in English language.
   agent: reporting_analyst
   context: [research_task]
   output_file: report.json
