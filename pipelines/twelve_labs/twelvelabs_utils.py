@@ -111,59 +111,62 @@ def embed_and_store_video(video_url: str, temp_file:str, collection_name: str, q
     points = []
     # Iterate through each video segment (clip) that has an embedding
     for i, clip in enumerate(result.embedding.video_embedding.segments):
-        # Get data to store to qdrant
-        vector = clip.float_
-        start = clip.start_offset_sec
-        end = clip.end_offset_sec
-        option = clip.embedding_option
-        scope = clip.embedding_scope
+        try:
+            vector = clip.float_
+            start = clip.start_offset_sec
+            end = clip.end_offset_sec
+            option = clip.embedding_option
+            scope = clip.embedding_scope
 
-        # create temp file for clip
-        temp_clip_file = os.path.join(TMP_DIR, "clip.mp4")
-        
-        # create temp dir for extracted image from clip
-        img_clip_dir = os.path.join(TMP_DIR, "clips")
-        os.makedirs(img_clip_dir, exist_ok=True)
+            temp_clip_file = os.path.join(TMP_DIR, f"clip_{i}.mp4")
+            img_clip_dir = os.path.join(TMP_DIR, f"clips_{i}")
+            os.makedirs(img_clip_dir, exist_ok=True)
 
-        # Cut video to clip and save it locally
-        cut_video(temp_file, temp_clip_file, start, end)
-        # Extract slide for each clip
-        extract_slides(temp_clip_file, img_clip_dir)
-        # store extracted image to GCS and generate description using LLM
-        extracted_texts = ""
-        for img_file in os.listdir(img_clip_dir):
-            # upload to gcs
-            img_path = os.path.join(img_clip_dir, img_file)
-            gcs_url = upload_file(img_path, BUCKET_NAME, "clips/extracted_image.png")
+            # cut video
+            cut_video(temp_file, temp_clip_file, start, end)
 
-            # generate description
-            text = describe_image_llm(gcs_url=gcs_url)
-            extracted_texts += f"\n{text}"
+            # extract slides
+            extract_slides(temp_clip_file, img_clip_dir)
 
-        # (OPTIONAL) See output of extracted text 
-        save_extracted_text(start, end, extracted_texts)
+            # proses extracted images
+            extracted_texts = ""
+            for img_file in os.listdir(img_clip_dir):
+                try:
+                    img_path = os.path.join(img_clip_dir, img_file)
+                    gcs_url = upload_file(img_path, BUCKET_NAME, f"clips/{img_file}")
+                    text = describe_image_llm(gcs_url=gcs_url)
+                    extracted_texts += f"\n{text}"
+                except Exception as e:
+                    print(f"⚠️ Skip image {img_file} karena error: {e}")
 
-        # Find all transcription words that fall within the current clip's timeframe
-        clip_transcriptions = [
-            t.value for t in result.transcription if t.start >= start and t.end <= end
-        ]
-        text = " ".join(clip_transcriptions)
+            save_extracted_text(start, end, extracted_texts)
 
-        # Create a Qdrant PointStruct with the vector and payload metadata
-        points.append(
-            PointStruct(
-                id=i,
-                vector=vector,
-                payload={
-                    "url": video_url,
-                    "start_offset_sec": start,
-                    "end_offset_sec": end,
-                    "embedding_option": option,
-                    "embedding_scope": scope,
-                    "transcription": text + "\n" + extracted_texts,
-                }
+            # transcription sesuai timeframe
+            clip_transcriptions = [
+                t.value for t in result.transcription if t.start >= start and t.end <= end
+            ]
+            text = " ".join(clip_transcriptions)
+
+            # build PointStruct
+            points.append(
+                PointStruct(
+                    id=i,
+                    vector=vector,
+                    payload={
+                        "url": video_url,
+                        "start_offset_sec": start,
+                        "end_offset_sec": end,
+                        "embedding_option": option,
+                        "embedding_scope": scope,
+                        "transcription": text + "\n" + extracted_texts,
+                    }
+                )
             )
-        )
+
+        except Exception as e:
+            print(f"⚠️ Skip clip {i} karena error: {e}")
+            continue
+
 
     # Upsert (update or insert) all the created points into the specified Qdrant collection
     qdrant_client.upsert(collection_name=collection_name, points=points)

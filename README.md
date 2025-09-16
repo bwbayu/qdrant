@@ -30,7 +30,7 @@
 
 ```
 project-root/
-│── app/                         # Aplikasi utama (frontend/backend)
+│── app/                         # Application (frontend/backend)
 │   ├── api/combine_output.py     # CrewAI tool calling Twelve Labs & Cognee inference
 │   ├── api/upload_data_pipeline.py # Helper for GUI: handle upload/update KB (PDF, video, image)
 │   ├── client/gui.py             # Gradio UI/frontend
