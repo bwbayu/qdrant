@@ -10,3 +10,4 @@ cognee-community-vector-adapter-qdrant
 gradio
 scikit-image
 opencv-python
+moviepy

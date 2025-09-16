@@ -10,6 +10,7 @@ from twelvelabs.tasks import TasksRetrieveResponse
 from qdrant_client.models import PointStruct
 
 from skimage.metrics import structural_similarity as ssim
+from moviepy import VideoFileClip
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -26,7 +27,7 @@ def url_to_id(url: str):
     return hashlib.md5(url.encode()).hexdigest()
 
 
-def embed_and_store_video(video_url: str, collection_name: str, qdrant_client):
+def embed_and_store_video(video_url: str, temp_file:str, collection_name: str, qdrant_client):
     """
     Processes a video with TwelveLabs to get embeddings and transcriptions,
     then stores the resulting data into a Qdrant collection.
@@ -84,6 +85,11 @@ def embed_and_store_video(video_url: str, collection_name: str, qdrant_client):
         end = clip.end_offset_sec
         option = clip.embedding_option
         scope = clip.embedding_scope
+
+        # Extract slide for each clip
+        temp_clip_file = "clip.mp4"
+        cut_video(temp_file, temp_clip_file, start, end)
+        extract_slides(temp_clip_file, "dir")
 
         # Find all transcription words that fall within the current clip's timeframe
         clip_transcriptions = [
@@ -229,29 +235,54 @@ def extract_slides(video_path, output_dir, checks_per_second=1, change_threshold
     cap.release()
     print(f"\n✨ Done! Extracted {slide_count} unique slides.")
 
-def extract_slides_from_url(video_url, output_dir="slides"):
+def download_video_from_url(video_url, output_dir):
     """
-    Downloads a video from a URL and then extracts slides from it.
-    
+    Downloads a file from a URL and saves it to a local path using a memory-efficient stream.
+
     Args:
-        video_url (str): The public URL of the video to download.
-        output_dir (str, optional): The directory where the extracted slide
-            images will be saved. Defaults to "slides".
+        video_url (str): The direct download URL for the video file.
+        output_path (str): The full local path (e.g., 'videos/my_video.mp4')
+                           where the file will be saved.
     """
-    tmp_file = "temp_video.mp4"
+    tmp_file = output_dir
     print("[*] Downloading video...")
 
-    # Download the video file in chunks and save it to temporary file
+    # Send an HTTP GET
     r = requests.get(video_url, stream=True)
+    # Open the target file path in binary write mode.
     with open(tmp_file, "wb") as f:
+        # Iterate over the response content in chunks.
         for chunk in r.iter_content(chunk_size=8192):
+            # Write each received chunk to the file.
             if chunk:
                 f.write(chunk)
 
-    # Call the local slide extraction function 
+def extract_slides_from_url(tmp_file, output_dir="slides"):
     print("[*] Extracting slides...")
     extract_slides(tmp_file, output_dir=output_dir)
 
-    # Clean up by removing the temporary video file
     os.remove(tmp_file)
     print("[*] Selesai, file sementara dihapus.")
+
+def cut_video(input_path: str, output_path: str, start: float, end: float):
+    """
+    Cuts a video from a local file based on the start and end times.
+    
+    Args:
+        input_path (str): Path to the original video file.
+        output_path (str): Path to save the resulting video clip.
+        start (float): The start time in seconds.
+        end (float): The end time in seconds.
+    """
+    # Load the original video file from the specified input path.
+    video = VideoFileClip(input_path)
+    
+    # Create a new clip by cutting the original video from the start to the end time.
+    clip = video.subclipped(start, end)
+    
+    # Save the newly created clip to the output path.
+    clip.write_videofile(output_path, codec="libx264", audio_codec="aac")
+
+    # Explicitly close the video and clip objects to release file handles and free up memory.
+    video.close()
+    clip.close()

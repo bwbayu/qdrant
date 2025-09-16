@@ -1,6 +1,6 @@
 import os
 import json
-from pipelines.twelve_labs.twelvelabs_utils import embed_and_store_video, extract_slides_from_url, url_to_id
+from pipelines.twelve_labs.twelvelabs_utils import embed_and_store_video, extract_slides_from_url, url_to_id, download_video_from_url
 from pipelines.qdrant.qdrant_utils import qdrant, create_collection_if_not_exists
 
 # Define the path to the JSON file that acts as a registry for processed videos.
@@ -52,8 +52,10 @@ def pipeline_twelvelabs(video_url: str):
             json.dump(data, f, ensure_ascii=False, indent=4)
         print("Video baru ditambahkan ke JSON")
 
-         # Process the video with TwelveLabs and store embeddings in Qdrant.
-        embed_and_store_video(video_url, collection, qdrant)
+        # Process the video with TwelveLabs and store embeddings in Qdrant.
+        temp_file = "temp_video.mp4"
+        download_video_from_url(video_url, temp_file)
+        embed_and_store_video(video_url, temp_file, collection, qdrant)
         # Download the video and extract its slides to a dedicated folder.
         # TODO: output_dir change to gcs dir
         # extract_slides_from_url(video_url, output_dir=f"data/raw/{external_id}")
