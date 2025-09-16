@@ -4,7 +4,7 @@ from app.client.db import init_db, get_all_sessions, create_new_session, get_ses
 import sqlite3
 import datetime
 from app.api.combine import summary_generation
-from app.api.upload_data_pipeline import pipeline_process_files, handle_uploaded_image
+from app.api.upload_data_pipeline import pipeline_process_files, handle_uploaded_image, list_files_in_gcs
 # from app.client.example import summary_generation
 MAX_VIDEOS = 5  # jumlah slot video yang kamu siapin
 
@@ -288,10 +288,17 @@ def chat_page():
 
 def data_page():
     with gr.Blocks() as demo:
+        # input file for update knowledge base
         file_input = gr.File(file_types=[".pdf", ".png", ".jpg", ".jpeg", ".mp4", ".mov", ".avi"], file_count="multiple")
         btn = gr.Button("Process Files")
         output = gr.HTML(label="Result")
         btn.click(pipeline_process_files, inputs=[file_input], outputs=[output])
+
+        # show file used in knowledge base
+        gcs_files = gr.HTML(value=list_files_in_gcs(), label="Files in GCS")
+        refresh_btn = gr.Button("Refresh File List")
+        refresh_btn.click(fn=list_files_in_gcs, inputs=None, outputs=gcs_files)
+
     return demo
 
 
@@ -306,4 +313,4 @@ with gr.Blocks() as demo:
         with gr.Tab("Data"):
             data_page()
 
-demo.launch(server_name="0.0.0.0", server_port=7860, share=True)
+demo.launch(server_name="0.0.0.0", server_port=7860)

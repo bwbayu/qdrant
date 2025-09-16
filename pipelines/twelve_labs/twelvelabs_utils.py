@@ -33,7 +33,7 @@ def url_to_id(url: str):
     """
     return hashlib.md5(url.encode()).hexdigest()
 
-EXTRACTED_TEXT_FILE = os.path.join(TMP_DIR, f"text_extracted.json")
+EXTRACTED_TEXT_FILE = os.path.join("data", f"text_extracted.json")
 
 # contoh fungsi untuk simpan extracted_text ke JSON
 def save_extracted_text(start_sec, end_sec, extracted_text, file_path=EXTRACTED_TEXT_FILE):
@@ -326,15 +326,19 @@ def cut_video(input_path: str, output_path: str, start: float, end: float):
         start (float): The start time in seconds.
         end (float): The end time in seconds.
     """
-    # Load the original video file from the specified input path.
-    video = VideoFileClip(input_path)
-    
-    # Create a new clip by cutting the original video from the start to the end time.
-    clip = video.subclipped(start, end)
-    
-    # Save the newly created clip to the output path.
-    clip.write_videofile(output_path, codec="libx264", audio_codec="aac")
+    if start < end:
+        # Load the original video file from the specified input path.
+        video = VideoFileClip(input_path)
+        
+        # Create a new clip by cutting the original video from the start to the end time.
+        clip = video.subclipped(start, end)
+        
+        # Save the newly created clip to the output path.
+        clip.write_videofile(output_path, codec="libx264", audio_codec="aac")
 
-    # Explicitly close the video and clip objects to release file handles and free up memory.
-    video.close()
-    clip.close()
+        # Explicitly close the video and clip objects to release file handles and free up memory.
+        video.close()
+        clip.close()
+    else:
+        print(f"⚠️ Skip clip karena start >= end (start={start}, end={end})")
+        return

@@ -6,6 +6,7 @@ import os
 import uuid
 import shutil
 import io
+from google.cloud import storage
 
 from pipelines.cognee.utils.upload_to_gcs import upload_file
 from pipelines.cognee.main import pipeline_cognee
@@ -159,6 +160,15 @@ async def pipeline_process_files(files):
             shutil.rmtree(TMP_DIR, ignore_errors=True)
 
 def handle_uploaded_image(img, session_id):
+    """
+    Upload image for query search. Turn image to text description
+
+    Flow:
+    1. Save image to buffer
+    2. Upload temporary image file to GCS
+    3. Use GCS Url to get image description from LLM
+    4. Return image description
+    """
     # check img
     if img is None:
         return gr.update()
@@ -178,6 +188,51 @@ def handle_uploaded_image(img, session_id):
     # return description to fill the text input
     return gr.update(value=output)
 
+def list_files_in_gcs():
+    """List PDF & Video files from GCS folders and return HTML string"""
+    client = storage.Client()
+    bucket = client.bucket(BUCKET_NAME)
+
+    # header + grid container
+    html = """
+    <h3>Files in GCS</h3>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+    """
+
+    for prefix in ["videos/", "pdfs/"]:
+        blobs = bucket.list_blobs(prefix=prefix)
+        for blob in blobs:
+            # get url
+            url = f"https://storage.googleapis.com/{BUCKET_NAME}/{blob.name}"
+            filename = blob.name.split("/")[-1]
+
+            # video preview
+            if blob.name.endswith((".mp4", ".mov", ".avi")):
+                html += f"""
+                <div style="text-align:center;">
+                    <div style="width:320px; height:180px; overflow:hidden; margin:0 auto;">
+                        <video controls style="width:100%; height:100%; object-fit:cover;">
+                            <source src="{url}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <p><a href="{url}" target="_blank">{filename}</a></p>
+                </div>
+                """
+
+            # pdf preview
+            elif blob.name.endswith(".pdf"):
+                html += f"""
+                <div style="text-align:center;">
+                    <div style="width:320px; height:240px; overflow:hidden; margin:0 auto; border:1px solid #ddd;">
+                        <iframe src="{url}" style="width:100%; height:100%;"></iframe>
+                    </div>
+                    <p><a href="{url}" target="_blank">{filename}</a></p>
+                </div>
+                """
+
+    html += "</div>"
+    return html
 
 # # Gradio UI
 # with gr.Blocks() as demo:
