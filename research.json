@@ -2,89 +2,89 @@
   "research_points": [
     {
       "topic": "Program Execution in Computer Architecture",
-      "findings": "The process of program execution involves six key steps, as demonstrated in a video transcription:\n1. Fetch instruction from memory[300] → IR = 1940; PC = 300.\n2. Execute instruction 1940: Load memory[940] into AC → AC = 0003; PC = 301.\n3. Fetch instruction from memory[301] → IR = 5941; PC = 302.\n4. Execute instruction 5941: AC = AC + memory[941] → 0003 + 0002 = 0005.\n5. Fetch instruction from memory[302] → IR = 2941; PC = 303.\n6. Execute instruction 2941: Store AC into memory[941] → memory[941] = 0005.\n\nMemory states during execution:\n- memory[300] = 1940, memory[301] = 5940, memory[302] = 2941.\n- memory[940] = 0003, memory[941] = 0002 (updated to 0005 after execution).",
-      "relevance": "This finding illustrates the step-by-step interaction between the CPU, memory, and registers during program execution, a fundamental concept in computer organization.",
+      "findings": "The video segment explains a six-step program execution process in computer architecture. It details the state of memory and CPU registers during execution. Key memory states include memori[300] = 1940, memori[301] = 5941, memori[302] = 2941, memori[940] = 0003, and memori[941] = 0002. The steps involve fetching instructions, loading data into the accumulator (AC), performing arithmetic operations, and storing results back to memory. For example, the instruction at memori[300] (1940) loads the content of memori[940] (0003) into the AC. The instruction at memori[301] (5941) adds the content of memori[941] (0002) to the AC, resulting in 0005. Finally, the instruction at memori[302] (2941) stores the AC value (0005) back into memori[941].",
+      "relevance": "This finding is highly relevant as it demonstrates the fundamental process of program execution in computer architecture, including memory access, CPU register operations, and instruction execution.",
       "sources": [
         {
           "title": "Example of Program Execution",
           "type": "video",
           "link": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
-          "transcription": "Example of Program Execution\nDiagram menampilkan enam langkah eksekusi program dengan keadaan memori dan register CPU.\nKondisi memori yang terlihat:\n- memori[300] = 1940\n- memori[301] = 5941\n- memori[302] = 2941\n- memori[940] = 0003\n- memori[941] = 0002\nLangkah-langkah (dilihat pada diagram):\nStep 1: Fetch instruksi dari memori[300] -> IR = 1940; PC menunjukkan 300.\nStep 2: Eksekusi instruksi 1940: muat isi memori[940] ke AC -> AC = 0003; PC = 301.\nStep 3: Fetch instruksi dari memori[301] -> IR = 5941; PC = 302.\nStep 4: Eksekusi instruksi 5941: AC = AC + memori[941] -> 0003 + 0002 = 0005.\nStep 5: Fetch instruksi dari memori[302] -> IR = 2941; PC = 303.\nStep 6: Eksekusi instruksi 2941: simpan AC ke memori[941] -> memori[941] = 0005.",
-          "start_offset_sec": "0",
-          "end_offset_sec": "5",
+          "transcription": "Example of Program Execution\nDiagram menampilkan enam langkah eksekusi program dengan keadaan memori dan register CPU.\nKondisi memori yang terlihat:\n- memori[300] = 1940\n- memori[301] = 5941\n- memori[302] = 2941\n- memori[940] = 0003\n- memori[941] = 0002\nLangkah-langkah (dilihat pada diagram):\nStep 1: Fetch instruksi dari memori[300] -> IR = 1940; PC menunjukkan 300.\nStep 2: Eksekusi instruksi 1940: muat isi memori[940] ke AC -> AC = 0003; PC = 301.\nStep 3: Fetch instruksi dari memori[301] -> IR = 5941; PC = 302.\nStep 4: Eksekusi instruksi 5941: AC = AC + memori[941] -> 0003 + 0002 = 0005.\nStep 5: Fetch instruksi dari memori[302] -> IR = 2941; PC = 303.\nStep 6: Eksekusi instruksi 2941: simpan AC ke memori[941] -> memori[941] = 0005.\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_10.jpg",
+          "start_offset_sec": "5",
+          "end_offset_sec": "10",
           "embedding_option": "visual-text",
           "embedding_scope": "clip"
         }
       ]
     },
     {
-      "topic": "General-Purpose Hardware vs. Hardwired Systems",
-      "findings": "Hardwired systems are inflexible and designed for specific tasks. In contrast, general-purpose hardware can perform diverse tasks by supplying different control signals. This flexibility eliminates the need for physical rewiring, enabling adaptability to various programs and operations.",
-      "relevance": "This distinction is critical in understanding the evolution of computer architecture from fixed-function to programmable systems.",
+      "topic": "Memory and Register Interaction",
+      "findings": "The transcription highlights the interaction between memory and CPU registers during program execution. The Program Counter (PC) points to the current instruction address (e.g., memori[300]), while the Instruction Register (IR) holds the fetched instruction (e.g., 1940). The Accumulator (AC) temporarily stores data for arithmetic operations. For instance, the AC is loaded with the value 0003 from memori[940], then updated to 0005 after adding the value from memori[941] (0002). This interaction is critical for understanding how data flows between memory and CPU registers in a von Neumann architecture.",
+      "relevance": "This is directly relevant to computer architecture as it illustrates the fetch-decode-execute cycle and the role of registers in CPU operations.",
       "sources": [
         {
-          "title": "Program Concept: Hardwired vs. General-Purpose Hardware",
-          "type": "text",
-          "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_2.jpg",
-          "transcription": "Program Concept\n• Hardwired systems are inflexible\n• General purpose hardware can do different tasks, given correct control signals\n• Instead of re-wiring, supply a new set of control signals",
-          "start_offset_sec": "",
-          "end_offset_sec": "",
-          "embedding_option": "",
-          "embedding_scope": ""
+          "title": "Example of Program Execution",
+          "type": "video",
+          "link": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
+          "transcription": "Example of Program Execution\nDiagram menampilkan enam langkah eksekusi program dengan keadaan memori dan register CPU.\nKondisi memori yang terlihat:\n- memori[300] = 1940\n- memori[301] = 5941\n- memori[302] = 2941\n- memori[940] = 0003\n- memori[941] = 0002\nLangkah-langkah (dilihat pada diagram):\nStep 1: Fetch instruksi dari memori[300] -> IR = 1940; PC menunjukkan 300.\nStep 2: Eksekusi instruksi 1940: muat isi memori[940] ke AC -> AC = 0003; PC = 301.\nStep 3: Fetch instruksi dari memori[301] -> IR = 5941; PC = 302.\nStep 4: Eksekusi instruksi 5941: AC = AC + memori[941] -> 0003 + 0002 = 0005.\nStep 5: Fetch instruksi dari memori[302] -> IR = 2941; PC = 303.\nStep 6: Eksekusi instruksi 2941: simpan AC ke memori[941] -> memori[941] = 0005.\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_10.jpg",
+          "start_offset_sec": "5",
+          "end_offset_sec": "10",
+          "embedding_option": "visual-text",
+          "embedding_scope": "clip"
         }
       ]
     },
     {
-      "topic": "Definition of a Program",
-      "findings": "A program is defined as a sequence of steps, where each step involves an arithmetic or logical operation. Each operation requires a unique set of control signals to execute. This structured approach allows computers to perform complex tasks by breaking them into manageable instructions.",
-      "relevance": "This definition lays the foundation for understanding how software interacts with hardware in computer organization.",
+      "topic": "Instruction Execution Flow",
+      "findings": "The execution flow involves sequential fetching and execution of instructions. The PC increments after each fetch to point to the next instruction. For example, after fetching the instruction at memori[300], the PC updates to 301. The IR decodes the instruction, and the CPU executes it (e.g., loading data into AC or performing arithmetic). This flow is repeated until all instructions are executed. The final step stores the result (0005) back into memory, completing the cycle. This process is foundational to understanding how programs are executed in a CPU.",
+      "relevance": "This finding is critical as it explains the step-by-step process of instruction execution, which is a core concept in computer architecture and CPU design.",
       "sources": [
         {
-          "title": "What is a Program?",
-          "type": "summary",
-          "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_3.jpg",
-          "transcription": "What is a program?\nA sequence of steps\nFor each step, an arithmetic or logical operation is done\nFor each operation, a different set of control signals is needed\nDeskripsi gambar: Slide menampilkan judul \"What is a program?\" di kiri atas; teks utama seperti di atas; ada logo kecil di pojok kiri bawah, footer \"Arskom\" di tengah bawah, dan nomor slide \"4\" di pojok kanan bawah.",
-          "start_offset_sec": "",
-          "end_offset_sec": "",
-          "embedding_option": "",
-          "embedding_scope": ""
+          "title": "Example of Program Execution",
+          "type": "video",
+          "link": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
+          "transcription": "Example of Program Execution\nDiagram menampilkan enam langkah eksekusi program dengan keadaan memori dan register CPU.\nKondisi memori yang terlihat:\n- memori[300] = 1940\n- memori[301] = 5941\n- memori[302] = 2941\n- memori[940] = 0003\n- memori[941] = 0002\nLangkah-langkah (dilihat pada diagram):\nStep 1: Fetch instruksi dari memori[300] -> IR = 1940; PC menunjukkan 300.\nStep 2: Eksekusi instruksi 1940: muat isi memori[940] ke AC -> AC = 0003; PC = 301.\nStep 3: Fetch instruksi dari memori[301] -> IR = 5941; PC = 302.\nStep 4: Eksekusi instruksi 5941: AC = AC + memori[941] -> 0003 + 0002 = 0005.\nStep 5: Fetch instruksi dari memori[302] -> IR = 2941; PC = 303.\nStep 6: Eksekusi instruksi 2941: simpan AC ke memori[941] -> memori[941] = 0005.\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_10.jpg",
+          "start_offset_sec": "5",
+          "end_offset_sec": "10",
+          "embedding_option": "visual-text",
+          "embedding_scope": "clip"
         }
       ]
     },
     {
-      "topic": "Function of the Control Unit",
-      "findings": "The Control Unit (CU) plays a pivotal role in computer architecture by interpreting operation codes (e.g., ADD, MOVE) and issuing the corresponding control signals to hardware components. This process enables the execution of instructions and coordinates the interaction between the CPU, memory, and other units.\n- Each operation has a unique code.\n- The CU decodes these codes and generates control signals.\n- This mechanism is essential for the computer's ability to perform diverse tasks.",
-      "relevance": "The Control Unit is a core component of the CPU, and its functionality is central to the execution of programs and the organization of computational tasks.",
+      "topic": "Visual Representation of Computer Architecture",
+      "findings": "The video segment references a diagram (available at https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_10.jpg) that visually represents the six-step program execution process. The diagram likely includes memory addresses, CPU registers (PC, IR, AC), and the flow of instructions and data. Visual aids like this are essential for understanding complex concepts in computer architecture, such as the interaction between hardware components during execution.",
+      "relevance": "This is highly relevant as visual representations help clarify abstract concepts in computer architecture, making it easier to grasp the flow of instructions and data.",
       "sources": [
         {
-          "title": "Function of Control Unit",
-          "type": "graph",
-          "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_4.jpg",
-          "transcription": "Function of Control Unit\nFor each operation a unique code is provided\ne.g. ADD, MOVE\nA hardware segment accepts the code and issues the control signals\nWe have a COMPUTER!\nFooter: Arskom (tengah bawah), slide number 5 (kanan bawah)\nLogo: lingkaran merah di pojok kiri bawah berisi gambar buku terbuka, lingkaran kuning di atas, dan pola hitam di bawah.",
-          "start_offset_sec": "",
-          "end_offset_sec": "",
-          "embedding_option": "",
-          "embedding_scope": ""
+          "title": "Example of Program Execution",
+          "type": "video",
+          "link": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
+          "transcription": "Example of Program Execution\nDiagram menampilkan enam langkah eksekusi program dengan keadaan memori dan register CPU.\nKondisi memori yang terlihat:\n- memori[300] = 1940\n- memori[301] = 5941\n- memori[302] = 2941\n- memori[940] = 0003\n- memori[941] = 0002\nLangkah-langkah (dilihat pada diagram):\nStep 1: Fetch instruksi dari memori[300] -> IR = 1940; PC menunjukkan 300.\nStep 2: Eksekusi instruksi 1940: muat isi memori[940] ke AC -> AC = 0003; PC = 301.\nStep 3: Fetch instruksi dari memori[301] -> IR = 5941; PC = 302.\nStep 4: Eksekusi instruksi 5941: AC = AC + memori[941] -> 0003 + 0002 = 0005.\nStep 5: Fetch instruksi dari memori[302] -> IR = 2941; PC = 303.\nStep 6: Eksekusi instruksi 2941: simpan AC ke memori[941] -> memori[941] = 0005.\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_10.jpg",
+          "start_offset_sec": "5",
+          "end_offset_sec": "10",
+          "embedding_option": "visual-text",
+          "embedding_scope": "clip"
         }
       ]
     },
     {
-      "topic": "Core Components of Computer Architecture",
-      "findings": "Computer architecture comprises several key components:\n1. **Central Processing Unit (CPU)**: Consists of the Control Unit (CU) and the Arithmetic and Logic Unit (ALU).\n2. **Input/Output (I/O)**: Facilitates the transfer of data and instructions into and out of the system.\n3. **Main Memory**: Provides temporary storage for code and results during execution.\nThese components work together to enable computation, data processing, and program execution.",
-      "relevance": "This breakdown highlights the essential building blocks of computer architecture, emphasizing their roles and interactions.",
+      "topic": "Arithmetic and Logic Operations in CPU",
+      "findings": "The transcription describes an arithmetic operation where the AC is updated by adding the value from memori[941] (0002) to its current value (0003), resulting in 0005. This operation is performed as part of the instruction execution cycle (instruction 5941). Such operations are fundamental to CPU functionality, enabling computations like addition, subtraction, and logical comparisons. The result is stored back in memory, demonstrating the CPU's role in processing and manipulating data.",
+      "relevance": "This is directly relevant to computer architecture as it illustrates how CPUs perform arithmetic and logic operations, which are core to computing.",
       "sources": [
         {
-          "title": "Components of Computer Architecture",
-          "type": "rag_completion",
-          "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_5.jpg",
-          "transcription": "Components\n• The Control Unit and the Arithmetic and Logic Unit constitute the Central Processing Unit\n• Data and instructions need to get into the system and results out\n  ○ Input/output\n• Temporary storage of code and results is needed\n  ○ Main memory\nSlide description (Indonesian): Slide berjudul \"Components\" dengan daftar berpoin. Poin utama: 1) \"The Control Unit and the Arithmetic and Logic Unit constitute the Central Processing Unit\"; 2) \"Data and instructions need to get into the system and results out\" dengan subpoin \"Input/output\"; 3) \"Temporary storage of code and results is needed\" dengan subpoin \"Main memory\". Di pojok kiri bawah terdapat sebuah logo bundar berwarna merah/putih/hitam. Di tengah bawah tercantum kata \"Arskom\" dan di sudut kanan bawah nomor slide \"6\".",
-          "start_offset_sec": "",
-          "end_offset_sec": "",
-          "embedding_option": "",
-          "embedding_scope": ""
+          "title": "Example of Program Execution",
+          "type": "video",
+          "link": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
+          "transcription": "Example of Program Execution\nDiagram menampilkan enam langkah eksekusi program dengan keadaan memori dan register CPU.\nKondisi memori yang terlihat:\n- memori[300] = 1940\n- memori[301] = 5941\n- memori[302] = 2941\n- memori[940] = 0003\n- memori[941] = 0002\nLangkah-langkah (dilihat pada diagram):\nStep 1: Fetch instruksi dari memori[300] -> IR = 1940; PC menunjukkan 300.\nStep 2: Eksekusi instruksi 1940: muat isi memori[940] ke AC -> AC = 0003; PC = 301.\nStep 3: Fetch instruksi dari memori[301] -> IR = 5941; PC = 302.\nStep 4: Eksekusi instruksi 5941: AC = AC + memori[941] -> 0003 + 0002 = 0005.\nStep 5: Fetch instruksi dari memori[302] -> IR = 2941; PC = 303.\nStep 6: Eksekusi instruksi 2941: simpan AC ke memori[941] -> memori[941] = 0005.\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_10.jpg",
+          "start_offset_sec": "5",
+          "end_offset_sec": "10",
+          "embedding_option": "visual-text",
+          "embedding_scope": "clip"
         }
       ]
     }
   ],
-  "summary": "This research consolidates key aspects of **computer architecture and organization**, covering program execution, hardware flexibility, program definition, the role of the Control Unit, and core architectural components. The findings are grounded in video transcriptions, text chunks, summaries, graph-based insights, and RAG-completed explanations, providing a holistic view of how computers are structured and operate. The interplay between hardware (CPU, memory, I/O) and software (programs, control signals) is emphasized, illustrating the foundational principles of modern computing."
+  "summary": "The research focuses on the fundamental aspects of computer architecture, specifically the program execution process. The video transcription provides a detailed, step-by-step explanation of how instructions are fetched, decoded, and executed in a CPU. It highlights the interaction between memory and CPU registers (PC, IR, AC), the flow of instructions, and arithmetic operations. The diagram referenced in the video serves as a visual aid to reinforce these concepts. This information is critical for understanding the core principles of computer architecture, including memory access, register operations, and instruction execution cycles."
 }

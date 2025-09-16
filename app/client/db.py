@@ -19,11 +19,12 @@ def init_db():
         
     ''')
     c.execute('''
-              CREATE TABLE IF NOT EXISTS video_data (
+              CREATE TABLE IF NOT EXISTS source_data (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             session_id INTEGER,
             link TEXT,
             description TEXT,
+            start_offset_sec INTEGER,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             FOREIGN KEY(session_id) REFERENCES sessions(id)
         )
@@ -69,13 +70,14 @@ def update_session(session_id, query=None, summary=None, video_link: list = None
         c.execute("UPDATE sessions SET query=?, summary=? WHERE id=?",
                   (query, summary, session_id))
     if video_link is not None:
-        c.execute("DELETE FROM video_data WHERE session_id=?", (session_id,))
+        c.execute("DELETE FROM source_data WHERE session_id=?", (session_id,))
         print("Executing insert for video links")
         for video in video_link:
             link = video.get("link", "")
             description = video.get("transcription", "")
-            c.execute("INSERT INTO video_data (session_id, link, description) VALUES (?, ?, ?)",
-                      (session_id, link, description))
+            start_offset_sec = video.get("start_offset_sec", "")
+            c.execute("INSERT INTO source_data (session_id, link, description, start_offset_sec) VALUES (?, ?, ?, ?)",
+                      (session_id, link, description, start_offset_sec))
     conn.commit()
     conn.close()
 
@@ -100,7 +102,7 @@ def get_session(session_id):
 
     # fetch video links
     c.execute(
-        "SELECT link, description FROM video_data WHERE session_id=?", (session_id,))
+        "SELECT link, description, start_offset_sec FROM source_data WHERE session_id=?", (session_id,))
     video_links = [r for r in c.fetchall()]
     conn.close()
     return row[0], row[1] if row else ("", ""), row[2] if row else ("", ""), video_links if video_links else []

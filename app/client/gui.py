@@ -12,6 +12,30 @@ MAX_VIDEOS = 5  # jumlah slot video yang kamu siapin
 # ==============================
 
 
+def display_video_from_url(video_url, start_time=3):
+    """
+    Menghasilkan HTML untuk menampilkan video dari URL pada detik tertentu.
+    """
+    # Cek apakah URL sudah diisi
+    if not video_url:
+        return "<p style='text-align:center; color:grey;'>Masukkan URL video untuk memulai</p>"
+
+    # Tambahkan #t=<seconds> ke URL video
+    video_url_with_time = f"{video_url}#t={start_time}"
+
+    # Buat konten HTML dengan tag video
+    html_content = f"""
+    <div style="text-align: center;">
+        <video width="100%" controls autoplay muted>
+            <source src="{video_url_with_time}" type="video/mp4">
+            Browser Anda tidak mendukung tag video.
+        </video>
+        <p style="margin-top: 8px;"><em>Memutar video dari detik ke-{start_time}.</em></p>
+    </div>
+    """
+    return html_content
+
+
 def process_files(files, session_id):
     if files is None:
         return None
@@ -100,7 +124,7 @@ def chat_page():
                     source_container = []
                     for i in range(MAX_VIDEOS):
                         with gr.Row() as slot:
-                            v = gr.Video(
+                            v = gr.HTML(
                                 visible=False, label=f"Video {i+1}", elem_id=f"myvideo-{i}")
                             t = gr.Markdown(
                                 "", elem_classes="video-title", visible=False)
@@ -170,10 +194,12 @@ def chat_page():
             updates = []
             for i in range(MAX_VIDEOS):
                 if i < len(vids):
-                    url, title_vid = vids[i]
+                    url, title_vid, start_offset_sec = vids[i]
                     if url.split('.')[-1] not in ['png', 'jpg', 'jpeg']:
+                        video = display_video_from_url(
+                            url, start_time=start_offset_sec)
                         updates.append(
-                            gr.update(value=url, visible=True))   # video
+                            gr.update(value=video, visible=True))   # video
                         updates.append(
                             gr.update(value=f"**{title_vid}**", visible=True))  # title
                         continue
@@ -184,7 +210,7 @@ def chat_page():
                 # save gambar
             for i in range(MAX_VIDEOS):
                 if i < len(vids):
-                    url, title_vid = vids[i]
+                    url, title_vid, start_offset_sec = vids[i]
                     if url.split('.')[-1] in ['png', 'jpg', 'jpeg'] and open_image(url) is not None:
                         updates.append(
                             gr.update(value=url, visible=True))   # video

@@ -1,47 +1,15 @@
 {
-  "report_title": "Fundamentals of Computer Architecture: Program Execution, Hardware Design, and Core Components",
-  "generation_date": "2023-10-05",
-  "summary": "This report synthesizes critical concepts in **computer architecture and organization**, focusing on the interplay between hardware and software during program execution. The analysis covers six key areas:\n\n1. **Program Execution Process**: A step-by-step breakdown of CPU-memory interactions, demonstrating how instructions are fetched, decoded, and executed. The example highlights register updates (e.g., `AC = 0003 → 0005`) and memory modifications (`memory[941] = 0002 → 0005`), illustrating the dynamic state changes during computation.\n\n2. **Hardware Flexibility**: A comparison between **hardwired systems** (inflexible, task-specific) and **general-purpose hardware**, which adapts to diverse tasks via control signals without physical rewiring. This distinction underscores the evolution from fixed-function to programmable architectures.\n\n3. **Program Definition**: Programs are defined as sequences of arithmetic/logical operations, each requiring unique control signals. This modularity enables complex task decomposition, forming the bridge between software instructions and hardware execution.\n\n4. **Control Unit (CU) Functionality**: The CU decodes operation codes (e.g., `ADD`, `MOVE`) into control signals, orchestrating interactions between the CPU, memory, and I/O. Its role is pivotal in translating instructions into actionable hardware commands.\n\n5. **Core Architectural Components**: The **CPU** (comprising CU and ALU), **I/O systems**, and **main memory** are identified as the foundational blocks of computer architecture. Their collaboration enables data processing, storage, and communication, forming the backbone of computational systems.\n\n6. **Cross-Topic Synthesis**: The report reveals a **unified narrative**: programs (as instruction sequences) rely on the CU to generate control signals, which activate hardware components (CPU, memory, I/O) to perform tasks. The contrast between hardwired and general-purpose systems further emphasizes the CU’s role in enabling adaptability. Memory state transitions during execution (e.g., `memory[941]` updates) exemplify the tangible outcomes of this coordination.\n\n**Key Insight**: The **Control Unit** emerges as the linchpin, bridging abstract programs with physical hardware operations. Its ability to interpret operation codes and issue control signals enables the flexibility and programmability that define modern computing. The step-by-step execution example reinforces this by showing how instructions (`1940`, `5941`) trigger register/memory updates, all governed by the CU.\n\n**Actionable Implications**:\n- For **educators**: Use the program execution example (with memory/register states) to demonstrate real-time CPU-memory interactions.\n- For **architects**: Prioritize CU design to balance flexibility (general-purpose) with efficiency (hardwired optimizations).\n- For **developers**: Understand that software instructions directly map to hardware control signals, influencing performance and resource usage.",
+  "report_title": "Program Execution in Computer Architecture: Memory, Registers, and Instruction Flow",
+  "generation_date": "2023-10-04",
+  "summary": "This report examines the fundamental process of program execution in computer architecture, focusing on the interaction between memory and CPU registers. The analysis reveals a six-step cycle: fetching instructions, loading data into the Accumulator (AC), performing arithmetic operations, and storing results back to memory. For example, instructions at memory addresses 300, 301, and 302 sequentially load, add, and store values, updating the AC from 0003 to 0005. The Program Counter (PC) and Instruction Register (IR) play critical roles in tracking and executing instructions, while the referenced diagram visually reinforces these steps.\n\nThe findings underscore the von Neumann architecture’s fetch-decode-execute cycle, where memory addresses (e.g., 940, 941) hold operands, and registers (PC, IR, AC) manage data flow. Arithmetic operations, such as adding values from memory, demonstrate the CPU’s computational role. This process is essential for understanding how programs are executed at the hardware level, bridging abstract instructions with physical memory and register states.",
   "lists": [
     {
       "link": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
-      "transcription": "Example of Program Execution\nDiagram menampilkan enam langkah eksekusi program dengan keadaan memori dan register CPU.\nKondisi memori yang terlihat:\n- memori[300] = 1940\n- memori[301] = 5941\n- memori[302] = 2941\n- memori[940] = 0003\n- memori[941] = 0002\nLangkah-langkah (dilihat pada diagram):\nStep 1: Fetch instruksi dari memori[300] -> IR = 1940; PC menunjukkan 300.\nStep 2: Eksekusi instruksi 1940: muat isi memori[940] ke AC -> AC = 0003; PC = 301.\nStep 3: Fetch instruksi dari memori[301] -> IR = 5941; PC = 302.\nStep 4: Eksekusi instruksi 5941: AC = AC + memori[941] -> 0003 + 0002 = 0005.\nStep 5: Fetch instruksi dari memori[302] -> IR = 2941; PC = 303.\nStep 6: Eksekusi instruksi 2941: simpan AC ke memori[941] -> memori[941] = 0005.",
-      "start_offset_sec": "0",
-      "end_offset_sec": "5",
+      "transcription": "Example of Program Execution\nDiagram menampilkan enam langkah eksekusi program dengan keadaan memori dan register CPU.\nKondisi memori yang terlihat:\n- memori[300] = 1940\n- memori[301] = 5941\n- memori[302] = 2941\n- memori[940] = 0003\n- memori[941] = 0002\nLangkah-langkah (dilihat pada diagram):\nStep 1: Fetch instruksi dari memori[300] -> IR = 1940; PC menunjukkan 300.\nStep 2: Eksekusi instruksi 1940: muat isi memori[940] ke AC -> AC = 0003; PC = 301.\nStep 3: Fetch instruksi dari memori[301] -> IR = 5941; PC = 302.\nStep 4: Eksekusi instruksi 5941: AC = AC + memori[941] -> 0003 + 0002 = 0005.\nStep 5: Fetch instruksi dari memori[302] -> IR = 2941; PC = 303.\nStep 6: Eksekusi instruksi 2941: simpan AC ke memori[941] -> memori[941] = 0005.\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_10.jpg",
+      "start_offset_sec": "5",
+      "end_offset_sec": "10",
       "embedding_option": "visual-text",
       "embedding_scope": "clip"
-    },
-    {
-      "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_2.jpg",
-      "transcription": "Program Concept\n• Hardwired systems are inflexible\n• General purpose hardware can do different tasks, given correct control signals\n• Instead of re-wiring, supply a new set of control signals",
-      "start_offset_sec": "",
-      "end_offset_sec": "",
-      "embedding_option": "",
-      "embedding_scope": ""
-    },
-    {
-      "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_3.jpg",
-      "transcription": "What is a program?\nA sequence of steps\nFor each step, an arithmetic or logical operation is done\nFor each operation, a different set of control signals is needed\nDeskripsi gambar: Slide menampilkan judul \"What is a program?\" di kiri atas; teks utama seperti di atas; ada logo kecil di pojok kiri bawah, footer \"Arskom\" di tengah bawah, dan nomor slide \"4\" di pojok kanan bawah.",
-      "start_offset_sec": "",
-      "end_offset_sec": "",
-      "embedding_option": "",
-      "embedding_scope": ""
-    },
-    {
-      "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_4.jpg",
-      "transcription": "Function of Control Unit\nFor each operation a unique code is provided\ne.g. ADD, MOVE\nA hardware segment accepts the code and issues the control signals\nWe have a COMPUTER!\nFooter: Arskom (tengah bawah), slide number 5 (kanan bawah)\nLogo: lingkaran merah di pojok kiri bawah berisi gambar buku terbuka, lingkaran kuning di atas, dan pola hitam di bawah.",
-      "start_offset_sec": "",
-      "end_offset_sec": "",
-      "embedding_option": "",
-      "embedding_scope": ""
-    },
-    {
-      "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_5.jpg",
-      "transcription": "Components\n• The Control Unit and the Arithmetic and Logic Unit constitute the Central Processing Unit\n• Data and instructions need to get into the system and results out\n  ○ Input/output\n• Temporary storage of code and results is needed\n  ○ Main memory\nSlide description (Indonesian): Slide berjudul \"Components\" dengan daftar berpoin. Poin utama: 1) \"The Control Unit and the Arithmetic and Logic Unit constitute the Central Processing Unit\"; 2) \"Data and instructions need to get into the system and results out\" dengan subpoin \"Input/output\"; 3) \"Temporary storage of code and results is needed\" dengan subpoin \"Main memory\". Di pojok kiri bawah terdapat sebuah logo bundar berwarna merah/putih/hitam. Di tengah bawah tercantum kata \"Arskom\" dan di sudut kanan bawah nomor slide \"6\".",
-      "start_offset_sec": "",
-      "end_offset_sec": "",
-      "embedding_option": "",
-      "embedding_scope": ""
     }
   ]
 }
