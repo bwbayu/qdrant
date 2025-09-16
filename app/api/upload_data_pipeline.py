@@ -5,12 +5,13 @@ import asyncio
 import os
 import uuid
 import shutil
+import io
 
 from pipelines.cognee.utils.upload_to_gcs import upload_file
-from pipelines.twelve_labs.twelvelabs_utils import extract_slides
 from pipelines.cognee.main import pipeline_cognee
 from pipelines.twelve_labs.main import pipeline_twelvelabs
 from pipelines.cognee.create_knowledge_img import create_knowledge_from_image
+from pipelines.cognee.utils.describe_image_llm import describe_image_llm
 
 # Load GCS bucket name from environment
 BUCKET_NAME = os.environ.get("GCS_BUCKET_NAME")
@@ -156,6 +157,27 @@ async def pipeline_process_files(files):
         # clean up the entire tmp directory after processing
         if os.path.exists(TMP_DIR):
             shutil.rmtree(TMP_DIR, ignore_errors=True)
+
+def handle_uploaded_image(img, session_id):
+    # check img
+    if img is None:
+        return gr.update()
+
+    # save image to buffer
+    buffer = io.BytesIO()
+    img.save(buffer, format="PNG")
+    buffer.seek(0)
+
+    # upload image to gcs temporary file
+    gcs_url = upload_file(buffer, BUCKET_NAME, f"chat_images/query_image.png", content_type="image/png")
+
+    # query LLM to get image description
+    desc = describe_image_llm(gcs_url)
+    output = f"Explain about {desc}"
+
+    # return description to fill the text input
+    return gr.update(value=output)
+
 
 # # Gradio UI
 # with gr.Blocks() as demo:

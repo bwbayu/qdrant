@@ -4,7 +4,7 @@ from app.client.db import init_db, get_all_sessions, create_new_session, get_ses
 import sqlite3
 import datetime
 from app.api.combine import summary_generation
-from app.api.upload_data_pipeline import pipeline_process_files
+from app.api.upload_data_pipeline import pipeline_process_files, handle_uploaded_image
 # from app.client.example import summary_generation
 MAX_VIDEOS = 5  # jumlah slot video yang kamu siapin
 
@@ -114,10 +114,9 @@ def chat_page():
                 with gr.Row():
                     msg = gr.Textbox(
                         placeholder="Type your message, or upload a file ...", scale=4, label="Type your message")
-                    # upload_button = gr.UploadButton(
-                    #     "📂 Upload Files",
-                    #     file_count="multiple"
-                    # )
+                    img_input = gr.Image(type="pil", label="Upload Image", sources=["upload"], scale=1, height=100, width=100, placeholder="Click to Upload Image") 
+                    
+                img_input.upload(fn=handle_uploaded_image, inputs=[img_input, state_session_id], outputs=msg )
 
                 summary = gr.Markdown("Summary will appear here...")
                 # container kosong untuk video
@@ -307,4 +306,4 @@ with gr.Blocks() as demo:
         with gr.Tab("Data"):
             data_page()
 
-demo.launch(server_name="0.0.0.0", server_port=7860)
+demo.launch(server_name="0.0.0.0", server_port=7860, share=True)
