@@ -1,13 +1,53 @@
 {
-  "report_title": "Program Execution in Computer Architecture: Memory, Registers, and Instruction Flow",
+  "report_title": "Comprehensive Analysis of Boolean Functions: Definitions, Representations, Simplification, and Applications",
   "generation_date": "2023-10-04",
-  "summary": "This report examines the fundamental process of program execution in computer architecture, focusing on the interaction between memory and CPU registers. The analysis reveals a six-step cycle: fetching instructions, loading data into the Accumulator (AC), performing arithmetic operations, and storing results back to memory. For example, instructions at memory addresses 300, 301, and 302 sequentially load, add, and store values, updating the AC from 0003 to 0005. The Program Counter (PC) and Instruction Register (IR) play critical roles in tracking and executing instructions, while the referenced diagram visually reinforces these steps.\n\nThe findings underscore the von Neumann architecture’s fetch-decode-execute cycle, where memory addresses (e.g., 940, 941) hold operands, and registers (PC, IR, AC) manage data flow. Arithmetic operations, such as adding values from memory, demonstrate the CPU’s computational role. This process is essential for understanding how programs are executed at the hardware level, bridging abstract instructions with physical memory and register states.",
+  "summary": "Boolean functions are the backbone of digital logic, computer science, and electronics, serving as mathematical mappings from binary inputs to binary outputs (°f: B^n → B°). These functions are represented through truth tables, canonical forms (Sum of Products, SOP, and Product of Sums, POS), and algebraic expressions, enabling systematic analysis and design. Simplification techniques—such as algebraic laws (e.g., De Morgan’s Laws) and Karnaugh Maps—optimize Boolean functions for practical applications, reducing complexity and improving efficiency in digital circuits. The duality principle ensures that every algebraic expression remains valid when operators and identity elements are swapped, reinforcing logical equivalence.\n\nApplications of Boolean functions are vast, spanning digital circuit design (e.g., logic gates and combinational circuits), computer programming (e.g., conditional statements and bitwise operations), and algorithm design (e.g., decision trees). Their role in modeling logical operations and decision-making processes underscores their indispensability in modern technology. This report synthesizes definitions, representations, simplification methods, and real-world applications, providing a unified understanding of Boolean functions and their critical contributions to computing and electronics.",
   "lists": [
     {
-      "link": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
-      "transcription": "Example of Program Execution\nDiagram menampilkan enam langkah eksekusi program dengan keadaan memori dan register CPU.\nKondisi memori yang terlihat:\n- memori[300] = 1940\n- memori[301] = 5941\n- memori[302] = 2941\n- memori[940] = 0003\n- memori[941] = 0002\nLangkah-langkah (dilihat pada diagram):\nStep 1: Fetch instruksi dari memori[300] -> IR = 1940; PC menunjukkan 300.\nStep 2: Eksekusi instruksi 1940: muat isi memori[940] ke AC -> AC = 0003; PC = 301.\nStep 3: Fetch instruksi dari memori[301] -> IR = 5941; PC = 302.\nStep 4: Eksekusi instruksi 5941: AC = AC + memori[941] -> 0003 + 0002 = 0005.\nStep 5: Fetch instruksi dari memori[302] -> IR = 2941; PC = 303.\nStep 6: Eksekusi instruksi 2941: simpan AC ke memori[941] -> memori[941] = 0005.\nArskom URL: https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/arsikom3_final_9c95a005_10.jpg",
-      "start_offset_sec": "5",
-      "end_offset_sec": "10",
+      "link": "https://storage.googleapis.com/qdrant-hackathon/videos/861e1d4c-3fb7-427b-9f05-13a9ed80029f/logif5_10min.mp4",
+      "transcription": "kemudian  fungsi  bolehan  dengan\n\nSlide presentasi berjudul \"OVERVIEW MATERI\" (panel kiri berwarna biru gelap). Di panel kanan daftar topik mata kuliah/logika informatika:\n- Definisi\n- Aljabar Boolean Dua Nilai\n- Ekspresi Boolean\n- Prinsip Dualitas\n- Hukum Aljabar Boolean\n- Fungsi Boolean\n- Bentuk Kanonik\n- Konversi Antar Bentuk Kanonik\n- Rangkaian Digital\n- Penyederhanaan Fungsi Boolean\n- Peta Karnaugh",
+      "start_offset_sec": "474.2339",
+      "end_offset_sec": "484.18204",
+      "embedding_option": "visual-text",
+      "embedding_scope": "clip"
+    },
+    {
+      "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_26.jpg",
+      "transcription": "Fungsi Boolean = fungsi biner, pemetaan dari f: B^n → B. Contoh-contoh fungsi Boolean: f(x) = x, f(x, y) = x' y + x y' + y', f(x, y, z) = x y z'. Setiap peubah di dalam fungsi Boolean, termasuk dalam bentuk komplemennya, disebut literal. Fungsi h(x, y, z) = x y z' terdiri dari 3 buah literal, yaitu x, y, dan z'.",
+      "start_offset_sec": "",
+      "end_offset_sec": "",
+      "embedding_option": "visual-text",
+      "embedding_scope": "clip"
+    },
+    {
+      "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_28.jpg",
+      "transcription": "Fungsi Boolean yang ekspresinya berbeda dapat menyatakan fungsi yang sama. Contoh: f(x,y,z) = x' y' z + x' y z + x y' dan g(x,y,z) = x' z + x y' memiliki tabel kebenaran yang identik, sehingga keduanya ekuivalen.",
+      "start_offset_sec": "",
+      "end_offset_sec": "",
+      "embedding_option": "visual-text",
+      "embedding_scope": "clip"
+    },
+    {
+      "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_34.jpg",
+      "transcription": "Ekspresi Boolean dapat disajikan dalam dua bentuk kanonik: SOP (penjumlahan hasil kali) dan POS (perkalian hasil jumlah). Contoh: f(x, y, z) = x’y’z + xy’z’ + xyz (SOP) dan g(x, y, z) = (x + y + z)(x + y’ + z)(x + y’ + z’)(x’ + y + z’)(x’ + y’ + z) (POS).",
+      "start_offset_sec": "",
+      "end_offset_sec": "",
+      "embedding_option": "visual-text",
+      "embedding_scope": "clip"
+    },
+    {
+      "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_51.jpg",
+      "transcription": "Menyederhanakan fungsi Boolean artinya mencari bentuk fungsi lain yang ekivalen tetapi dengan jumlah literal atau operasi yang lebih sedikit. Contoh: f(x, y) = x' y + x y' + y' disederhanakan menjadi f(x, y) = x' + y'.",
+      "start_offset_sec": "",
+      "end_offset_sec": "",
+      "embedding_option": "visual-text",
+      "embedding_scope": "clip"
+    },
+    {
+      "link": "https://storage.googleapis.com/qdrant-hackathon/logif/docs/images/920200419930811201_3_97040c00_8.jpg",
+      "transcription": "Aljabar Boolean memenuhi aksioma seperti Commutative, Associative, Distributive, dan De Morgan's Laws. Contoh: (x + y)' = x' y' dan (x y)' = x' + y'.",
+      "start_offset_sec": "",
+      "end_offset_sec": "",
       "embedding_option": "visual-text",
       "embedding_scope": "clip"
     }
