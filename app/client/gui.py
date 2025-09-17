@@ -313,4 +313,4 @@ with gr.Blocks() as demo:
         with gr.Tab("Data"):
             data_page()
 
-demo.launch(server_name="0.0.0.0", server_port=7860)
+demo.launch(server_name="0.0.0.0", server_port=7860, share=True)
