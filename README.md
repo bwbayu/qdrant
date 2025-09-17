@@ -1,4 +1,6 @@
-# Project Title
+# Qlassroom
+
+https://youtu.be/kzP5Lp_Z_AI
 
 ## 1. Overview
 
@@ -184,9 +186,3 @@ GCS_DEST_METADATA_PATH=
 GCS_DEST_RAW_PATH=
 GCS_BUCKET_NAME=
 ```
-
----
-
-## 7. Demo
-
-*TODO: Add video demo here*
